@@ -43,6 +43,9 @@ Route::post('/nkotext', [nkocontroller::class, 'saveNkoText'])->name('saveNkoTex
 /////// End To NKO only /////////
 
 
+Route::get('/homepage', [homepagecontroller::class, 'homepage'])->name('homepage');
+
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });
