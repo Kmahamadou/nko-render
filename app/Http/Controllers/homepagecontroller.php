@@ -10,4 +10,9 @@ class homepagecontroller extends Controller
     {
     return view('homepage');
     }
+
+    public function mainpage()
+    {
+    return view('main');
+    }
 }

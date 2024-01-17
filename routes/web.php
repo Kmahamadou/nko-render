@@ -5,6 +5,7 @@ use App\Http\Controllers\audiocontroller;
 use App\Http\Controllers\frenchcontroller;
 use App\Http\Controllers\FrenchToNkocontroller;
 use App\Http\Controllers\nkocontroller;
+use App\Http\Controllers\homepagecontroller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -44,6 +45,9 @@ Route::post('/nkotext', [nkocontroller::class, 'saveNkoText'])->name('saveNkoTex
 
 
 Route::get('/homepage', [homepagecontroller::class, 'homepage'])->name('homepage');
+// Route::get('/homepage', [homepagecontroller::class, 'homepage'])->name('homepage');
+Route::get('/accueil', [homepagecontroller::class, 'mainpage'])->name('mainpage');
+
 
 
 // Route::get('/', function () {
