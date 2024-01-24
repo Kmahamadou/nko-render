@@ -14,6 +14,29 @@ body {
   color: #444444;
 }
 
+
+.microphone {
+  width: 80px; 
+  height: 80px; 
+  background-color: #fff; 
+  border-radius: 50% 50% 50% 50%; 
+  overflow: hidden; 
+  position: relative; 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.microphone:hover {
+  width: 80px; 
+  height: 80px; 
+  /* background-color: #fff;  */
+  border-radius: 50% 50% 50% 50%; 
+  overflow: hidden; 
+  position: relative; 
+  box-shadow: 0 20px 40px rgba(104, 20, 79, 0.2), 0 0 30px #c30925;
+  /* background-color: #FF0000; */
+}
+
+
 a {
   color: #106eea;
   text-decoration: none;

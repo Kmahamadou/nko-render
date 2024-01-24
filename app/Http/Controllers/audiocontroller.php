@@ -5,12 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\audio;
 use Illuminate\Support\Facades\log;
-
+use Illuminate\Support\Facades\DB;
 class audiocontroller extends Controller
 {
     public function show()
     {
-        return view('saisie');
+        $randomSentence = DB::table('frenchsentences')->inRandomOrder()->first();
+        return view('saisie')->with('randomSentence', $randomSentence);
     }
 
     
@@ -41,9 +42,11 @@ class audiocontroller extends Controller
     public function saveaudio(Request $request)
     {
 
-        // log::info($request->all());
 
-        $audio = $request->base64;
+        log::info($request->all());
+
+        $audio = $request->valeur0;
+        $texteSaisi = $request->valeur1;
 
         // $texteSaisi = $request->input('texte');
 
@@ -51,11 +54,16 @@ class audiocontroller extends Controller
 
         // return redirect('/saisie')->with('message', 'Texte saisi avec succès !');
         // // Return the response
+        $audio_storage_path = "Nko/audio-".$texteSaisi.".wav";
+        $audiotest = \Storage::disk('s3')->put($audio_storage_path, file_get_contents($request->file('idCard')));
+
+
 
         $audio = audio::create([
             'audio_data' => $audio,
-            // 'texte_saisi' => $texteSaisi,
+            'texte_saisi' => $texteSaisi,
         ]);
+
 
         if (!empty($audio)) {
             return response()->json(['message' => 'Request processed successfully']);

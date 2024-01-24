@@ -6,46 +6,23 @@
     <title>Saisie de Texte</title>
 </head>
 <body>
-<style>
-body {
-    background-image: url('{{ asset('/user/images/ph3.jpg') }}');
-    background-size: cover;
-    background-position: center;
-    margin: 0;
-    /* background-repeat: no-repeat; */
-}
-.center-container form {
-    text-align: center;
-    width: 1200px;
-    margin: auto;
-    margin-top: 150px;
-}
-.center-container input {
-    width: 40%;
-    height: 40px;
-    border: solid transparent;
-    border-radius: 20px 20px 20px 20px;
-    text-align: center;
-}
-</style>
+@extends("layouts.layout4")
 
-@if(session('message'))
-    <p>{{ session('message') }}</p>
-@endif
+@section("content")
 
 <div class="center-container">
-    <h1>
+<p>Veuillez enoncer la phrase suivante : {{ $randomSentence->sentence }} </p>
     <form method="post" action="/saisiepost">
         @csrf
-        <input type="text" name="texte" id="texte" placeholder="Entrez votre texte ici...">
-        <button type="submit" class="btn btn-primary">Envoyer</button>
-    </form>
+        <div style="text-align: center; margin-left: 460px; margin-top: 100px;">
+    <div class="microphone">
+        <i class="fa fa-microphone" id="icon-record-audio" onclick="recordAudio()" style="cursor: pointer; color: #DC143C; font-size: 1.5em; line-height: 80px; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);"></i>
+    </div>
 </div>
-<div class="center-container">
-    <form method="post" action="/saisiepost">
-        @csrf
-        <i class="fa fa-microphone" id="icon-record-audio" onclick="recordAudio()" style="cursor: pointer; color: white"></i>
+
+
         <input type="hidden" name="base64" id="audioData" value="">
+        <input type="hidden" name="text" id="text" value="{{ $randomSentence->sentence }}">
     </form>
 </div>        
 
@@ -58,9 +35,19 @@ body {
         // create an instance for AJAX
         var ajax = new XMLHttpRequest()
         
+
+        var text = document.getElementById("text");
+        var textValue = text.value;
         // send base64 string to server
-        const formData = new FormData()
-        formData.append("base64", base64)
+        var valeurs = [base64, textValue];
+        const formData = new FormData();
+
+
+        for (let index = 0; index < valeurs.length; index++) {
+            const element = valeurs[index];
+
+            formData.append("valeur"+index,valeurs[index])            
+        }
  
         // set request method as POST, set URL and set asynchronous to true
         // ajax.open("POST", "http://localhost:3000/sendVoiceNote", true)
@@ -211,6 +198,6 @@ body {
     }
     
 </script>
-
+@endsection
 </body>
 </html>
