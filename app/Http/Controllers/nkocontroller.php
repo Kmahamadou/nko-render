@@ -16,7 +16,7 @@ class nkocontroller extends Controller
 
     public function saveNkoText(Request $request)
     {
-        
+
         $sentence = $request->sentence;
         // dd($sentence);
         // Créer deux phrases distinctes
@@ -25,10 +25,10 @@ class nkocontroller extends Controller
         ]);
 //  dd($sentence);
         if (!empty($sentence)) {
-            return redirect()->route('showNkoText')->with('success', 'Phrase ajouté avec succès !');
-        }            
-        
-        return redirect()->route('showNkoText')->with('error', 'Une erreur est survenue !');
+            return response()->json(['message' => 'Phrase ajouté avec succès !']);
+        }
+        return response()->json(['error' => 'Une est survenue']);
+
 
     }
 }

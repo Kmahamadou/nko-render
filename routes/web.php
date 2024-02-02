@@ -6,6 +6,7 @@ use App\Http\Controllers\frenchcontroller;
 use App\Http\Controllers\FrenchToNkocontroller;
 use App\Http\Controllers\nkocontroller;
 use App\Http\Controllers\homepagecontroller;
+use App\Http\Controllers\contactController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,34 +18,35 @@ use App\Http\Controllers\homepagecontroller;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/saisie', [audiocontroller::class, 'show']);
-Route::post('/saisiepost', [audiocontroller::class, 'save']);
-Route::post('/saisiepost', [audiocontroller::class, 'saveaudio']);
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', [homepagecontroller::class, 'homepage'])->name('homepage');
+// Route::post('/send-visiter-email', [contactController::class, 'sendVisiterEmail'])->name("sendVisiterEmail");
+
+Route::get('/audio-nko', [audiocontroller::class, 'show'])->name("audioNko");
+Route::get('/enregistrement-nko', [audiocontroller::class, 'recording'])->name("nkoRecording");
+// Route::post('/saisiepost', [audiocontroller::class, 'save']);
+// Route::post('/enregistrement-audio-nko', [audiocontroller::class, 'saveaudio'])->name("audioNko");
 
 
 //////Frecnh only ////////////
 Route::get('/frenchtext', [frenchcontroller::class, 'showFrenchTextPage'])->name('onlyFrenchText');
-Route::post('/frenchtext', [frenchcontroller::class, 'saveFrenchText'])->name('saveFrenchText');
 /////// End Frecnh Only /////////
 
 
 //////Frecnh To NKO ////////////
 Route::get('/frenchtonko', [FrenchToNkocontroller::class, 'showFrenchToNkoPage'])->name('showFrenchToNkoPage');
-Route::post('/frenchtonko', [FrenchToNkocontroller::class, 'saveFrenchToNko'])->name('saveFrenchToNko');
 /////// End Frecnh To NKO /////////
 
 
 
 ////// End NKO only ////////////
 Route::get('/nkotext', [nkocontroller::class, 'showNkoText'])->name('showNkoText');
-Route::post('/nkotext', [nkocontroller::class, 'saveNkoText'])->name('saveNkoText');
 /////// End To NKO only /////////
 
 
-Route::get('/homepage', [homepagecontroller::class, 'homepage'])->name('homepage');
 // Route::get('/homepage', [homepagecontroller::class, 'homepage'])->name('homepage');
 Route::get('/accueil', [homepagecontroller::class, 'mainpage'])->name('mainpage');
 

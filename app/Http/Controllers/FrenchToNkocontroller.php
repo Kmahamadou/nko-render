@@ -14,12 +14,14 @@ class FrenchToNkocontroller extends Controller
         return view('frenchToNko')->with('randomSentence', $randomSentence);
     }
 
+
     public function saveFrenchToNko(Request $request)
     {
                 // dd($request->all());
 
         $nkoSentence = $request->sentence;
-        $equivalentFrenchText = $request->sentence;
+        $equivalentFrenchText = $request->randomFrenchSentence;
+        $randomFrenchSentence = DB::table('frenchsentences')->inRandomOrder()->first();
 
         // Créer deux phrases distinctes
         $traduction = FrenchToNko::create([
@@ -28,10 +30,10 @@ class FrenchToNkocontroller extends Controller
         ]);
 
         if (!empty($traduction)) {
-            return redirect()->route('showFrenchToNkoPage')->with('success', 'Phrase traduite avec succès !');
-        }            
-        
-        return redirect()->route('showFrenchToNkoPage')->with('error', 'Une erreur est survenue !');
+            return response()->json(['message' => 'Phrase ajouté avec succès !', 'next_french_sentence' => $randomFrenchSentence->sentence]);
+        }
+
+        return response()->json(['error' => 'Une erreur est survenue ! !']);
 
     }
 }

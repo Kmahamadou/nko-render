@@ -8,11 +8,11 @@ class homepagecontroller extends Controller
 {
     public function homepage()
     {
-    return view('homepage');
+        return view('homepage');
     }
 
-    public function mainpage()
-    {
-    return view('main');
-    }
+    // public function mainpage()
+    // {
+    //     return view('main');
+    // }
 }

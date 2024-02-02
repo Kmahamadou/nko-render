@@ -6,38 +6,24 @@ use Illuminate\Http\Request;
 use App\Models\audio;
 use Illuminate\Support\Facades\log;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
+
 class audiocontroller extends Controller
 {
     public function show()
     {
-        $randomSentence = DB::table('frenchsentences')->inRandomOrder()->first();
-        return view('saisie')->with('randomSentence', $randomSentence);
+        $randomSentence = DB::table('nkosentences')->inRandomOrder()->first();
+        return view('audioNko')->with('randomSentence', $randomSentence);
+        // return view('progressHelper')->with('randomSentence', $randomSentence);
     }
 
-    
-
-    public function save(Request $request)
+    public function recording()
     {
-
-        // log::info($request->all());
-
-        $audio = $request->base64;
-
-        // $texteSaisi = $request->input('texte');
-
-        // Vous pouvez faire ce que vous voulez avec le texte saisi, par exemple le sauvegarder en base de données.
-
-        // return redirect('/saisie')->with('message', 'Texte saisi avec succès !');
-        // // Return the response
-
-        // \App\Models\Audio::create([
-        //     'base64_data' => $audio,
-        //     'texte' => $texteSaisi,
-        // ]);
-
-        return response()->json(['message' => 'Request processed successfully']);
-
+        $randomSentence = DB::table('nkosentences')->inRandomOrder()->first();
+        return view('record')->with('randomSentence', $randomSentence);
+        // return view('progressHelper')->with('randomSentence', $randomSentence);
     }
+
 
     public function saveaudio(Request $request)
     {
@@ -45,8 +31,14 @@ class audiocontroller extends Controller
 
         log::info($request->all());
 
-        $audio = $request->valeur0;
+        $base64String = $request->valeur0;
         $texteSaisi = $request->valeur1;
+
+
+        $binaryData = base64_decode($base64String);
+
+        $randomNkoSentence = DB::table('nkosentences')->inRandomOrder()->first();
+
 
         // $texteSaisi = $request->input('texte');
 
@@ -54,19 +46,20 @@ class audiocontroller extends Controller
 
         // return redirect('/saisie')->with('message', 'Texte saisi avec succès !');
         // // Return the response
-        $audio_storage_path = "Nko/audio-".$texteSaisi.".wav";
-        $audiotest = \Storage::disk('s3')->put($audio_storage_path, file_get_contents($request->file('idCard')));
+        $audio_name = Str::uuid();
+        $audio_storage_path = "nko/audio-".$audio_name.".wav";
+        $audiotest = \Storage::disk('s3')->put($audio_storage_path, $binaryData);
 
 
 
         $audio = audio::create([
-            'audio_data' => $audio,
+            'audio_data' => $audio_storage_path,
             'texte_saisi' => $texteSaisi,
         ]);
 
 
         if (!empty($audio)) {
-            return response()->json(['message' => 'Request processed successfully']);
+            return response()->json(['message' => 'Request processed successfully', 'next_nko_sentence' => $randomNkoSentence->sentence]);
 
         }
 
@@ -74,5 +67,5 @@ class audiocontroller extends Controller
 
     }
 
-    
+
 }

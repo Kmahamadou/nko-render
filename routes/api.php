@@ -3,6 +3,10 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\audiocontroller;
+use App\Http\Controllers\contactController;
+use App\Http\Controllers\frenchcontroller;
+use App\Http\Controllers\FrenchToNkocontroller;
+use App\Http\Controllers\nkocontroller;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -19,4 +23,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::post('/saveaudio', [audiocontroller::class, 'saveaudio']);
+// Route::post('/saveaudio', [audiocontroller::class, 'saveaudio']);
+Route::post('/enregistrement-audio-nko', [audiocontroller::class, 'saveAudio'])->name("saveAudioNko");
+
+Route::post('/nkotext', [nkocontroller::class, 'saveNkoText'])->name('saveNkoText');
+Route::post('/frenchtext', [frenchcontroller::class, 'saveFrenchText'])->name('saveFrenchText');
+Route::post('/frenchtonko', [FrenchToNkocontroller::class, 'saveFrenchToNko'])->name('saveFrenchToNko');
+Route::post('/send-visiter-email', [contactController::class, 'sendVisiterEmail'])->name("sendVisiterEmail");

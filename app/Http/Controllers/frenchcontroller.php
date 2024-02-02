@@ -17,7 +17,7 @@ class frenchcontroller extends Controller
 
     public function saveFrenchText(Request $request)
     {
-        
+
         $sentence = $request->sentence;
 
         // Créer deux phrases distinctes
@@ -26,10 +26,9 @@ class frenchcontroller extends Controller
         ]);
 
         if (!empty($sentence)) {
-            return redirect()->route('onlyFrenchText')->with('success', 'Phrase ajouté avec succès !');
-        }            
-        
-        return redirect()->route('onlyFrenchText')->with('error', 'Une erreur est survenue !');
+            return response()->json(['message' => 'Phrase ajouté avec succès !']);
+        }
+        return response()->json(['error' => 'Une est survenue']);
 
     }
 }
