@@ -25,7 +25,7 @@ RUN echo "deb http://security.debian.org/debian-security buster/updates main" >>
 RUN apt-get update
 
 
-RUN apt-get install -y libmysqlclient-dev
+# RUN apt-get install -y libmysqlclient-dev
 
 # Install extensions
 
