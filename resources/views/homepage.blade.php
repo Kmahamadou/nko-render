@@ -428,8 +428,8 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="member">
               <div class="member-img">
-                <a href="assets/img/Alpha.jpg" data-lightbox="gallery" data-title="Bamoye Traore">
-                <img src="assets/img/Alpha.jpg" class="img-fluid" alt="">
+                <a href="assets/img/Alpha.jpeg" data-lightbox="gallery" data-title="Bamoye Traore">
+                <img src="assets/img/Alpha.jpeg" class="img-fluid" alt="">
                 </a>
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
