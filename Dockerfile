@@ -1,17 +1,47 @@
+###################################
+# Use the official PHP 8.1 FPM image from Docker Hub
 FROM php:8.1-fpm
-ARG user
-ARG uid
-RUN apt update && apt install -y \
-    git \
-    curl \
+
+# Install dependencies
+RUN apt-get update && apt-get install -y \
+    build-essential \
     libpng-dev \
-    libonig-dev \
-    libxml2-dev
-RUN apt clean && rm -rf /var/lib/apt/lists/*
-RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
-# RUN useradd -G www-data,root -u $uid -d /home/$user $user
-# RUN mkdir -p /home/$user/.composer && \
-#     chown -R $user:$user /home/$user
-# WORKDIR /var/www
-# USER $user
+    libjpeg62-turbo-dev \
+    libfreetype6-dev \
+    locales \
+    zip \
+    jpegoptim optipng pngquant gifsicle \
+    vim \
+    unzip \
+    git \
+    curl
+
+# Clear cache
+RUN apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Install extensions
+RUN docker-php-ext-install pdo_mysql mbstring zip exif pcntl
+RUN docker-php-ext-configure gd --with-jpeg=/usr/include/ --with-freetype=/usr/include/
+RUN docker-php-ext-install gd
+
+# Install composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+# Set working directory
+WORKDIR /var/www
+
+# Remove the default nginx index page
+RUN rm -rf /var/www/html
+
+# Copy existing application directory
+COPY . /var/www
+
+# Copy existing application directory permissions
+COPY --chown=www-data:www-data . /var/www
+
+# Change current user to www
+USER www-data
+
+# Expose port 9000 and start php-fpm server
+EXPOSE 9000
+CMD ["php-fpm"]
