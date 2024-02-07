@@ -14,7 +14,7 @@
             <h2>Traduction</h2>
             <h3><span>Francais &rarr; N'KO <i class="bi bi-pencil" style="margin-right:5px; color: #3399FF;"></i></span></h3>
             <p style="font-size: 17px; margin-left: 300px;margin-top: 50px;"><i class="fas fa-language" style="margin-right:5px; color: #3399FF;"></i>Traduire la phrase suivante en Nko :</p>
-            @if (!isset($randomSentence->sentence))
+            @if (empty($randomSentence))
                 <p>Aucune phrase</p>
             @else
                 <!-- Custom Card Component with shadow and padding -->
@@ -27,20 +27,23 @@
 
           <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
 
-            <div class="col-lg-6">
-              <form id="thisForm" method="post" action="{{ route('saveFrenchToNko') }}" role="form" onsubmit="submitForm(event)">
-                  @csrf
-                  <input type="hidden" id="randomFrenchSentence" name="randomFrenchSentence" value="{{ $randomSentence->sentence }}">
-                <div class="form-group">
-                  <textarea class="form-control" id="sentence" name="sentence" rows="5" placeholder="Votre traduction..." autofocus required></textarea>
+            @if (!empty($randomSentence))
+                <div class="col-lg-6">
+                <form id="thisForm" method="post" action="{{ route('saveFrenchToNko') }}" role="form" onsubmit="submitForm(event)">
+                    @csrf
+
+                    <input type="hidden" id="randomFrenchSentence" name="randomFrenchSentence" value="{{ $randomSentence->sentence }}">
+                    <div class="form-group">
+                    <textarea class="form-control" id="sentence" name="sentence" rows="5" placeholder="Votre traduction..." autofocus required></textarea>
+                    </div>
+                    <div class="my-3">
+                    {{-- <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div> --}}
+                    </div>
+                    <div class="text-center"><button class="btn btn-primary" type="submit">Soumettre</button></div>
+                </form>
                 </div>
-                <div class="my-3">
-                  {{-- <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div> --}}
-                </div>
-                <div class="text-center"><button class="btn btn-primary" type="submit">Soumettre</button></div>
-              </form>
-            </div>
+            @endif
 
           </div>
 

@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {Schema::create('audio', function (Blueprint $table) {
         $table->id();
-        $table->text('audio_data');
-        $table->text('texte_saisi')->nullable();
+        $table->text('audio_data')->nullable();
+        $table->text('texte_saisi');
         $table->timestamps();
     });
     }

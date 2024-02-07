@@ -175,8 +175,8 @@
             <a href="{{ route('audioNko') }}">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
               <div class="icon"><i class="fas fa-microphone"></i></div>
-              <h4 class="title"><a href="{{ route('audioNko') }}">Parler</a></h4>
-              <p class="description">Prononcer le texte N'KO qui vous etes presente</p>
+              <h4 class="title"><a href="{{ route('audioNko') }}">Lire</a></h4>
+              <p class="description">Lire le texte presente en alphabet N'KO</p>
             </div>
             </a>
           </div>
@@ -185,8 +185,8 @@
             <a href="{{ route('showNkoText') }}">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
               <div class="icon"><i class="bi bi-pencil"></i></div>
-              <h4 class="title"><a href="{{ route("showNkoText") }}">Fournir du texte N'KO</a></h4>
-              <p class="description">Nous recoltons des donnees en N'KO</p>
+              <h4 class="title"><a href="{{ route("showNkoText") }}">Ecrire du texte en alphabet N'KO</a></h4>
+              <p class="description">A quoi pensez-vous ?</p>
             </div>
             </a>
           </div>
@@ -205,7 +205,7 @@
             <a href="{{ route('onlyFrenchText') }}">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
               <div class="icon"><i class="bi bi-pencil"></i></div>
-              <h4 class="title"><a href="{{ route('onlyFrenchText') }}">Fournir du texte en Francais</a></h4>
+              <h4 class="title"><a href="{{ route('onlyFrenchText') }}">Ecrire du texte en alphabet Francais</a></h4>
               <p class="description">Les textes recueillis en francais seront traduis en N'KO</p>
             </div>
             </a>
@@ -231,11 +231,21 @@
             <img src="assets/img/about.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
-            <h3>A quoi sert la presente plateforme?</h3>
+            <h3>Pourquoi cette plateforme ?</h3>
             <p class="fst-italic">
-              Ici, nous collectons des donnees sur le N'KO en vue d'entrainer nos IA (Intelligence Artificielle) a comprendre et generer du texte en N'KO<br/>.
-              La mise en place d'un IA de ce type a les avantages suivants:
-            </p>
+              L'objectif principale de la presente plateforme vise a rendre accessible les outils
+              numerique a une audience qui, principalement, lit et ecrit en alphabet N'KO.
+
+              Les fonctionnalites utiles comme l'assistant vocal
+              ou encore les programmes de generations textes entre autres
+              sont des exemples de debouches pouvant emerges de l'utilisation des donnees recoltees
+              sur cette plateforme.
+
+              Ceci permettra a ceux qui ne peuvent pas lire ou ceux ayant un handicap
+              a pourvoir passer des appels par commandes vocales.
+
+              C'est dans cette optique que nous vous solicitons a contribuer vivement a la collecte.
+
             <ul>
                 <li>
                   <i class="fas fa-language"></i>
@@ -278,32 +288,32 @@
           <div class="col-lg-3 col-md-6">
             <div class="count-box">
               <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Happy Clients</p>
+              <span data-purecounter-start="0" data-purecounter-end="{{ $countsValues["audios"] }}" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Enregistrement audios</p>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
             <div class="count-box">
               <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Projects</p>
+              <span data-purecounter-start="0" data-purecounter-end="{{ $countsValues["nkosentences"] }}" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Textes en alphabet nko</p>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
             <div class="count-box">
               <i class="bi bi-headset"></i>
-              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hours Of Support</p>
+              <span data-purecounter-start="0" data-purecounter-end="{{ $countsValues["frenchsentences"] }}" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Textes en alphabet francais</p>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
             <div class="count-box">
               <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hard Workers</p>
+              <span data-purecounter-start="0" data-purecounter-end="{{ $countsValues["FrenchToNkos"] }}" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Traductions</p>
             </div>
           </div>
 
@@ -320,19 +330,19 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/donilab.png" class="img-fluid" alt="">
+            <img src="{{ asset('assets/img/donilab.png') }}" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/sallpro.png" class="img-fluid" alt="">
+            <img src="{{ asset('assets/img/sallpro.png') }}" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/bkotech.png" class="img-fluid" alt="">
+            <img src="{{ asset('assets/img/bkotech.png') }}" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/donifab.png" class="img-fluid" alt="">
+            <img src="{{ asset('assets/img/donifab.png') }}" class="img-fluid" alt="">
           </div>
 
         </div>
@@ -370,7 +380,7 @@
               </div>
               <div class="member-info">
                 <h4>Hawa DIONE</h4>
-                <span style="color: #3c3c3c">Etudiante</span>
+                <span style="color: #c3c3c3 text-center">Etudiante</span>
               </div>
             </div>
           </div>
@@ -378,7 +388,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
             <div class="member">
               <div class="member-img">
-                <a href="assets/img/diouka.jpg" data-lightbox="gallery" data-title="Hawa DIONE">
+                <a href="assets/img/diouka.jpg" data-lightbox="gallery" data-title="Diouka Sissoko">
                 <img src="assets/img/diouka.jpg" class="img-fluid" alt="">
                 </a>
                 <div class="social">
@@ -390,7 +400,7 @@
               </div>
               <div class="member-info">
                 <h4>Diouka SISSOKO</h4>
-                <span style="color: #3c3c3c">Etudiante en Genie <br/> Informatique et Telecoms</span>
+                <span style="color: #c3c3c3 text-center">Etudiante en Genie <br/> Informatique et Telecoms</span>
               </div>
             </div>
           </div>
@@ -398,7 +408,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
               <div class="member-img">
-                <a href="assets/img/djigui.jpg" data-lightbox="gallery" data-title="Hawa DIONE">
+                <a href="assets/img/djigui.jpg" data-lightbox="gallery" data-title="Djigui Keita">
                 <img src="assets/img/djigui.jpg" class="img-fluid" alt="">
                 </a>
                 <div class="social">
@@ -410,7 +420,7 @@
               </div>
               <div class="member-info">
                 <h4>Djigui Youba KEITA</h4>
-                <span style="color: #3c3c3c">Expert en N'KO</span>
+                <span style="color: #c3c3c3 text-center">Expert en N'KO</span>
               </div>
             </div>
           </div>
@@ -418,7 +428,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="member">
               <div class="member-img">
-                <a href="assets/img/Alpha.jpg" data-lightbox="gallery" data-title="Hawa DIONE">
+                <a href="assets/img/Alpha.jpg" data-lightbox="gallery" data-title="Bamoye Traore">
                 <img src="assets/img/Alpha.jpg" class="img-fluid" alt="">
                 </a>
                 <div class="social">
@@ -430,7 +440,7 @@
               </div>
               <div class="member-info">
                 <h4>Bamoye TRAORE</h4>
-                <span style="color: #3c3c3c">ML Developer</span>
+                <span style="color: #c3c3c3 text-center">ML Developer</span>
               </div>
             </div>
           </div>
@@ -438,7 +448,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="50">
             <div class="member">
               <div class="member-img">
-                <a href="assets/img/mohamed.jpeg" data-lightbox="gallery" data-title="Hawa DIONE">
+                <a href="assets/img/mohamed.jpeg" data-lightbox="gallery" data-title="Mahamadou Kone">
                 <img src="assets/img/mohamed.jpeg" class="img-fluid" alt="">
                 </a>
                 <div class="social">
@@ -450,7 +460,7 @@
               </div>
               <div class="member-info">
                 <h4>Mahamadou KONE</h4>
-                <span style="color: #3c3c3c">FullStack Developer</span>
+                <span style="color: #c3c3c3 text-center">FullStack Developer</span>
               </div>
             </div>
           </div>
@@ -458,7 +468,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="50">
             <div class="member">
               <div class="member-img">
-                <a href="assets/img/sall.jpeg" data-lightbox="gallery" data-title="Hawa DIONE">
+                <a href="assets/img/sall.jpeg" data-lightbox="gallery" data-title="Youssouf Sall">
                 <img src="assets/img/sall.jpeg" class="img-fluid" alt="">
                 </a>
                 <div class="social">
@@ -470,7 +480,7 @@
               </div>
               <div class="member-info">
                 <h4>Youssouf SALL</h4>
-                <span style="color: #3c3c3c">Consultant en Innovation Technologique</span>
+                <span style="color: #c3c3c3 text-center">Consultant en Innovation Technologique</span>
               </div>
             </div>
           </div>

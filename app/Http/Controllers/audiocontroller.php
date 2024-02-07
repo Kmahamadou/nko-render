@@ -46,16 +46,19 @@ class audiocontroller extends Controller
 
         // return redirect('/saisie')->with('message', 'Texte saisi avec succès !');
         // // Return the response
-        $audio_name = Str::uuid();
+
+        $audio = audio::create([
+            // 'audio_data' => $audio_storage_path,
+            'texte_saisi' => $texteSaisi,
+        ]);
+
+        $audio_name = $audio->id;
+
         $audio_storage_path = "nko/audio-".$audio_name.".wav";
         $audiotest = \Storage::disk('s3')->put($audio_storage_path, $binaryData);
 
 
 
-        $audio = audio::create([
-            'audio_data' => $audio_storage_path,
-            'texte_saisi' => $texteSaisi,
-        ]);
 
 
         if (!empty($audio)) {
