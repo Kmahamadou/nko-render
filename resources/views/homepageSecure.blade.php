@@ -700,8 +700,15 @@ function isValidEmail(email) {
                 message_value.trim() === ''
             ) {
                 // Show an error message or perform any other action to handle invalid data
-                alert('Tous les champs sont requis.');
-                return;
+                // Simulating a successful file upload
+                setTimeout(() => {
+                    // Show a custom notification
+                    showNotification('Tous les champs sont obligatoires !', 'error');
+                        // Reset the form inputs
+                        // document.getElementById('emailForm').reset();
+
+                        send_email_loading.style.display = 'none';
+                }, 3500); // Simulated upload time (adjust as needed)
             }
 
 
