@@ -317,19 +317,19 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/donilab.png" class="img-fluid" alt="">
+            <img src="{{ secure_asset('assets/img/donilab.png') }}" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/sallpro.png" class="img-fluid" alt="">
+            <img src="{{ secure_asset('assets/img/sallpro.jpeg') }}" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/bkotech.png" class="img-fluid" alt="">
+            <img src="{{ secure_asset('assets/img/bko-tech.png') }}" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/donifab.png" class="img-fluid" alt="">
+            <img src="{{ secure_asset('assets/img/donifab.png') }}" class="img-fluid" alt="">
           </div>
 
         </div>
@@ -358,14 +358,14 @@
                 <img src="{{ secure_asset('assets/img/hawa.JPG') }}" class="img-fluid" alt="">
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
-                  {{-- <a href=""><i class="bi bi-facebook"></i></a> --}}
+                  <a href="https://www.facebook.com/hawa.dioni.39" target="_blank"><i class="bi bi-facebook"></i></a>
                   {{-- <a href=""><i class="bi bi-instagram"></i></a> --}}
                   {{-- <a href=""><i class="bi bi-linkedin"></i></a> --}}
                 </div>
               </div>
               <div class="member-info">
                 <h4>Hawa DIONE</h4>
-                <span style="color: #3c3c3c">Etudiante</span>
+                <span style="color: #3c3c3c">Etudiante en Data Sciences</span>
               </div>
             </div>
           </div>
