@@ -20,7 +20,8 @@ class homepagecontroller extends Controller
         ];
 
         // dd($countsValues);
-        return view('homepageSecure')->with("countsValues", $countsValues);
+        return view('homepageSecure')
+                ->with("countsValues", $countsValues);
     }
 
     // public function mainpage()
