@@ -29,7 +29,7 @@ class audiocontroller extends Controller
     {
 
 
-        log::info($request->all());
+        // log::info($request->all());
 
         $base64String = $request->valeur0;
         $texteSaisi = $request->valeur1;
