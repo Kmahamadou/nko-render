@@ -174,7 +174,7 @@
           </div>
 
 
-        <div class="container justify-content-center" data-aos="fade-up" data-aos-delay="100">
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch text-center mb-5 mb-lg-0">
             <a href="{{ route('audioNko') }}">
