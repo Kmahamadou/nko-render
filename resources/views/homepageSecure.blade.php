@@ -409,7 +409,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="member">
               <div class="member-img">
-                <img src="{{ secure_asset('assets/img/Alpha.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ secure_asset('assets/img/Alpha.jpeg') }}" class="img-fluid" alt="">
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
                   <a target="_blank" href="https://www.facebook.com/profile.php?id=100006821057109"><i class="bi bi-facebook"></i></a>
