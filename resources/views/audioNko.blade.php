@@ -1,8 +1,8 @@
 @extends('layouts.template')
 
-<link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/css/record-style.css') }}">
+<link rel="stylesheet" href="{{ secure_asset('assets/css/reset.css') }}">
+<link rel="stylesheet" href="{{ secure_asset('assets/css/font-awesome.min.css') }}">
+<link rel="stylesheet" href="{{ secure_asset('assets/css/record-style.css') }}">
 
 @section('content')
     <div class="container">
@@ -75,8 +75,8 @@
         </section><!-- End Audio Record Section -->
     </main>
 
-    <script src="{{ asset('assets/js/audio-recording.js') }}"></script>
-    <script src="{{ asset('assets/js/index.js') }}"></script>
+    <script src="{{ secure_asset('assets/js/audio-recording.js') }}"></script>
+    <script src="{{ secure_asset('assets/js/index.js') }}"></script>
 
 
     {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

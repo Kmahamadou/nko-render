@@ -355,7 +355,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
               <div class="member-img">
-                <img src="assets/img/hawa.JPG" class="img-fluid" alt="">
+                <img src="{{ secure_asset('assets/img/hawa.JPG') }}" class="img-fluid" alt="">
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
                   {{-- <a href=""><i class="bi bi-facebook"></i></a> --}}
@@ -373,7 +373,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
             <div class="member">
               <div class="member-img">
-                <img src="assets/img/diouka.jpg" class="img-fluid" alt="">
+                <img src="{{ secure_asset('assets/img/diouka.jpg') }}" class="img-fluid" alt="">
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
                   <a target="_blank" href="https://m.facebook.com/profile.php/?id=100022039608402"><i class="bi bi-facebook"></i></a>
@@ -391,7 +391,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
               <div class="member-img">
-                <img src="assets/img/djigui.jpg" class="img-fluid" alt="">
+                <img src="{{ secure_asset('assets/img/djigui.jpg') }}" class="img-fluid" alt="">
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
                   <a target="_blank" href="#"><i class="bi bi-facebook"></i></a>
@@ -409,7 +409,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="member">
               <div class="member-img">
-                <img src="assets/img/Alpha.jpg" class="img-fluid" alt="">
+                <img src="{{ secure_asset('assets/img/Alpha.jpg') }}" class="img-fluid" alt="">
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
                   <a target="_blank" href="https://www.facebook.com/profile.php?id=100006821057109"><i class="bi bi-facebook"></i></a>
@@ -427,7 +427,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="50">
             <div class="member">
               <div class="member-img">
-                <img src="assets/img/mohamed.jpeg" class="img-fluid" alt="">
+                <img src="{{ secure_asset('assets/img/mohamed.jpeg') }}" class="img-fluid" alt="">
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
                   <a target="_blank" href="https://www.facebook.com/DoniFab/"><i class="bi bi-facebook"></i></a>
@@ -445,7 +445,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="50">
             <div class="member">
               <div class="member-img">
-                <img src="assets/img/sall.jpeg" class="img-fluid" alt="">
+                <img src="{{ secure_asset('assets/img/sall.jpeg') }}" class="img-fluid" alt="">
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
                   <a target="_blank" href="https://www.facebook.com/DoniFab/"><i class="bi bi-facebook"></i></a>
