@@ -166,9 +166,17 @@
     <section id="featured-services" class="featured-services">
       <div class="container" data-aos="fade-up">
 
-        <div class="row">
 
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+        <div class="section-title">
+            <h2>Contribuer</h2>
+            <h3><span></span></h3>
+            <p></p>
+          </div>
+
+
+        <div class="container justify-content-center" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch text-center mb-5 mb-lg-0">
             <a href="{{ route('audioNko') }}">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
               <div class="icon"><i class="fas fa-microphone"></i></div>
@@ -178,7 +186,7 @@
             </a>
           </div>
 
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch text-center mb-5 mb-lg-0">
             <a href="{{ route('showNkoText') }}">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
               <div class="icon"><i class="bi bi-pencil"></i></div>
@@ -188,7 +196,7 @@
             </a>
           </div>
 
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch text-center mb-5 mb-lg-0">
             <a href="{{ route("showFrenchToNkoPage") }}">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
               <div class="icon"><i class="fas fa-language"></i></div>
@@ -198,7 +206,7 @@
             </a>
           </div>
 
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch text-center mb-5 mb-lg-0">
             <a href="{{ route('onlyFrenchText') }}">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
               <div class="icon"><i class="bi bi-pencil"></i></div>
@@ -212,6 +220,7 @@
 
       </div>
     </section><!-- End Featured Services Section -->
+
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about section-bg">
@@ -349,7 +358,7 @@
           <p>Notre objectif est de faire la difference.</p>
         </div>
 
-        <div class="row membre">
+        <div class="container row membre">
 
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
