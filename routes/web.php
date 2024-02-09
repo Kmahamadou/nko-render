@@ -48,7 +48,7 @@ Route::get('/nkotext', [nkocontroller::class, 'showNkoText'])->name('showNkoText
 
 
 // Route::get('/homepage', [homepagecontroller::class, 'homepage'])->name('homepage');
-Route::get('/accueil', [homepagecontroller::class, 'mainpage'])->name('mainpage');
+// Route::get('/accueil', [homepagecontroller::class, 'mainpage'])->name('mainpage');
 
 
 

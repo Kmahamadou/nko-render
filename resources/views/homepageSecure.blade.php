@@ -10,8 +10,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link rel="icon" href="{{ secure_asset('assets/img/logo.png') }}" type="image/x-icon">
-  <link rel="shortcut icon" href="{{ secure_asset('assets/img/logo.png') }}" type="image/x-icon">
+  <link rel="icon" href="https://ikeneya.s3.us-east-2.amazonaws.com/nko-assets/assets/logo.png" type="image/x-icon">
+  <link rel="shortcut icon" href="https://ikeneya.s3.us-east-2.amazonaws.com/nko-assets/assets/logo.png" type="image/x-icon">
 
 
   <!-- fa icon CDN -->
@@ -449,7 +449,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
               <div class="member-img">
-                <a href="{{ secure_asset('assets/img/hawa.JPG') }}" data-lightbox="gallery" data-title="Hawa DIONE">
+                <a href="https://ikeneya.s3.us-east-2.amazonaws.com/nko-assets/assets/hawa.JPG" data-lightbox="gallery" data-title="Hawa DIONE">
                     <img src="{{ secure_asset('assets/img/hawa.JPG') }}" class="img-fluid" alt="">
                 </a>
                 <div class="social">
@@ -469,7 +469,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
             <div class="member">
               <div class="member-img">
-                <a href="{{ secure_asset('assets/img/diouka.jpg') }}" data-lightbox="gallery" data-title="Diouka SISSOKO">
+                <a href="https://ikeneya.s3.us-east-2.amazonaws.com/nko-assets/assets/diouka.jpg" data-lightbox="gallery" data-title="Diouka SISSOKO">
                     <img src="{{ secure_asset('assets/img/diouka.jpg') }}" class="img-fluid" alt="">
                 </a>
                 <div class="social">
@@ -489,7 +489,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
               <div class="member-img">
-                <a href="{{ secure_asset('assets/img/djigui.jpg') }}" data-lightbox="gallery" data-title="Djigui KEITA">
+                <a href="https://ikeneya.s3.us-east-2.amazonaws.com/nko-assets/assets/djigui.jpg" data-lightbox="gallery" data-title="Djigui KEITA">
                     <img src="{{ secure_asset('assets/img/djigui.jpg') }}" class="img-fluid" alt="">
                 </a>
                 <div class="social">
@@ -509,7 +509,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="member">
               <div class="member-img">
-                <a href="{{ secure_asset('assets/img/Alpha.jpeg') }}" data-lightbox="gallery" data-title="Bamoye TRAORE">
+                <a href="https://ikeneya.s3.us-east-2.amazonaws.com/nko-assets/assets/Alpha.jpeg" data-lightbox="gallery" data-title="Bamoye TRAORE">
                     <img src="{{ secure_asset('assets/img/Alpha.jpeg') }}" class="img-fluid" alt="">
                 </a>
                 <div class="social">
@@ -529,7 +529,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="50">
             <div class="member">
               <div class="member-img">
-                <a href="{{ secure_asset('assets/img/fatoma.jpeg') }}" data-lightbox="gallery" data-title="Fatoma DAOU">
+                <a href="https://ikeneya.s3.us-east-2.amazonaws.com/nko-assets/assets/fatoma.jpeg" data-lightbox="gallery" data-title="Fatoma DAOU">
                     <img src="{{ secure_asset('assets/img/fatoma.jpeg') }}" class="img-fluid" alt="">
                 </a>
                 <div class="social">
@@ -549,7 +549,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="50">
             <div class="member">
               <div class="member-img">
-                <a href="{{ secure_asset('assets/img/sall.jpeg') }}" data-lightbox="gallery" data-title="Yousssouf SALL">
+                <a href="https://ikeneya.s3.us-east-2.amazonaws.com/nko-assets/assets/sall.jpeg" data-lightbox="gallery" data-title="Yousssouf SALL">
                     <img src="{{ secure_asset('assets/img/sall.jpeg') }}" class="img-fluid" alt="">
                 </a>
                 <div class="social">
@@ -569,7 +569,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="50">
             <div class="member">
               <div class="member-img">
-                <a href="{{ secure_asset('assets/img/mohamed.jpeg') }}" data-lightbox="gallery" data-title="Mahamadou KONE">
+                <a href="https://ikeneya.s3.us-east-2.amazonaws.com/nko-assets/assets/mohamed.jpeg" data-lightbox="gallery" data-title="Mahamadou KONE">
                     <img src="{{ secure_asset('assets/img/mohamed.jpeg') }}" class="img-fluid" alt="">
 
                 </a>
@@ -634,12 +634,6 @@
 
           <div class="col-lg-6 ">
             <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15571.49108181196!2d-7.9270629!3d12.6563459!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe51d2eefc83e617%3A0x5d46e6bf47471e4f!2sDoniLab!5e0!3m2!1sen!2sml!4v1706201887233!5m2!1sen!2sml" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            {{-- <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe> --}}
-          </div>
-
-          <div class="col-lg-6">
-            <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15571.49108181196!2d-7.9270629!3d12.6563459!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe51d2eefc83e617%3A0x5d46e6bf47471e4f!2sDoniLab!5e0!3m2!1sen!2sml!4v1706201887233!5m2!1sen!2sml" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            {{-- <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe> --}}
           </div>
 
           <div class="col-lg-6">
@@ -754,7 +748,7 @@
 
   <div class="container py-4">
     <div class="copyright">
-      &copy; Copyright <strong><span>N'KO</span></strong>. Tous Droit Reserves
+      &copy; Copyright <strong><span>N'KO</span></strong>. Tous Droit Réservés
     </div>
     <div class="credits">
       <!-- All the links in the footer should remain intact. -->
@@ -763,7 +757,7 @@
       <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bizland-bootstrap-business-template/ -->
       Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
     </div>
-    <div class="credits">
+    <div class="credits mx-5">
       <!-- All the links in the footer should remain intact. -->
       <!-- You can delete the links only if you purchased the pro version. -->
       <!-- Licensing information: https://bootstrapmade.com/license/ -->
