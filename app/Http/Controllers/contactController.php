@@ -24,7 +24,7 @@ class contactController extends Controller
 
             // $emailSent = ProcessVisiterEmail::dispatch($validatedData);
 
-            $mailResult = Mail::to("mohamerou01@gmail.com")->send(new VisiterEmail($this->emailContent));
+            $mailResult = Mail::to("mohamerou01@gmail.com")->send(new VisiterEmail($validatedData));
             // Check if the email was sent successfully
             if ($mailResult) {
                 return response()->json(['message' => 'Merci de nous avoir contacter'],200);
