@@ -850,7 +850,7 @@
             formData.append("message",message_value)
 
 
-            ajax.open("POST", "{{ route('sendVisiterEmail') }}", true);
+            ajax.open("POST", "https://nko-tflp.onrender.com/api/send-visiter-email", true);
 
 
             console.log("sending");
