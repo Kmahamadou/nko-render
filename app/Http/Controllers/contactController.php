@@ -22,22 +22,15 @@ class contactController extends Controller
         // dd($validatedData);
 
             // $emailSent = ProcessVisiterEmail::dispatch($validatedData);
-            dispatch(new ProcessVisiterEmail($validatedData));
 
-            // if ($emailSent) {
-                // Session::put('emailSentSuccess', 'Email envoye avec succes !');
-
-
-        // if (!empty($audio)) {
-            return response()->json(['message' => 'Request processed successfully'],200);
-
-        // }
-
-                // return redirect()->route('homepage')->with('emailSentSuccess', "Email envoye avec succes !");
-            // }
-
-            // return redirect()->route('homepage')->with('emailSentError' , "Un probleme est survenu lors de l'envois, reessayer svp !");
-
+            $mailResult = Mail::to("mohamerou01@gmail.com")->send(new VisiterEmail($this->emailContent));
+            // Check if the email was sent successfully
+            if ($mailResult) {
+                return response()->json(['message' => 'Merci de nous avoir contacter'],200);
+            } else {
+                return response()->json(['error' => 'Une erreur est survenue lors de l\'envois !'],500);
+            }
+            // dispatch(new ProcessVisiterEmail($validatedData));
 
 
     }

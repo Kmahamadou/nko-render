@@ -51,6 +51,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+        flex-wrap: wrap;
     }
 
     @media (max-width: 768px) {
@@ -164,62 +165,62 @@
 
     <!-- ======= Featured Services Section ======= -->
     <section id="featured-services" class="featured-services">
-      <div class="container" data-aos="fade-up">
+        <div class="container" data-aos="fade-up">
 
 
-        <div class="section-title">
-            <h2>Contribuer</h2>
-            <h3><span></span></h3>
-            <p></p>
-          </div>
-
-
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch text-center mb-5 mb-lg-0">
-            <a href="{{ route('audioNko') }}">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
-              <div class="icon"><i class="fas fa-microphone"></i></div>
-              <h4 class="title"><a href="{{ route('audioNko') }}">Parler</a></h4>
-              <p class="description">Prononcer le texte N'KO qui vous etes presente</p>
+          <div class="section-title">
+              <h2>Contribuer</h2>
+              <h3><span></span></h3>
+              <p></p>
             </div>
-            </a>
-          </div>
 
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch text-center mb-5 mb-lg-0">
-            <a href="{{ route('showNkoText') }}">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-              <div class="icon"><i class="bi bi-pencil"></i></div>
-              <h4 class="title"><a href="{{ route("showNkoText") }}">Fournir du texte N'KO</a></h4>
-              <p class="description">Nous recoltons des donnees en N'KO</p>
-            </div>
-            </a>
-          </div>
 
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch text-center mb-5 mb-lg-0">
-            <a href="{{ route("showFrenchToNkoPage") }}">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-              <div class="icon"><i class="fas fa-language"></i></div>
-              <h4 class="title"><a href="{{ route("showFrenchToNkoPage") }}">Traduire du francais vers le N'KO</a></h4>
-              <p class="description">Traduire en N'KO le texte ecris en francais</p>
-            </div>
-            </a>
-          </div>
+          <div class="row" data-aos="fade-up" data-aos-delay="100">
 
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch text-center mb-5 mb-lg-0">
-            <a href="{{ route('onlyFrenchText') }}">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-              <div class="icon"><i class="bi bi-pencil"></i></div>
-              <h4 class="title"><a href="{{ route('onlyFrenchText') }}">Fournir du texte en Francais</a></h4>
-              <p class="description">Les textes recueillis en francais seront traduis en N'KO</p>
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch text-center mb-5 mb-lg-0">
+              <a href="{{ route('audioNko') }}">
+              <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon"><i class="fas fa-microphone"></i></div>
+                <h4 class="title"><a href="{{ route('audioNko') }}">Parler</a></h4>
+                <p class="description">Prononcer le texte N'KO qui vous etes presente</p>
+              </div>
+              </a>
             </div>
-            </a>
+
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch text-center mb-5 mb-lg-0">
+              <a href="{{ route('showNkoText') }}">
+              <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                <div class="icon"><i class="fas fa-pen"></i></div>
+                <h4 class="title"><a href="{{ route("showNkoText") }}">Fournir du texte N'KO</a></h4>
+                <p class="description">Nous recoltons des donnees en N'KO</p>
+              </div>
+              </a>
+            </div>
+
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch text-center mb-5 mb-lg-0">
+              <a href="{{ route("showFrenchToNkoPage") }}">
+              <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon"><i class="fas fa-language"></i></div>
+                <h4 class="title"><a href="{{ route("showFrenchToNkoPage") }}">Traduire du francais vers le N'KO</a></h4>
+                <p class="description">Traduire en N'KO le texte ecris en francais</p>
+              </div>
+              </a>
+            </div>
+
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch text-center mb-5 mb-lg-0">
+              <a href="{{ route('onlyFrenchText') }}">
+              <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon"><i class="fas fa-pen"></i></div>
+                <h4 class="title"><a href="{{ route('onlyFrenchText') }}">Fournir du texte en Francais</a></h4>
+                <p class="description">Les textes recueillis en francais seront traduis en N'KO</p>
+              </div>
+              </a>
+            </div>
+
           </div>
 
         </div>
-
-      </div>
-    </section><!-- End Featured Services Section -->
+      </section><!-- End Featured Services Section -->
 
 
     <!-- ======= About Section ======= -->
@@ -364,7 +365,9 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
               <div class="member-img">
-                <img src="{{ secure_asset('assets/img/hawa.JPG') }}" class="img-fluid" alt="">
+                <a href="assets/img/hawa.JPG" data-lightbox="gallery" data-title="Hawa DIONE">
+                    <img src="{{ secure_asset('assets/img/hawa.JPG') }}" class="img-fluid" alt="">
+                </a>
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
                   <a href="https://www.facebook.com/hawa.dioni.39" target="_blank"><i class="bi bi-facebook"></i></a>
@@ -382,7 +385,9 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
             <div class="member">
               <div class="member-img">
-                <img src="{{ secure_asset('assets/img/diouka.jpg') }}" class="img-fluid" alt="">
+                <a href="assets/img/diouka.jpg" data-lightbox="gallery" data-title="Diouka SISSOKO">
+                    <img src="{{ secure_asset('assets/img/diouka.jpg') }}" class="img-fluid" alt="">
+                </a>
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
                   <a target="_blank" href="https://m.facebook.com/profile.php/?id=100022039608402"><i class="bi bi-facebook"></i></a>
@@ -400,7 +405,9 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
               <div class="member-img">
-                <img src="{{ secure_asset('assets/img/djigui.jpg') }}" class="img-fluid" alt="">
+                <a href="assets/img/djigui.jpg" data-lightbox="gallery" data-title="Djigui KEITA">
+                    <img src="{{ secure_asset('assets/img/djigui.jpg') }}" class="img-fluid" alt="">
+                </a>
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
                   <a target="_blank" href="#"><i class="bi bi-facebook"></i></a>
@@ -418,7 +425,9 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="member">
               <div class="member-img">
-                <img src="{{ secure_asset('assets/img/Alpha.jpeg') }}" class="img-fluid" alt="">
+                <a href="assets/img/Alpha.jpeg" data-lightbox="gallery" data-title="Bamoye TRAORE">
+                    <img src="{{ secure_asset('assets/img/Alpha.jpeg') }}" class="img-fluid" alt="">
+                </a>
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
                   <a target="_blank" href="https://www.facebook.com/profile.php?id=100006821057109"><i class="bi bi-facebook"></i></a>
@@ -436,7 +445,50 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="50">
             <div class="member">
               <div class="member-img">
-                <img src="{{ secure_asset('assets/img/mohamed.jpeg') }}" class="img-fluid" alt="">
+                <a href="assets/img/fatoma.jpeg" data-lightbox="gallery" data-title="Fatoma DAOU">
+                    <img src="{{ secure_asset('assets/img/fatoma.jpeg') }}" class="img-fluid" alt="">
+                </a>
+                <div class="social">
+                  {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
+                  <a href="#"><i class="bi bi-facebook"></i></a>
+                  {{-- <a href=""><i class="bi bi-instagram"></i></a> --}}
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Fatoma DAOU</h4>
+                <span style="color: #3c3c3c">Expert N'KO</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="50">
+            <div class="member">
+              <div class="member-img">
+                <a href="assets/img/sall.jpeg" data-lightbox="gallery" data-title="Yousssouf SALL">
+                    <img src="{{ secure_asset('assets/img/sall.jpeg') }}" class="img-fluid" alt="">
+                </a>
+                <div class="social">
+                  {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
+                  <a target="_blank" href="https://www.facebook.com/DoniFab/"><i class="bi bi-facebook"></i></a>
+                  {{-- <a href=""><i class="bi bi-instagram"></i></a> --}}
+                  <a target="_blank" href="https://www.linkedin.com/in/youssouf-sall-567b5a72/"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Youssouf SALL</h4>
+                <span style="color: #3c3c3c">Consultant en Innovation Technologique</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="50">
+            <div class="member">
+              <div class="member-img">
+                <a href="assets/img/mohamed.jpeg" data-lightbox="gallery" data-title="Mahamadou KONE">
+                    <img src="{{ secure_asset('assets/img/mohamed.jpeg') }}" class="img-fluid" alt="">
+
+                </a>
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
                   <a target="_blank" href="https://www.facebook.com/DoniFab/"><i class="bi bi-facebook"></i></a>
@@ -447,24 +499,6 @@
               <div class="member-info">
                 <h4>Mahamadou KONE</h4>
                 <span style="color: #3c3c3c">FullStack Developer</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="50">
-            <div class="member">
-              <div class="member-img">
-                <img src="{{ secure_asset('assets/img/sall.jpeg') }}" class="img-fluid" alt="">
-                <div class="social">
-                  {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
-                  <a target="_blank" href="https://www.facebook.com/DoniFab/"><i class="bi bi-facebook"></i></a>
-                  {{-- <a href=""><i class="bi bi-instagram"></i></a> --}}
-                  <a target="_blank" href="https://www.linkedin.com/in/mahamadou-kone-42597b185/"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Youssouf SALL</h4>
-                <span style="color: #3c3c3c">Consultant en Innovation Technologique</span>
               </div>
             </div>
           </div>
@@ -515,6 +549,11 @@
         <div class="row" data-aos="fade-up" data-aos-delay="100">
 
           <div class="col-lg-6 ">
+            <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15571.49108181196!2d-7.9270629!3d12.6563459!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe51d2eefc83e617%3A0x5d46e6bf47471e4f!2sDoniLab!5e0!3m2!1sen!2sml!4v1706201887233!5m2!1sen!2sml" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            {{-- <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe> --}}
+          </div>
+
+          <div class="col-lg-6">
             <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15571.49108181196!2d-7.9270629!3d12.6563459!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe51d2eefc83e617%3A0x5d46e6bf47471e4f!2sDoniLab!5e0!3m2!1sen!2sml!4v1706201887233!5m2!1sen!2sml" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             {{-- <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe> --}}
           </div>
@@ -618,10 +657,10 @@
           {{-- <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p> --}}
           <div class="social-links mt-3">
             {{-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> --}}
-            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+            <a target="_blank" href="https://www.facebook.com/DoniFab/" class="facebook"><i class="bx bxl-facebook"></i></a>
             {{-- <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> --}}
             {{-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> --}}
-            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            {{-- <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> --}}
           </div>
         </div>
 
@@ -656,6 +695,12 @@
 <script src="{{ secure_asset('assets/vendor/waypoints/noframework.waypoints.js') }}"></script>
 {{-- <script src="{{ secure_asset('assets/vendor/php-email-form/validate.js') }}"></script> --}}
 
+
+<!-- Jquery CDN -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+
 <!-- Template Main JS File -->
 <script src="{{ secure_asset('assets/js/main.js') }}"></script>
 
@@ -669,133 +714,135 @@
 
 <script>
 
-function isValidEmail(email) {
-            // Regular expression for a simple email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailRegex.test(email);
-            }
+    function isValidEmail(email) {
+                // Regular expression for a simple email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+                }
 
 
 
 
 
-    function sendEmail(){
-        var ajax = new XMLHttpRequest();
+        function sendEmail(){
+            var ajax = new XMLHttpRequest();
 
-        const full_name_value = document.getElementById("full_name").value;
-        const visiterEmail_value = document.getElementById("visiterEmail").value;
-        const subject_value = document.getElementById("subject").value;
-        const message_value = document.getElementById("message").value;
+            const full_name_value = document.getElementById("full_name").value;
+            const visiterEmail_value = document.getElementById("visiterEmail").value;
+            const subject_value = document.getElementById("subject").value;
+            const message_value = document.getElementById("message").value;
 
 
-        // console.log(visiterEmail_value)
+            // console.log(visiterEmail_value)
 
-          // Validate form fields
-          // Define the isValidEmail function before sendEmail
+              // Validate form fields
+              // Define the isValidEmail function before sendEmail
 
-            if (
-                full_name_value.trim() === '' ||
-                visiterEmail_value.trim() === '' ||
-                subject_value.trim() === '' ||
-                message_value.trim() === ''
-            ) {
-                // Show an error message or perform any other action to handle invalid data
+                if (
+                    full_name_value.trim() === '' ||
+                    visiterEmail_value.trim() === '' ||
+                    subject_value.trim() === '' ||
+                    message_value.trim() === ''
+                ) {
+
+                        // Show a custom notification
+                        showNotification('Tous les champs sont obligatoires !', 'error');
+                    return;
+                }
+
+
+                // const loader = document.getElementById('loader');
+                send_email_loading = document.getElementById('send-email-loading');
+
+                // loader.style.display = 'block';
+                send_email_loading.style.display = 'block';
+
+
+            const formData = new FormData();
+
+            formData.append("full_name",full_name_value)
+            formData.append("visiterEmail",visiterEmail_value)
+            formData.append("subject",subject_value)
+            formData.append("message",message_value)
+
+
+            ajax.open("POST", "{{ route('sendVisiterEmail') }}", true);
+
+
+            console.log("sending");
+
+            // whenever the status of the request is changed
+            ajax.onreadystatechange = async function() {
+            if (this.readyState == 4) {
+                if (this.status == 200) {
+
+
+                console.log("succes recieved");
+
                 // Simulating a successful file upload
                 setTimeout(() => {
                     // Show a custom notification
-                    showNotification('Tous les champs sont obligatoires !', 'error');
+                    showNotification('Merci de nous avoir contacter !', 'success');
                         // Reset the form inputs
-                        // document.getElementById('emailForm').reset();
+                        document.getElementById('emailForm').reset();
 
                         send_email_loading.style.display = 'none';
                 }, 3500); // Simulated upload time (adjust as needed)
-            }
-
-
-            // const loader = document.getElementById('loader');
-            send_email_loading = document.getElementById('send-email-loading');
-
-            // loader.style.display = 'block';
-            send_email_loading.style.display = 'block';
-
-
-        const formData = new FormData();
-
-        formData.append("full_name",full_name_value)
-        formData.append("visiterEmail",visiterEmail_value)
-        formData.append("subject",subject_value)
-        formData.append("message",message_value)
-
-
-        ajax.open("POST", "http://localhost:8000/api/send-visiter-email", true);
-
-
-        console.log("sending");
-
-        // whenever the status of the request is changed
-        ajax.onreadystatechange = async function() {
-        if (this.readyState == 4) {
-            if (this.status == 200) {
-
-
-            console.log("succes recieved");
-
-            // Simulating a successful file upload
-            setTimeout(() => {
-                // Show a custom notification
-                showNotification('Vocal envoyer avec succes !', 'success');
-                    // Reset the form inputs
-                    document.getElementById('emailForm').reset();
-
-                    send_email_loading.style.display = 'none';
-            }, 3500); // Simulated upload time (adjust as needed)
-
-            // Hide loader after upload is complete
-            // loader.style.display = 'none';
-
-            console.log(this.responseText);
-            }
-
-            if (this.status == 500) {
-
-                console.log("error recieved");
-                // Simulating a successful file upload
-                setTimeout(() => {
-                    // Show a custom notification
-                    showNotification('Une erreur est survenue, veuillez reessayer !', 'error');
-
-                    send_email_loading.style.display = 'none';
-
-                }, 3500); // Simulated upload time (adjust as needed)
-
-
 
                 // Hide loader after upload is complete
-            // loader.style.display = 'none';
-            // email_error_message.style.display = 'none';
+                // loader.style.display = 'none';
 
-            console.log(this.responseText);
+                console.log(this.responseText);
+                }
+
+                if (this.status == 500) {
+
+                    console.log("error recieved");
+                    // Simulating a successful file upload
+                    setTimeout(() => {
+                        // Show a custom notification
+                        showNotification('Une erreur est survenue, veuillez reessayer !', 'error');
+
+                        send_email_loading.style.display = 'none';
+
+                    }, 3500); // Simulated upload time (adjust as needed)
+
+
+
+                    // Hide loader after upload is complete
+                // loader.style.display = 'none';
+                // email_error_message.style.display = 'none';
+
+                console.log(this.responseText);
+                }
             }
-        }
-        };
+            };
 
-        ajax.send(formData);
-}
-
-
-
-function showNotification(message, type)
-    {
-        const notification = document.createElement('div');
-        notification.className = `notification ${type}`;
-        notification.textContent = message;
-
-        document.body.appendChild(notification);
-
-        setTimeout(() => {
-            notification.remove();
-        }, 3000); // Remove the notification after 3 seconds (adjust as needed)
+            ajax.send(formData);
     }
+
+
+
+
+
+        ////////////////////////////////// Notification /////////////////////////////
+        function showNotification(message, type) {
+            var notification = document.createElement('div');
+            notification.textContent = message;
+            notification.className = 'notification ' + type;
+
+            document.body.appendChild(notification);
+
+            // Trigger the animation
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 10);
+
+            // Remove the notification after a delay
+            setTimeout(() => {
+                notification.remove();
+            }, 5000);
+        }
 
 
 </script>
