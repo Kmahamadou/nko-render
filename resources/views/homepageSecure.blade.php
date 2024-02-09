@@ -41,6 +41,21 @@
 
 
   <style>
+
+    .read-more-content {
+        max-height: 5em;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
+    }
+
+    .read-more-trigger {
+        cursor: pointer;
+        color: blue;
+        text-decoration: underline;
+        display: inline-block;
+        margin-top: 10px;
+    }
+
     .member-img {
         width: 15em !important;
         height: 16em;
@@ -142,7 +157,7 @@
       <div style="display: flex; flex-direction: row; justify-content: center; align-item: start">
         <div>
           <h1>Nos langues <span>Notre force</span></h1>
-          <h2></h2>
+          <h2>Ensemble, valorisons nos langues</h2>
           <div class="d-flex">
             <a href="{{ route('audioNko') }}" class="btn-get-started scrollto">Contribuer</a>
             {{-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span style="color: #fff">Presentation</span></a> --}}
@@ -173,9 +188,11 @@
             <div class="col-md-6 col-lg-3 d-flex align-items-stretch text-center mb-5 mb-lg-0">
               <a href="{{ route('audioNko') }}">
               <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
-                <div class="icon"><i class="fas fa-microphone"></i></div>
-                <h4 class="title"><a href="{{ route('audioNko') }}">Parler</a></h4>
-                <p class="description">Prononcer le texte N'KO qui vous etes presente</p>
+                  <div class="icon"><i class="fas fa-microphone"></i></div>
+                  <h4 class="title"><a href="{{ route('audioNko') }}">Prononcer le texte NKO affiché</a></h4>
+                  <p class="description">
+                  Objectif : Encourager les visiteurs à vocaliser le texte NKO affiché. <br>
+                  </p>
               </div>
               </a>
             </div>
@@ -184,8 +201,9 @@
               <a href="{{ route('showNkoText') }}">
               <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
                 <div class="icon"><i class="fas fa-pen"></i></div>
-                <h4 class="title"><a href="{{ route("showNkoText") }}">Fournir du texte N'KO</a></h4>
-                <p class="description">Nous recoltons des donnees en N'KO</p>
+                <h4 class="title"><a href="{{ route("showNkoText") }}">Écrire uniquement du texte en NKO</a></h4>
+                <p class="description">    Objectif : Inciter les visiteurs à composer du texte exclusivement en NKO. <br>
+                </p>
               </div>
               </a>
             </div>
@@ -194,8 +212,9 @@
               <a href="{{ route("showFrenchToNkoPage") }}">
               <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
                 <div class="icon"><i class="fas fa-language"></i></div>
-                <h4 class="title"><a href="{{ route("showFrenchToNkoPage") }}">Traduire du francais vers le N'KO</a></h4>
-                <p class="description">Traduire en N'KO le texte ecris en francais</p>
+                <h4 class="title"><a href="{{ route("showFrenchToNkoPage") }}">Traduire les textes fournis précédemment en français en texte NKO</a></h4>
+                <p class="description">    Objectif : Les visiteurs traduisent des textes français existants en NKO.<br>
+                </p>
               </div>
               </a>
             </div>
@@ -204,8 +223,9 @@
               <a href="{{ route('onlyFrenchText') }}">
               <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
                 <div class="icon"><i class="fas fa-pen"></i></div>
-                <h4 class="title"><a href="{{ route('onlyFrenchText') }}">Fournir du texte en Francais</a></h4>
-                <p class="description">Les textes recueillis en francais seront traduis en N'KO</p>
+                <h4 class="title"><a href="{{ route('onlyFrenchText') }}">Écrire uniquement du texte en français</a></h4>
+                <p class="description">    Objectif : Encourager les visiteurs à rédiger exclusivement en français.<br>
+                </p>
               </div>
               </a>
             </div>
@@ -216,58 +236,129 @@
       </section><!-- End Featured Services Section -->
 
 
+
     <!-- ======= About Section ======= -->
     <section id="about" class="about section-bg">
-      <div class="container" data-aos="fade-up">
+        <div class="container" data-aos="fade-up">
 
-        <div class="section-title">
-          <h2>A propos</h2>
-          <h3>Savoir plus <span>sur Nous</span></h3>
-          <p>Nous sommes un laboratoire de fabrication numerique.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+          <div class="section-title">
+            <h2>A propos</h2>
+            <h3>Savoir plus <span>sur Nous</span></h3>
+            <p>Nous sommes un laboratoire de fabrication numerique.</p>
           </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
-            <h3>A quoi sert la presente plateforme?</h3>
-            <p class="fst-italic">
-              Ici, nous collectons des donnees sur le N'KO en vue d'entrainer nos IA (Intelligence Artificielle) a comprendre et generer du texte en N'KO<br/>.
-              La mise en place d'un IA de ce type a les avantages suivants:
-            </p>
-            <ul>
+
+          <div class="row">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+              <img src="assets/img/about.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+
+
+              <h4>À propos de nous</h4>
+
+              <div class="read-more-content">
+                  <p>Bienvenue sur <strong>la plateforme de collecte de données pour les modèles de Langue NKO de DoniFab</strong>, le FabLab pionnier au <strong>Mali</strong>, fondé en 2016. Nous sommes dédiés à repousser les limites de l'innovation et de la technologie, en tant que lieu de créativité, de collaboration et de projets de pointe.</p>
+
+                  <h4>Notre Mission</h4>
+
+                  <p>À <strong>DoniFab</strong>, nous croyons au pouvoir transformateur de la technologie pour créer un changement positif. En tant que FabLab, nous avons été à l'avant-garde du mouvement maker, fournissant un espace où des individus de divers horizons peuvent explorer, expérimenter et donner vie à leurs idées.</p>
+
+                  <h4>Plateforme de Collecte de Données pour les Modèles Linguistiques NKO</h4>
+
+                  <p>En plus de notre engagement envers l'innovation, nous avons lancé une initiative passionnante en collaboration avec nos modèles linguistiques NKO. Nous avons mis en place une plateforme de collecte de données de pointe conçue pour rassembler des données textuelles et audio. Notre objectif est de contribuer à l'avancement des technologies de la parole au texte et du texte à la parole, spécifiquement adaptées à la langue NKO, favorisant ainsi la communication et l'accessibilité.</p>
+
+                  <h4>Abattre les Barrières Linguistiques</h4>
+
+                  <p>Grâce à la collecte de jeux de données divers, nous visons à former nos modèles pour convertir de manière transparente la langue NKO en français et vice versa. Cela améliore non seulement notre compréhension des subtilités linguistiques, mais aussi abat les barrières linguistiques, ouvrant de nouvelles possibilités de communication et de compréhension.</p>
+
+                  <h4>Rejoignez-nous dans l'Aventure de l'Innovation</h4>
+
+                  <p>Que vous soyez un innovateur chevronné, un créateur curieux, ou quelqu'un passionné par l'intersection de la technologie et du langage, <strong>DoniFab</strong> vous invite à nous rejoindre dans cette aventure de l'innovation. Ensemble, explorons les possibilités, repoussons les limites et façonnons un avenir où la technologie nous donne du pouvoir et nous connecte tous.</p>
+
+                  <p>Merci de faire partie de notre communauté !</p>
+
+                  <p><strong>DoniFab</strong></p>
+              </div>
+
+              <a class="read-more-trigger" onclick="toggleReadMore()">Lire la suite</a>
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="250">
+
+
+              <ul>
+                  <li>
+                    <i class="fas fa-language"></i>
+                    <div>
+                      <h5>Précision Améliorée de la Traduction </h5>
+                      <p>
+                          Le jeu de données multilingue améliore la compréhension du modèle NKO des nuances et du contexte du français et du NKO, conduisant à des traductions plus précises.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <i class="fa fa-text-width"></i>
+                    <div>
+                      <h5>Génération de Texte Améliorée</h5>
+                      <p>
+                          Les entrées linguistiques variées contribuent à une compréhension plus complète de la langue NKO, permettant au modèle de générer un texte cohérent et contextuellement pertinent en NKO.
+                      </p>
+                    </div>
+                  </li>
                 <li>
-                  <i class="fas fa-language"></i>
+                  <i class="fa fa-globe"></i>
                   <div>
-                    <h5>Traduire du N'KO vers d'autres langues et vis versa </h5>
-                    {{-- <p>Il vous suffit de commander et la machine vous obeillit</p> --}}
+                    <h5>Sensibilité Culturelle </h5>
+                    <p>
+                      Le jeu de données diversifié garantit une représentation de différents styles linguistiques et contextes culturels, rendant les modèles NKO plus sensibles culturellement et conscients du contexte dans leurs tâches linguistiques.
+                    </p>
                   </div>
                 </li>
                 <li>
-                  <i class="fas fa-microphone"></i>
+                  <i class="fa-universal-access"></i>
                   <div>
-                    <h5>Donner des commandes vocales a son appareil en N'KO</h5>
-                    {{-- <p>Il vous suffit de commander et la machine vous obeillit</p> --}}
+                    <h5>Accès Accru  </h5>
+                    <p>
+                      L'inclusion de données NKO parlées soutient le développement d'applications vocales, favorisant l'accessibilité pour les individus préférant ou nécessitant des interactions basées sur la parole en NKO.
+                    </p>
                   </div>
                 </li>
-              <li>
-                <i class="bi bi-pencil"></i>
-                <div>
-                  <h5>Auto-correction lors de la saisie de texte en N'KO</h5>
-                  <p></p>
-                </div>
-              </li>
-            </ul>
-            {{-- <p>
-                Ensemble, mettons nos langues en valeur.<br/>
+                <li>
+                  <i class="fa fa-language"></i>
+                  <div>
+                    <h5>Compréhension Globale de la Langue NKO </h5>
+                    <p>
+                      Les activités couvrant l'écriture, la traduction et la parole contribuent à une compréhension holistique de la langue NKO, englobant les formes écrites et parlées, résultant en des modèles performants pour diverses tâches linguistiques.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <i class="fa fa-plus-square"></i>
+                  <div>
+                    <h5>Soutien à la Création de Contenu NKO </h5>
+                    <p>
+                      Les créateurs de contenu sur la plateforme bénéficient de modèles linguistiques améliorés pour la création de contenu en NKO, améliorant la qualité et la pertinence dans divers domaines.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <i class="fa fa-industry"></i>
+                  <div>
+                    <h5>Applications Linguistiques Polyvalentes </h5>
+                    <p>
+                      Un modèle NKO bien entraîné peut être appliqué dans de nombreuses applications, y compris la création de contenu, les services de traduction, les plateformes d'apprentissage linguistique, contribuant à la polyvalence de la technologie linguistique NKO.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+              {{-- <p>
+                  Ensemble, mettons nos langues en valeur.<br/>
 
-            </p> --}}
+              </p> --}}
+            </div>
           </div>
-        </div>
 
-      </div>
-    </section><!-- End About Section -->
+        </div>
+      </section><!-- End About Section -->
 
     <!-- ======= Counts Section ======= -->
     <section id="counts" class="counts">
@@ -277,7 +368,7 @@
 
             <div class="col-lg-3 col-md-6">
               <div class="count-box">
-                <i class="bi bi-emoji-smile"></i>
+                <i class="fas fa-microphone"></i>
                 <span data-purecounter-start="0" data-purecounter-end="{{ $countsValues["audios"] }}" data-purecounter-duration="1" class="purecounter"></span>
                 <p>Enregistrements audios</p>
               </div>
@@ -285,7 +376,7 @@
 
             <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
               <div class="count-box">
-                <i class="bi bi-journal-richtext"></i>
+                <i class="fas fa-pen"></i>
                 <span data-purecounter-start="0" data-purecounter-end="{{ $countsValues["nkosentences"] }}" data-purecounter-duration="1" class="purecounter"></span>
                 <p>Textes en NKO</p>
               </div>
@@ -293,17 +384,17 @@
 
             <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
               <div class="count-box">
-                <i class="bi bi-headset"></i>
-                <span data-purecounter-start="0" data-purecounter-end="{{ $countsValues["frenchsentences"] }}" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Textes en Francais</p>
+                <i class="fas fa-language"></i>
+                <span data-purecounter-start="0" data-purecounter-end="{{ $countsValues["FrenchToNkos"] }}" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Traductions</p>
               </div>
             </div>
 
             <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
               <div class="count-box">
-                <i class="bi bi-people"></i>
-                <span data-purecounter-start="0" data-purecounter-end="{{ $countsValues["FrenchToNkos"] }}" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Traductions</p>
+                <i class="fas fa-pen"></i>
+                <span data-purecounter-start="0" data-purecounter-end="{{ $countsValues["frenchsentences"] }}" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Textes en Francais</p>
               </div>
             </div>
 
@@ -358,7 +449,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
               <div class="member-img">
-                <a href="assets/img/hawa.JPG" data-lightbox="gallery" data-title="Hawa DIONE">
+                <a href="{{ secure_asset('assets/img/hawa.JPG') }}" data-lightbox="gallery" data-title="Hawa DIONE">
                     <img src="{{ secure_asset('assets/img/hawa.JPG') }}" class="img-fluid" alt="">
                 </a>
                 <div class="social">
@@ -378,7 +469,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
             <div class="member">
               <div class="member-img">
-                <a href="assets/img/diouka.jpg" data-lightbox="gallery" data-title="Diouka SISSOKO">
+                <a href="{{ secure_asset('assets/img/diouka.jpg') }}" data-lightbox="gallery" data-title="Diouka SISSOKO">
                     <img src="{{ secure_asset('assets/img/diouka.jpg') }}" class="img-fluid" alt="">
                 </a>
                 <div class="social">
@@ -398,7 +489,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
               <div class="member-img">
-                <a href="assets/img/djigui.jpg" data-lightbox="gallery" data-title="Djigui KEITA">
+                <a href="{{ secure_asset('assets/img/djigui.jpg') }}" data-lightbox="gallery" data-title="Djigui KEITA">
                     <img src="{{ secure_asset('assets/img/djigui.jpg') }}" class="img-fluid" alt="">
                 </a>
                 <div class="social">
@@ -418,7 +509,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="member">
               <div class="member-img">
-                <a href="assets/img/Alpha.jpeg" data-lightbox="gallery" data-title="Bamoye TRAORE">
+                <a href="{{ secure_asset('assets/img/Alpha.jpeg') }}" data-lightbox="gallery" data-title="Bamoye TRAORE">
                     <img src="{{ secure_asset('assets/img/Alpha.jpeg') }}" class="img-fluid" alt="">
                 </a>
                 <div class="social">
@@ -438,7 +529,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="50">
             <div class="member">
               <div class="member-img">
-                <a href="assets/img/fatoma.jpeg" data-lightbox="gallery" data-title="Fatoma DAOU">
+                <a href="{{ secure_asset('assets/img/fatoma.jpeg') }}" data-lightbox="gallery" data-title="Fatoma DAOU">
                     <img src="{{ secure_asset('assets/img/fatoma.jpeg') }}" class="img-fluid" alt="">
                 </a>
                 <div class="social">
@@ -458,7 +549,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="50">
             <div class="member">
               <div class="member-img">
-                <a href="assets/img/sall.jpeg" data-lightbox="gallery" data-title="Yousssouf SALL">
+                <a href="{{ secure_asset('assets/img/sall.jpeg') }}" data-lightbox="gallery" data-title="Yousssouf SALL">
                     <img src="{{ secure_asset('assets/img/sall.jpeg') }}" class="img-fluid" alt="">
                 </a>
                 <div class="social">
@@ -478,7 +569,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="50">
             <div class="member">
               <div class="member-img">
-                <a href="assets/img/mohamed.jpeg" data-lightbox="gallery" data-title="Mahamadou KONE">
+                <a href="{{ secure_asset('assets/img/mohamed.jpeg') }}" data-lightbox="gallery" data-title="Mahamadou KONE">
                     <img src="{{ secure_asset('assets/img/mohamed.jpeg') }}" class="img-fluid" alt="">
 
                 </a>
@@ -684,6 +775,31 @@
 
 <div id="preloader"></div>
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+
+
+<script>
+
+    function toggleReadMore() {
+
+        console.log("reached !");
+        const content = document.querySelector('.read-more-content');
+        const trigger = document.querySelector('.read-more-trigger');
+
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+            trigger.innerText = 'Lire la suite';
+
+        console.log("Strech !");
+        } else {
+            content.style.maxHeight = content.scrollHeight + 'px';
+            trigger.innerText = 'Réduire';
+
+        console.log("Shrink !");
+        }
+    }
+</script>
 
 
 <script>

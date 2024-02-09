@@ -14,6 +14,11 @@
             <h2>Traduction</h2>
             <h3><span>Francais &rarr; N'KO <i class="bi bi-pencil" style="margin-right:5px; color: #3399FF;"></i></span></h3>
             <p style="font-size: 17px; margin-left: 300px;margin-top: 50px;"><i class="fas fa-language" style="margin-right:5px; color: #3399FF;"></i>Traduire la phrase suivante en Nko :</p>
+
+            <p class="fst-italic">   <strong> Objectif :</strong> Les visiteurs traduisent des textes français existants en NKO.<br>
+                <strong> Contribution de données :</strong> Cette tâche enrichit le jeu de données en fournissant des paires de textes français-NKO parallèles, offrant des perspectives précieuses sur les modèles de traduction, les nuances linguistiques et l'alignement contextuel, améliorant ainsi la qualité des modèles de traduction.
+            </p>
+
             @if (empty($randomSentence))
                 <p>Aucune phrase</p>
             @else

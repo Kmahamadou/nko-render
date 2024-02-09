@@ -21,7 +21,17 @@
                     <h3><span>Parlons N'KO <i class="fas fa-microphone" style="margin-right:5px; color: #3399FF;"></i></span>
                     </h3>
                     <p style="margint: 20px auto;"> <i class="fas fa-microphone"
-                            style="margin-right:5px; color: #3399FF;"></i> Lire la phrase suivante :</p>
+                            style="margin-right:5px; color: #3399FF;"></i>
+                            Lire la phrase suivante :
+                    </p>
+
+
+
+                    <p class="fst-italic">
+                        <strong>Objectif :</strong> Encourager les visiteurs à vocaliser le texte NKO affiché. <br>
+                        Contribution de données : Cette activité contribue à la collecte de données audio en NKO, aidant au développement de modèles de transcription de la parole spécifiques à la langue NKO. Cela contribue à améliorer la précision dans la transcription de la langue NKO parlée, facilitant une meilleure communication et accessibilité.
+                    </p>
+
                 </div>
 
                 @if (!isset($randomSentence->sentence))

@@ -15,7 +15,12 @@
             <h2>Saisie</h2>
             <h3><span>N'KO <i class="bi bi-pencil" style="margin-right:5px; color: #3399FF;"></i></span></h3>
             <p>Fournir une phrase ou un paragraphe en N'KO:</p>
-          </div>
+
+            <p class="fst-italic">    <strong>Objectif :</strong> Inciter les visiteurs à composer du texte exclusivement en NKO. <br>
+                <strong>Contribution de données :</strong> Cette activité fournit des données précieuses en langue NKO, essentielles pour former des modèles à mieux comprendre les nuances, la structure et le contexte de la langue NKO, améliorant ainsi la précision de la génération de texte en NKO.
+            </p>
+
+        </div>
 
           <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
 
