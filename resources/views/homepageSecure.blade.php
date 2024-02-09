@@ -449,9 +449,9 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
               <div class="member-img">
-                <a href="https://ikeneya.s3.us-east-2.amazonaws.com/nko-assets/assets/hawa.JPG" data-lightbox="gallery" data-title="Hawa DIONE">
+                {{-- <a href="https://ikeneya.s3.us-east-2.amazonaws.com/nko-assets/assets/hawa.JPG" data-lightbox="gallery" data-title="Hawa DIONE"> --}}
                     <img src="{{ secure_asset('assets/img/hawa.JPG') }}" class="img-fluid" alt="">
-                </a>
+                {{-- </a> --}}
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
                   <a href="https://www.facebook.com/hawa.dioni.39" target="_blank"><i class="bi bi-facebook"></i></a>
@@ -469,9 +469,9 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
             <div class="member">
               <div class="member-img">
-                <a href="https://ikeneya.s3.us-east-2.amazonaws.com/nko-assets/assets/diouka.jpg" data-lightbox="gallery" data-title="Diouka SISSOKO">
+                {{-- <a href="https://ikeneya.s3.us-east-2.amazonaws.com/nko-assets/assets/diouka.jpg" data-lightbox="gallery" data-title="Diouka SISSOKO"> --}}
                     <img src="{{ secure_asset('assets/img/diouka.jpg') }}" class="img-fluid" alt="">
-                </a>
+                {{-- </a> --}}
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
                   <a target="_blank" href="https://m.facebook.com/profile.php/?id=100022039608402"><i class="bi bi-facebook"></i></a>
@@ -489,9 +489,9 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
               <div class="member-img">
-                <a href="https://ikeneya.s3.us-east-2.amazonaws.com/nko-assets/assets/djigui.jpg" data-lightbox="gallery" data-title="Djigui KEITA">
+                {{-- <a href="https://ikeneya.s3.us-east-2.amazonaws.com/nko-assets/assets/djigui.jpg" data-lightbox="gallery" data-title="Djigui KEITA"> --}}
                     <img src="{{ secure_asset('assets/img/djigui.jpg') }}" class="img-fluid" alt="">
-                </a>
+                {{-- </a> --}}
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
                   <a target="_blank" href="#"><i class="bi bi-facebook"></i></a>
@@ -509,9 +509,9 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="member">
               <div class="member-img">
-                <a href="https://ikeneya.s3.us-east-2.amazonaws.com/nko-assets/assets/Alpha.jpeg" data-lightbox="gallery" data-title="Bamoye TRAORE">
+                {{-- <a href="https://ikeneya.s3.us-east-2.amazonaws.com/nko-assets/assets/Alpha.jpeg" data-lightbox="gallery" data-title="Bamoye TRAORE"> --}}
                     <img src="{{ secure_asset('assets/img/Alpha.jpeg') }}" class="img-fluid" alt="">
-                </a>
+                {{-- </a> --}}
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
                   <a target="_blank" href="https://www.facebook.com/profile.php?id=100006821057109"><i class="bi bi-facebook"></i></a>
@@ -529,9 +529,9 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="50">
             <div class="member">
               <div class="member-img">
-                <a href="https://ikeneya.s3.us-east-2.amazonaws.com/nko-assets/assets/fatoma.jpeg" data-lightbox="gallery" data-title="Fatoma DAOU">
+                {{-- <a href="https://ikeneya.s3.us-east-2.amazonaws.com/nko-assets/assets/fatoma.jpeg" data-lightbox="gallery" data-title="Fatoma DAOU"> --}}
                     <img src="{{ secure_asset('assets/img/fatoma.jpeg') }}" class="img-fluid" alt="">
-                </a>
+                {{-- </a> --}}
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
                   <a href="#"><i class="bi bi-facebook"></i></a>
@@ -549,9 +549,9 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="50">
             <div class="member">
               <div class="member-img">
-                <a href="https://ikeneya.s3.us-east-2.amazonaws.com/nko-assets/assets/sall.jpeg" data-lightbox="gallery" data-title="Yousssouf SALL">
+                {{-- <a href="https://ikeneya.s3.us-east-2.amazonaws.com/nko-assets/assets/sall.jpeg" data-lightbox="gallery" data-title="Yousssouf SALL"> --}}
                     <img src="{{ secure_asset('assets/img/sall.jpeg') }}" class="img-fluid" alt="">
-                </a>
+                {{-- </a> --}}
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
                   <a target="_blank" href="https://www.facebook.com/DoniFab/"><i class="bi bi-facebook"></i></a>
@@ -569,9 +569,9 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="50">
             <div class="member">
               <div class="member-img">
-                <a href="https://ikeneya.s3.us-east-2.amazonaws.com/nko-assets/assets/mohamed.jpeg" data-lightbox="gallery" data-title="Mahamadou KONE">
+                {{-- <a href="https://ikeneya.s3.us-east-2.amazonaws.com/nko-assets/assets/mohamed.jpeg" data-lightbox="gallery" data-title="Mahamadou KONE"> --}}
                     <img src="{{ secure_asset('assets/img/mohamed.jpeg') }}" class="img-fluid" alt="">
-
+{{--  --}}
                 </a>
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
