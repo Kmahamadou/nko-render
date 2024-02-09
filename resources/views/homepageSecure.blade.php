@@ -10,8 +10,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link rel="icon" href="{{ secure_asset('assets/img/logo.svg') }}" type="image/x-icon">
-  <link rel="shortcut icon" href="{{ secure_asset('assets/img/logo.svg') }}" type="image/x-icon">
+  <link rel="icon" href="{{ secure_asset('assets/img/logo.png') }}" type="image/x-icon">
+  <link rel="shortcut icon" href="{{ secure_asset('assets/img/logo.png') }}" type="image/x-icon">
 
 
   <!-- fa icon CDN -->
@@ -86,9 +86,9 @@
       </div>
       <div class="social-links d-none d-md-flex align-items-center">
         {{-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a> --}}
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a target="_blank" href="https://www.facebook.com/DoniFab/"><i class="bi bi-facebook"></i></a>
         {{-- <a href="#" class="instagram"><i class="bi bi-instagram"></i></a> --}}
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        <a target="_blank" href="https://www.linkedin.com/in/mahamadou-kone-42597b185/"><i class="bi bi-linkedin"></i></i></a>
       </div>
     </div>
   </section>
@@ -136,20 +136,13 @@
 
 
 
-  {{-- //////////////////// Email Sent /////////////// --}}
-  @if(Session::has('emailSentSuccess'))
-  <div id="successMessage" class="alert alert-success col-4 mx-auto my-3 text-center">
-      {{ Session::get('emailSentSuccess') }}
-  </div>
-  @endif
-
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
       <div style="display: flex; flex-direction: row; justify-content: center; align-item: start">
         <div>
-          <h1>Espace <span>N'KO</span></h1>
-          <h2>Nos langues, Notre force</h2>
+          <h1>Nos langues <span>Notre force</span></h1>
+          <h2></h2>
           <div class="d-flex">
             <a href="{{ route('audioNko') }}" class="btn-get-started scrollto">Contribuer</a>
             {{-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span style="color: #fff">Presentation</span></a> --}}
@@ -187,7 +180,7 @@
               </a>
             </div>
 
-            <div class="col-md-6 col-lg-3 d-flex align-items-stretch text-center mb-5 mb-lg-0">
+            <div class="col-md-6 col-lg-3 d-flex px-5 align-items-stretch text-center mb-5 mb-lg-0">
               <a href="{{ route('showNkoText') }}">
               <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
                 <div class="icon"><i class="fas fa-pen"></i></div>
@@ -277,48 +270,48 @@
     </section><!-- End About Section -->
 
     <!-- ======= Counts Section ======= -->
-    {{-- <section id="counts" class="counts">
-      <div class="container" data-aos="fade-up">
+    <section id="counts" class="counts">
+        <div class="container" data-aos="fade-up">
 
-        <div class="row">
+          <div class="row">
 
-          <div class="col-lg-3 col-md-6">
-            <div class="count-box">
-              <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Happy Clients</p>
+            <div class="col-lg-3 col-md-6">
+              <div class="count-box">
+                <i class="bi bi-emoji-smile"></i>
+                <span data-purecounter-start="0" data-purecounter-end="{{ $countsValues["audios"] }}" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Enregistrements audios</p>
+              </div>
             </div>
-          </div>
 
-          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
-            <div class="count-box">
-              <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Projects</p>
+            <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+              <div class="count-box">
+                <i class="bi bi-journal-richtext"></i>
+                <span data-purecounter-start="0" data-purecounter-end="{{ $countsValues["nkosentences"] }}" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Textes en NKO</p>
+              </div>
             </div>
-          </div>
 
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
-              <i class="bi bi-headset"></i>
-              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hours Of Support</p>
+            <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+              <div class="count-box">
+                <i class="bi bi-headset"></i>
+                <span data-purecounter-start="0" data-purecounter-end="{{ $countsValues["frenchsentences"] }}" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Textes en Francais</p>
+              </div>
             </div>
-          </div>
 
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
-              <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hard Workers</p>
+            <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+              <div class="count-box">
+                <i class="bi bi-people"></i>
+                <span data-purecounter-start="0" data-purecounter-end="{{ $countsValues["FrenchToNkos"] }}" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Traductions</p>
+              </div>
             </div>
+
           </div>
 
         </div>
-
-      </div>
-    </section> --}}
-    <!-- End Counts Section -->
+      </section>
+      <!-- End Counts Section -->
 
     <!-- ======= Clients Section ======= -->
     <section id="clients" class="clients section-bg">
@@ -359,7 +352,7 @@
           <p>Notre objectif est de faire la difference.</p>
         </div>
 
-        <div class="container row membre">
+        <div class="membre">
 
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
@@ -660,7 +653,7 @@
             <a target="_blank" href="https://www.facebook.com/DoniFab/" class="facebook"><i class="bx bxl-facebook"></i></a>
             {{-- <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> --}}
             {{-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> --}}
-            {{-- <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> --}}
+            <a target="_blank" href="https://www.linkedin.com/in/mahamadou-kone-42597b185/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
           </div>
         </div>
 
@@ -679,37 +672,18 @@
       <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bizland-bootstrap-business-template/ -->
       Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
     </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bizland-bootstrap-business-template/ -->
+      Implemented by by <a href="#">BKO-TECHNOLOGIES</a>
+    </div>
   </div>
 </footer><!-- End Footer -->
 
 <div id="preloader"></div>
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-<!-- Vendor JS Files -->
-<script src="{{ secure_asset('assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
-<script src="{{ secure_asset('assets/vendor/aos/aos.js') }}"></script>
-<script src="{{ secure_asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-<script src="{{ secure_asset('assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
-<script src="{{ secure_asset('assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
-<script src="{{ secure_asset('assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
-<script src="{{ secure_asset('assets/vendor/waypoints/noframework.waypoints.js') }}"></script>
-{{-- <script src="{{ secure_asset('assets/vendor/php-email-form/validate.js') }}"></script> --}}
-
-
-<!-- Jquery CDN -->
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-
-
-<!-- Template Main JS File -->
-<script src="{{ secure_asset('assets/js/main.js') }}"></script>
-
-{{-- <script>
-    // Hide the success message after 5 seconds (5000 milliseconds)
-    setTimeout(function(){
-        document.getElementById('successMessage').style.display = 'none';
-    }, 5000);
-</script> --}}
 
 
 <script>
@@ -846,6 +820,37 @@
 
 
 </script>
+
+
+
+<script>
+    document.querySelectorAll('.zoomable').forEach(function (image) {
+        image.addEventListener('click', function () {
+        this.classList.toggle('clicked');
+        });
+    });
+
+</script>
+
+
+<!-- Vendor JS Files -->
+<script src="{{ secure_asset('assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
+<script src="{{ secure_asset('assets/vendor/aos/aos.js') }}"></script>
+<script src="{{ secure_asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ secure_asset('assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+<script src="{{ secure_asset('assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+<script src="{{ secure_asset('assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+<script src="{{ secure_asset('assets/vendor/waypoints/noframework.waypoints.js') }}"></script>
+{{-- <script src="{{ secure_asset('assets/vendor/php-email-form/validate.js') }}"></script> --}}
+
+
+<!-- Jquery CDN -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+
+<!-- Template Main JS File -->
+<script src="{{ secure_asset('assets/js/main.js') }}"></script>
 
 </body>
 
