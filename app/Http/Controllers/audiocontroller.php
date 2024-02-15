@@ -55,6 +55,8 @@ class audiocontroller extends Controller
         $audio_name = $audio->id;
 
         $audio_storage_path = "nko/audio-".$audio_name.".wav";
+
+
         $audiotest = \Storage::disk('s3')->put($audio_storage_path, $binaryData);
 
 
@@ -65,7 +67,6 @@ class audiocontroller extends Controller
             return response()->json(['message' => 'Request processed successfully', 'next_nko_sentence' => $randomNkoSentence->sentence]);
 
         }
-
         return response()->json(['error' => "Erreur lors du chargement de l'audio"]);
 
     }
