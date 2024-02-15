@@ -17,13 +17,6 @@ ENV LOG_CHANNEL stderr
 # Allow composer to run as root
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
-# Install PHP dependencies and run migrations
-RUN composer install --no-scripts --no-dev --no-autoloader && \
-    composer dump-autoload --optimize && \
-    php artisan migrate --force --seed
-
-# Expose port 80
-EXPOSE 80
 
 
 CMD ["/start.sh"]
