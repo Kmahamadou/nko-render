@@ -257,27 +257,26 @@
               <h4>À propos de nous</h4>
 
               <div class="read-more-content">
-                  <p>Bienvenue sur <strong>la plateforme de collecte de données pour les modèles de Langue NKO de DoniFab</strong>, le FabLab pionnier au <strong>Mali</strong>, fondé en 2016. Nous sommes dédiés à repousser les limites de l'innovation et de la technologie, en tant que lieu de créativité, de collaboration et de projets de pointe.</p>
+                  <p>Bienvenue sur <strong>la plateforme de collecte de données pour les modèles de Langue NKO </strong>.</p>
 
                   <h4>Notre Mission</h4>
 
                   <p>À <strong>DoniFab</strong>, nous croyons au pouvoir transformateur de la technologie pour créer un changement positif. En tant que FabLab, nous avons été à l'avant-garde du mouvement maker, fournissant un espace où des individus de divers horizons peuvent explorer, expérimenter et donner vie à leurs idées.</p>
 
-                  <h4>Plateforme de Collecte de Données pour les Modèles Linguistiques NKO</h4>
+                  <h4>Pourquoi une plateforme de Collecte de Données pour les Modèles Linguistiques NKO</h4>
 
-                  <p>En plus de notre engagement envers l'innovation, nous avons lancé une initiative passionnante en collaboration avec nos modèles linguistiques NKO. Nous avons mis en place une plateforme de collecte de données de pointe conçue pour rassembler des données textuelles et audio. Notre objectif est de contribuer à l'avancement des technologies de la parole au texte et du texte à la parole, spécifiquement adaptées à la langue NKO, favorisant ainsi la communication et l'accessibilité.</p>
+                  <p>En plus de notre engagement envers l'innovation, nous avons mis en place une plateforme conçue pour rassembler des données textuelles et audio. Notre objectif est de contribuer à l'avancement des technologies à base d'intelligence artificielle, spécifiquement adaptées à la langue NKO, favorisant ainsi la communication et l'accessibilité.</p>
 
                   <h4>Abattre les Barrières Linguistiques</h4>
 
-                  <p>Grâce à la collecte de jeux de données divers, nous visons à former nos modèles pour convertir de manière transparente la langue NKO en français et vice versa. Cela améliore non seulement notre compréhension des subtilités linguistiques, mais aussi abat les barrières linguistiques, ouvrant de nouvelles possibilités de communication et de compréhension.</p>
+                  <p>Grâce à la collecte de jeux de données divers, nous visons à former nos modèles pour convertir de manière transparente la langue NKO en d'autre langues et vice versa. Cela améliore non seulement notre compréhension des subtilités linguistiques, mais aussi abat les barrières linguistiques, ouvrant de nouvelles possibilités de communication et de compréhension.</p>
 
                   <h4>Rejoignez-nous dans l'Aventure de l'Innovation</h4>
 
                   <p>Que vous soyez un innovateur chevronné, un créateur curieux, ou quelqu'un passionné par l'intersection de la technologie et du langage, <strong>DoniFab</strong> vous invite à nous rejoindre dans cette aventure de l'innovation. Ensemble, explorons les possibilités, repoussons les limites et façonnons un avenir où la technologie nous donne du pouvoir et nous connecte tous.</p>
 
-                  <p>Merci de faire partie de notre communauté !</p>
+                  <p>Merci de faire partie de la communauté !</p>
 
-                  <p><strong>DoniFab</strong></p>
               </div>
 
               <a class="read-more-trigger" onclick="toggleReadMore()">Lire la suite</a>
@@ -291,7 +290,7 @@
                     <div>
                       <h5>Précision Améliorée de la Traduction </h5>
                       <p>
-                          Le jeu de données multilingue améliore la compréhension du modèle NKO des nuances et du contexte du français et du NKO, conduisant à des traductions plus précises.
+                          Le jeu de données multilingue améliore la compréhension du modèle NKO des nuances et du contexte d'autres langues et du NKO, conduisant à des traductions plus précises.
                       </p>
                     </div>
                   </li>
@@ -304,24 +303,6 @@
                       </p>
                     </div>
                   </li>
-                <li>
-                  <i class="fa fa-globe"></i>
-                  <div>
-                    <h5>Sensibilité Culturelle </h5>
-                    <p>
-                      Le jeu de données diversifié garantit une représentation de différents styles linguistiques et contextes culturels, rendant les modèles NKO plus sensibles culturellement et conscients du contexte dans leurs tâches linguistiques.
-                    </p>
-                  </div>
-                </li>
-                <li>
-                  <i class="fa-universal-access"></i>
-                  <div>
-                    <h5>Accès Accru  </h5>
-                    <p>
-                      L'inclusion de données NKO parlées soutient le développement d'applications vocales, favorisant l'accessibilité pour les individus préférant ou nécessitant des interactions basées sur la parole en NKO.
-                    </p>
-                  </div>
-                </li>
                 <li>
                   <i class="fa fa-language"></i>
                   <div>
@@ -438,7 +419,7 @@
 
         <div class="section-title">
           <h2>Equipe</h2>
-          <h3>Notre formidable <span>Equipe</span></h3>
+          <h3>DoniFab <span>Dream & Make</span></h3>
           <p>Nous sommes une equipe de professionels et d'etudiants, tous passionnes des nouvelles technologies.</p>
           <p>Notre objectif est de faire la difference.</p>
         </div>
