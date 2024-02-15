@@ -14,4 +14,4 @@ php artisan view:cache
 
 
 echo "Running migrations..."
-php artisan migrate:fresh --force
+php artisan migrate --force
