@@ -28,7 +28,7 @@
               <form id="thisForm" method="post" action="{{ route('saveNkoText') }}" role="form" onsubmit="submitForm(event)">
                   @csrf
                 <div class="form-group">
-                  <textarea class="form-control" id="sentence" name="sentence" rows="5" placeholder="Votre phrase en N'KO..." autofocus required></textarea>
+                  <textarea style="text-align: right;" class="form-control" id="sentence" name="sentence" rows="5" placeholder="Votre phrase en N'KO..." autofocus required></textarea>
                 </div>
                 <div class="my-3">
                   {{-- <div class="error-message"></div>

@@ -39,7 +39,7 @@
 
                     <input type="hidden" id="randomFrenchSentence" name="randomFrenchSentence" value="{{ $randomSentence->sentence }}">
                     <div class="form-group">
-                    <textarea class="form-control" id="sentence" name="sentence" rows="5" placeholder="Votre traduction..." autofocus required></textarea>
+                    <textarea style="text-align: right;" class="form-control" id="sentence" name="sentence" rows="5" placeholder="Votre traduction..." autofocus required></textarea>
                     </div>
                     <div class="my-3">
                     {{-- <div class="error-message"></div>

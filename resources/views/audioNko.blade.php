@@ -40,7 +40,7 @@
                     <!-- Custom Card Component with shadow and padding -->
                     <div style="font-size: 21px; box-shadow: 0px 7px 13px rgba(0, 0, 0, 0.2); padding: 15px; background-color: white; border-radius: 8px; width: 50%;"
                         class="mx-auto my-5">
-                        <p id="next_nko_sentence">{{ $randomSentence->sentence }}</p>
+                        <p style="text-align: right;" id="next_nko_sentence">{{ $randomSentence->sentence }}</p>
                         <div class="my-3">
                         <div id="loader"></div>
                         </div>
