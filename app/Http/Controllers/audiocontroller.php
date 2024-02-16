@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Audio;
+use App\Models\audio;
 use Illuminate\Support\Facades\log;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
@@ -47,7 +47,7 @@ class audiocontroller extends Controller
         // return redirect('/saisie')->with('message', 'Texte saisi avec succès !');
         // // Return the response
 
-        $audio = Audio::create([
+        $audio = audio::create([
             // 'audio_data' => $audio_storage_path,
             'texte_saisi' => $texteSaisi,
         ]);
