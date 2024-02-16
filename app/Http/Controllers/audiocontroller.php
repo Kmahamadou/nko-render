@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\audio;
+use App\Models\Audio;
 use Illuminate\Support\Facades\log;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
@@ -47,14 +47,14 @@ class audiocontroller extends Controller
         // return redirect('/saisie')->with('message', 'Texte saisi avec succès !');
         // // Return the response
 
-        $audio = audio::create([
+        $audio = Audio::create([
             // 'audio_data' => $audio_storage_path,
             'texte_saisi' => $texteSaisi,
         ]);
 
         $audio_name = $audio->id;
 
-        $audio_storage_path = "nko/audio-".$audio_name.".wav";
+        $audio_storage_path = "nko/audio-data/audio-".$audio_name.".wav";
 
 
         $audiotest = \Storage::disk('s3')->put($audio_storage_path, $binaryData);
