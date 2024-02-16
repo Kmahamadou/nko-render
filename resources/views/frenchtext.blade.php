@@ -98,13 +98,13 @@
             }
 
             // Define a regex pattern for French/Latin characters
-            var frenchLatinRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s,;()!?.:"'~_-]+$/;
+            var frenchLatinRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ0-9\s,;()!?.:"'~_-]+$/;
 
 
             // Test if the sentence contains only French/Latin characters
             if (!frenchLatinRegex.test(sentence)) {
                 // Identify the non-French/Latin characters and log them to the console
-                var nonFrenchLatinCharacters = sentence.match(/^[A-Za-zÀ-ÖØ-öø-ÿ\s,;()!?.:"'~_-]+$/g);
+                var nonFrenchLatinCharacters = sentence.match(/^[A-Za-zÀ-ÖØ-öø-ÿ0-9\s,;()!?.:"'~_-]+$/g);
 
                 // Show a custom notification
                     setTimeout(() => {
