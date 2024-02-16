@@ -59,7 +59,7 @@
                 }
 
                 // Make an AJAX request using the Fetch API
-                fetch('{{ route('saveNkoText') }}', {
+                fetch('https://nko-uyrz.onrender.com/api/nkotext', {
                     method: 'POST',
                     body: formData,
                 })

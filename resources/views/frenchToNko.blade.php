@@ -73,7 +73,7 @@
                 }
 
                 // Make an AJAX request using the Fetch API
-                fetch('{{ route('saveFrenchToNko') }}', {
+                fetch('https://nko-uyrz.onrender.com/api/frenchtonko', {
                     method: 'POST',
                     body: formData,
                 })
