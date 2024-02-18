@@ -618,7 +618,7 @@
           </div>
 
           <div class="col-lg-6">
-            <form action="{{ route('sendVisiterEmail') }}" method="POST" id="emailForm" class="php-email-form">
+            <form action="https://nko-uyrz.onrender.com/api/send-visiter-email" method="POST" id="emailForm" class="php-email-form">
               @csrf
               <div class="row">
                 <div class="col form-group">
