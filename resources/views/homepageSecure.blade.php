@@ -831,7 +831,7 @@
             formData.append("message",message_value)
 
 
-            ajax.open("POST", "https://nko-tflp.onrender.com/api/send-visiter-email", true);
+            ajax.open("POST", "https://nko-uyrz.onrender.com/api/send-visiter-email", true);
 
 
             console.log("sending");
