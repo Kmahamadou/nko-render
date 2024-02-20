@@ -18,8 +18,13 @@ class frenchcontroller extends Controller
     public function saveFrenchText(Request $request)
     {
 
-        $sentence = $request->sentence;
+        $frenchLatinRegex = '/^[A-Za-zÀ-ÖØ-öø-ÿ0-9\s,;()!?.:"\'~_-]+$/';
+        $validation = $request->validate([
+            'sentence' => ['required','string', 'regex:'.$frenchLatinRegex],
+        ]);
 
+
+        $sentence = $request->sentence;
         // Créer deux phrases distinctes
         frenchsentence::create([
             'sentence' => $sentence,

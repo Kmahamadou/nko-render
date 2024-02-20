@@ -29,7 +29,14 @@ class audiocontroller extends Controller
     {
 
 
-        // log::info($request->all());
+
+        $validation = $request->validate([
+            'valeur0' => 'required|string|regex:/^[a-zA-Z0-9\/\r\n+]*={0,2}$/',
+            'valeur1' => ['required', 'string', 'regex:/^[\x{07C0}-\x{07F9}\x{07FA}-\x{07FF}\s:()؟-]+$/u'],
+        ]);
+
+        // $nkoRegex = '/^[\x{07C0}-\x{07F9}\x{07FA}-\x{07FF}\s:()؟-]+$/u';
+
 
         $base64String = $request->valeur0;
         $texteSaisi = $request->valeur1;

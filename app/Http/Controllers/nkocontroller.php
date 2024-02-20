@@ -17,12 +17,19 @@ class nkocontroller extends Controller
     public function saveNkoText(Request $request)
     {
 
+
+
+        $validation = $request->validate([
+            'sentence' => ['required', 'string', 'regex:/^[\x{07C0}-\x{07F9}\x{07FA}-\x{07FF}\s:()؟-]+$/u'],
+        ]);
+
         $sentence = $request->sentence;
-        // dd($sentence);
-        // Créer deux phrases distinctes
+
         nkosentence::create([
             'sentence' => $sentence,
         ]);
+
+
 //  dd($sentence);
         if (!empty($sentence)) {
             return response()->json(['message' => 'Phrase ajouté avec succès !']);
