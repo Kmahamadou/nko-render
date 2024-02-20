@@ -407,6 +407,10 @@
             <img src="{{ secure_asset('assets/img/donifab.png') }}" class="img-fluid" alt="">
           </div>
 
+          <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{{ secure_asset('assets/img/logo-lonko-dounbou.png') }}" class="img-fluid" alt="">
+          </div>
+
         </div>
 
       </div>
@@ -421,7 +425,6 @@
           <h2>Equipe</h2>
           <h3>DoniFab <span>Dream & Make</span></h3>
           <p>Nous sommes une equipe de professionels et d'etudiants, tous passionnes des nouvelles technologies.</p>
-          <p>Notre objectif est de faire la difference.</p>
         </div>
 
         <div class="membre">
