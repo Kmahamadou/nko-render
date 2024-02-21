@@ -18,7 +18,7 @@
             <div class="container" data-aos="fade-up">
                 <div class="section-title">
                     <h2>Enregistrement vocal</h2>
-                    <h3><span>Parlons N'KO <i class="fas fa-microphone" style="margin-right:5px; color: #3399FF;"></i></span>
+                    <h3><span>Lecture<i class="fas fa-microphone" style="margin-right:5px; color: #3399FF;"></i></span>
                     </h3>
                     <p style="margint: 20px auto;"> <i class="fas fa-microphone"
                             style="margin-right:5px; color: #3399FF;"></i>
@@ -28,8 +28,8 @@
 
 
                     <p class="fst-italic">
-                        <strong>Objectif :</strong> Encourager les visiteurs à vocaliser le texte NKO affiché. <br>
-                        Contribution de données : Cette activité contribue à la collecte de données audio en NKO, aidant au développement de modèles de transcription de la parole spécifiques à la langue NKO. Cela contribue à améliorer la précision dans la transcription de la langue NKO parlée, facilitant une meilleure communication et accessibilité.
+                        <strong>Objectif :</strong> Vocaliser le texte NKO affiché. <br>
+                        {{-- Contribution de données : Cette activité contribue à la collecte de données audio en NKO, aidant au développement de modèles de transcription de la parole spécifiques à la langue NKO. Cela contribue à améliorer la précision dans la transcription de la langue NKO parlée, facilitant une meilleure communication et accessibilité. --}}
                     </p>
 
                 </div>
