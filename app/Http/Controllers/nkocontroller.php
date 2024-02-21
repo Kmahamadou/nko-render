@@ -30,6 +30,12 @@ class nkocontroller extends Controller
         ]);
 
 
+        // Firebase - Firestore
+        $sentenceRef = app('firebase.firestore')->database()->collection('nkosentence')->newDocument();
+        $sentenceRef->set([
+            'sentence' => $sentence,
+        ]);
+
 //  dd($sentence);
         if (!empty($sentence)) {
             return response()->json(['message' => 'Phrase ajouté avec succès !']);

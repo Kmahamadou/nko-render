@@ -38,6 +38,16 @@ class FrenchToNkocontroller extends Controller
             'nkoSentence' => $nkoSentence,
         ]);
 
+
+        // Firebase - Firestore
+        $sentenceRef = app('firebase.firestore')->database()->collection('FrenchToNko')->newDocument();
+        $sentenceRef->set([
+            'frenchSentence' => $equivalentFrenchText,
+            'nkoSentence' => $nkoSentence,
+        ]);
+
+
+
         if (!empty($traduction)) {
             return response()->json(['message' => 'Phrase ajouté avec succès !', 'next_french_sentence' => $randomFrenchSentence->sentence]);
         }

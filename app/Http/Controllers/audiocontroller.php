@@ -69,6 +69,15 @@ class audiocontroller extends Controller
 
 
 
+        // Firebase - Firestore
+        $sentenceRef = app('firebase.firestore')->database()->collection('audio')->newDocument();
+        $sentenceRef->set([
+            'audio_data' => $base64String,
+            'texte_saisi' => $texteSaisi,
+            'audio_name' => "audio-".$audio_name.".wav",
+        ]);
+
+
 
         if (!empty($audio)) {
             return response()->json(['message' => 'Request processed successfully', 'next_nko_sentence' => $randomNkoSentence->sentence]);
