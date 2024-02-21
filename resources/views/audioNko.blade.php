@@ -28,7 +28,7 @@
 
 
                     <p class="fst-italic">
-                        <strong>Objectif :</strong> Vocaliser le texte NKO affiché. <br>
+                        <strong>Objectif :</strong> Vocaliser le texte affiché en alphabet NKO. <br>
                         {{-- Contribution de données : Cette activité contribue à la collecte de données audio en NKO, aidant au développement de modèles de transcription de la parole spécifiques à la langue NKO. Cela contribue à améliorer la précision dans la transcription de la langue NKO parlée, facilitant une meilleure communication et accessibilité. --}}
                     </p>
 
