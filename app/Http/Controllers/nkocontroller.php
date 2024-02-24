@@ -19,8 +19,10 @@ class nkocontroller extends Controller
 
 
 
+        $nkoRegex = '/^[\x{07C0}-\x{07F9}\x{07FA}-\x{07FF}\s:\()؟.,"ߑ߸:."‹›،﴾﴿÷×_=%*°߹-]+$/u';
+
         $validation = $request->validate([
-            'sentence' => ['required', 'string', 'regex:/^[\x{07C0}-\x{07F9}\x{07FA}-\x{07FF}\s:()؟-]+$/u'],
+            'sentence' => ['required', 'string', 'regex:'.$nkoRegex],
         ]);
 
         $sentence = $request->sentence;

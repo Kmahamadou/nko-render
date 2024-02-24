@@ -30,9 +30,12 @@ class audiocontroller extends Controller
 
 
 
+        $nkoRegex = '/^[\x{07C0}-\x{07F9}\x{07FA}-\x{07FF}\s:\()؟.,"ߑ߸:."‹›،﴾﴿÷×_=%*°߹-]+$/u';
+
+
         $validation = $request->validate([
             'valeur0' => 'required|string|regex:/^[a-zA-Z0-9\/\r\n+]*={0,2}$/',
-            'valeur1' => ['required', 'string', 'regex:/^[\x{07C0}-\x{07F9}\x{07FA}-\x{07FF}\s:()؟-]+$/u'],
+            'valeur1' => ['required', 'string', 'regex:'.$nkoRegex],
         ]);
 
         // $nkoRegex = '/^[\x{07C0}-\x{07F9}\x{07FA}-\x{07FF}\s:()؟-]+$/u';

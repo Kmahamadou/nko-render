@@ -20,7 +20,9 @@ class FrenchToNkocontroller extends Controller
                 // dd($request->all());
 
         $frenchLatinRegex = '/^[A-Za-zÀ-ÖØ-öø-ÿ0-9\s,;()!?.:"\'~_-]+$/';
-        $nkoRegex = '/^[\x{07C0}-\x{07F9}\x{07FA}-\x{07FF}\s:()؟-]+$/u';
+        // $nkoRegex = '/^[\x{07C0}-\x{07F9}\x{07FA}-\x{07FF}\s:()؟-]+$/u';
+        $nkoRegex = '/^[\x{07C0}-\x{07F9}\x{07FA}-\x{07FF}\s:\()؟.,"ߑ߸:."‹›،﴾﴿÷×_=%*°߹-]+$/u';
+
 
         $validation = $request->validate([
             'randomFrenchSentence' => ['required', 'string', 'regex:'.$frenchLatinRegex],
