@@ -1,5 +1,18 @@
 FROM richarvey/nginx-php-fpm:latest
 
+
+# Install system dependencies
+RUN apk add --no-cache \
+    autoconf \
+    build-base \
+    openssl-dev
+
+# Install gRPC extension
+RUN pecl install grpc && \
+    docker-php-ext-enable grpc
+
+
+
 COPY . .
 
 # Image config
