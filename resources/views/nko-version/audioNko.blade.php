@@ -156,7 +156,7 @@
             }
 
             // set request method as POST, set URL and set asynchronous to true
-            ajax.open("POST", "http://localhost:8000/api/enregistrement-audio-nko", true)
+            ajax.open("POST", "https://nko-uyrz.onrender.com/api/enregistrement-audio-nko", true)
 
             // whenever the status of request is changed
             ajax.onreadystatechange = async function() {
