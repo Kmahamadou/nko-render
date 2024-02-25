@@ -181,10 +181,10 @@
         <div class="row" data-aos="fade-up" data-aos-delay="100">
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch text-center mb-5 mb-lg-0">
-            <a href="{{ route('audioNko') }}">
+            <a href="{{ route('showAudioNko') }}">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
                 <div class="icon"><i class="fas fa-microphone"></i></div>
-                <h4 class="title"><a href="{{ route('audioNko') }}">ߒߞߏ ߞߟߏߜߍ ߝߍ߲߬ߛߍ߬ߣߍ߲ ߣߌ߲߬ ߞߊ߬ߙߊ߲߬</a></h4>
+                <h4 class="title"><a href="{{ route('showAudioNko') }}">ߒߞߏ ߞߟߏߜߍ ߝߍ߲߬ߛߍ߬ߣߍ߲ ߣߌ߲߬ ߞߊ߬ߙߊ߲߬</a></h4>
                 <p class="description">
                     ߟߊ߬ߢߌߣߌ߲: ߞߊ߬ ߟߊ߬ߡߍ߲߬ߛߍ߲߬ߧߊ߬ߟߊ ߟߎ߬ ߘߐߛߎ߫ ߒߞߏ ߞߟߏߜߍ ߝߍ߲߬ߛߍ߬ߣߍ߲ ߘߐߞߊ߬ߙߊ߲߫ ߠߊ߫ <br>
                 </p>
@@ -193,10 +193,10 @@
           </div>
 
           <div class="col-md-6 col-lg-3 d-flex px-5 align-items-stretch text-center mb-5 mb-lg-0">
-            <a href="{{ route('showNkoText') }}">
+            <a href="{{ route('showNkoNkoText') }}">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
               <div class="icon"><i class="fas fa-pen"></i></div>
-              <h4 class="title"><a href="{{ route("showNkoText") }}">ߞߊ߬ ߞߟߏߜߍ ߛߓߍ߫ ߒߞߏ ߘߐߙߐ߲߫ ߘߐ߫</a></h4>
+              <h4 class="title"><a href="{{ route("showNkoNkoText") }}">ߞߊ߬ ߞߟߏߜߍ ߛߓߍ߫ ߒߞߏ ߘߐߙߐ߲߫ ߘߐ߫</a></h4>
               <p class="description">    ߟߊ߬ߢߌߣߌ߲: ߞߊ߬ ߟߊ߬ߡߍ߲߬ߛߍ߲߬ߧߊ߬ߟߊ ߟߎ߬ ߘߐߛߎ߫ ߒߞߏ ߞߟߏߜߍ ߘߐߙߐ߲߫ ߛߓߍ߫ ߟߊ߫<br>
               </p>
             </div>
@@ -204,10 +204,10 @@
           </div>
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch text-center mb-5 mb-lg-0">
-            <a href="{{ route("showFrenchToNkoPage") }}">
+            <a href="{{ route("showNkoFrenchToNkoPage") }}">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
               <div class="icon"><i class="fas fa-language"></i></div>
-              <h4 class="title"><a href="{{ route("showFrenchToNkoPage") }}">ߞߟߏߜߍ ߡߍ߲ ߠߎ߬ ߛߓߍߣߍ߲ ߝߊ߬ߙߊ߲߬ߛߌ ߘߐ߫ ߸ ߏ߬ ߟߎ߬ ߘߟߊߡߌ߬ߣߊ߬ ߒߞߏ ߘߐ߫</a></h4>
+              <h4 class="title"><a href="{{ route("showNkoFrenchToNkoPage") }}">ߞߟߏߜߍ ߡߍ߲ ߠߎ߬ ߛߓߍߣߍ߲ ߝߊ߬ߙߊ߲߬ߛߌ ߘߐ߫ ߸ ߏ߬ ߟߎ߬ ߘߟߊߡߌ߬ߣߊ߬ ߒߞߏ ߘߐ߫</a></h4>
               <p class="description">    ߟߊ߬ߢߌߣߌ߲: ߟߊ߬ߡߍ߲߬ߛߍ߲߬ߧߊ߬ߟߊ ߟߎ߬ ߦߋ߫ ߝߊ߬ߙߊ߲߬ߛߌ ߞߟߏߜߍ ߟߎ߬ ߘߟߊߡߌ߬ߣߊ߬ ߒߞߏ ߘߐ߫<br>
               </p>
             </div>
@@ -215,10 +215,10 @@
           </div>
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch text-center mb-5 mb-lg-0">
-            <a href="{{ route('onlyFrenchText') }}">
+            <a href="{{ route('nkoOnlyFrenchText') }}">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
               <div class="icon"><i class="fas fa-pen"></i></div>
-              <h4 class="title"><a href="{{ route('onlyFrenchText') }}">ߛߓߍߟߌ ߞߍ߫ ߝߊ߬ߙߊ߲߬ߛߌ ߘߐߙߐ߲߫ ߘߐ߫</a></h4>
+              <h4 class="title"><a href="{{ route('nkoOnlyFrenchText') }}">ߛߓߍߟߌ ߞߍ߫ ߝߊ߬ߙߊ߲߬ߛߌ ߘߐߙߐ߲߫ ߘߐ߫</a></h4>
               <p class="description">    ߟߊ߬ߢߌߣߌ߲: ߞߊ߬ ߟߊ߬ߡߍ߲߬ߛߍ߲߬ߧߊ߬ߟߊ ߟߎ߬ ߘߐߛߎ߫ ߸ ߊ߬ߟߎ߬ ߦߋ߫ ߛߓߍߟߌ ߞߍ߫ ߝߊ߬ߙߊ߲߬ߛߌ ߘߐߙߐ߲߫ ߘߐ߫ <br>
               </p>
             </div>
