@@ -17,6 +17,13 @@ class audiocontroller extends Controller
         // return view('progressHelper')->with('randomSentence', $randomSentence);
     }
 
+    public function nkoShow()
+    {
+        $randomSentence = DB::table('nkosentences')->inRandomOrder()->first();
+        return view('nko-version.audioNko')->with('randomSentence', $randomSentence);
+        // return view('progressHelper')->with('randomSentence', $randomSentence);
+    }
+
     public function recording()
     {
         $randomSentence = DB::table('nkosentences')->inRandomOrder()->first();

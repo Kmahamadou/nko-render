@@ -15,6 +15,13 @@ class frenchcontroller extends Controller
         return view('frenchtext')->with('randomSentence', $randomSentence);
     }
 
+    public function showNkoFrenchTextPage()
+    {
+        $randomSentence = DB::table('frenchsentences')->inRandomOrder()->first();
+
+        return view('nko-version.frenchtext')->with('randomSentence', $randomSentence);
+    }
+
     public function saveFrenchText(Request $request)
     {
 

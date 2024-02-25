@@ -14,6 +14,13 @@ class nkocontroller extends Controller
         return view('nkotext')->with('randomSentence', $randomSentence);
     }
 
+    public function showNkoNkoText()
+    {
+        $randomSentence = DB::table('nkosentences')->inRandomOrder()->first();
+
+        return view('nko-version.nkotext')->with('randomSentence', $randomSentence);
+    }
+
     public function saveNkoText(Request $request)
     {
 

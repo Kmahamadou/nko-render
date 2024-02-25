@@ -24,8 +24,16 @@ class homepagecontroller extends Controller
                 ->with("countsValues", $countsValues);
     }
 
-    // public function mainpage()
-    // {
-    //     return view('main');
-    // }
+    public function nkoHomepage()
+    {
+        $countsValues = [
+            "audios" => audio::count(),
+            "frenchsentences" => frenchsentence::count(),
+            "FrenchToNkos" => FrenchToNko::count(),
+            "nkosentences" => nkosentence::count(),
+        ];
+
+        // dd($countsValues);
+        return view('nko-version.homepage')->with("countsValues", $countsValues);
+    }
 }

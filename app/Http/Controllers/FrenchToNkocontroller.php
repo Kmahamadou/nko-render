@@ -15,6 +15,15 @@ class FrenchToNkocontroller extends Controller
     }
 
 
+    public function showNkoFrenchToNkoPage()
+    {
+        $randomSentence = DB::table('frenchsentences')->inRandomOrder()->first();
+
+        // dd($randomSentence);
+        return view('nko-version.frenchToNko')->with('randomSentence', $randomSentence);
+    }
+
+
     public function saveFrenchToNko(Request $request)
     {
                 // dd($request->all());
