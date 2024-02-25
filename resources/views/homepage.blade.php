@@ -128,6 +128,11 @@
             </ul>
           </li> --}}
           <li><a class="nav-link scrollto" href="/homepage#contact">Contact</a></li>
+          <li class="dropdown"><a href="#"><span><img src="{{ secure_asset('assets/img/language/france.png') }}" width="20px" height="20px"/></span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+                <li><a class="nav-link scrollto" href="{{ route('nkoHomepage') }}"><img src="{{ secure_asset('assets/img/language/mali.png') }}" width="25px" height="25"/>Francais</a>  </li>
+            </ul>
+          </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

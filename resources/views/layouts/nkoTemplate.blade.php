@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Nos langues, notre force</title>
+  <title>ߊ߲ ߞߊ߫ ߞߊ߲ ߠߎ߬ ߸ ߊ߲ ߝߊ߲߬ߞߊ</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -51,7 +51,7 @@
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
         <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">kmahamadou01@gmail.com</a></i>
-        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+223 60 69 03 43</span></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span>߀߀߂߂߃ ߆߀ ߆߉ ߀߃ ߄߃</span></i>
       </div>
       <div class="social-links d-none d-md-flex align-items-center">
         {{-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a> --}}
@@ -66,17 +66,17 @@
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="{{ route('homepage') }}">N'KO<span>.</span></a></h1>
+      <h1 class="logo"><a href="{{ route('nkoHomepage') }}">ߒߞߏ<span>.</span></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="{{ route('homepage') }}">Accueil</a></li>
-          <li><a class="nav-link scrollto" href="/#about">A Propos</a></li>
+          <li><a class="nav-link scrollto active" href="{{ route('nkoHomepage') }}">ߟߊ߬ߛߣߍ߬ߟߌ߬ߘߊ </a></li>
+          <li><a class="nav-link scrollto" href="/nko/#about">ߊ߲ ߞߊ߫ ߛߙߍ</a></li>
           {{-- <li><a class="nav-link scrollto" href="#services">Services</a></li> --}}
           {{-- <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li> --}}
-          <li><a class="nav-link scrollto" href="/#team">Notre equipe</a></li>
+          <li><a class="nav-link scrollto" href="/nko/#team">ߊ߲ ߞߊ߫ ߛߙߍ</a></li>
           {{-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
@@ -94,10 +94,10 @@
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li> --}}
-          <li><a class="nav-link scrollto" href="/#contact">Contact</a></li>
-          <li class="dropdown"><a href="#"><span><img src="{{ secure_asset('assets/img/language/france.png') }}" width="25px" height="25"/></span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="nav-link scrollto" href="/nko/#contact">ߞߵߊ߲ ߠߊߛߐ߬ߘߐ߲߬ </a></li>
+          <li class="dropdown"><a href="#"><span><img src="{{ secure_asset('assets/img/language/mali.png') }}" width="25px" height="25px"/></span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-                <li><a class="nav-link scrollto" href="{{ route('nkoHomepage') }}"><img src="{{ secure_asset('assets/img/language/mali.png') }}" width="25px" height="25"/>Francais</a>  </li>
+                <li><a class="nav-link scrollto" href="{{ route('homepage') }}"><img src="{{ secure_asset('assets/img/language/france.png') }}" width="25px" height="25"/>Francais</a>  </li>
             </ul>
           </li>
         </ul>
@@ -141,24 +141,22 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>N'KO<span>.</span></h3>
+            <h3>ߒߞߏ<span>.</span></h3>
             <p>
-              0853 Rue des Armees <br>
-              Sotuba ACI, Bamako<br>
-              Mali <br><br>
-              <strong>Phone:</strong> +223 60 69 03 43<br>
+                ߀߈߅߃ ߣߊ߲߬ߕߌ߮ ߟߎ߬ ߟߊ߫ ߓߐߟߐ߲߸ <br/>ߛߏ߬ߕߌ߬ߓߊ߬ ߊߛߋߦߌ ߡߊ߬ߟߌ ߓߡߊ߬ߞߐ߬<br><br>
+              <strong>Phone:</strong> ߀߀߂߂߃ ߆߀ ߆߉ ߀߃ ߄߃<br>
               <strong>Email:</strong> kmahamadou01@gmail.com<br>
             </p>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Raccourcis</h4>
+            <h4>ߕߍ߰ߒߞߣߐ</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('homepage') }}">Accueil</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#about">A propos</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ route('homepage') }}">ߟߊ߬ߛߣߍ߬ߟߌ߬ߘߊ </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">ߊ߲ ߞߎ߲߭ߞߊ߲߬</a></li>
               {{-- <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li> --}}
-              <li><i class="bx bx-chevron-right"></i> <a href="#team">Equipe</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Politique de confidentialitee</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#team">ߊ߲ ߞߊ߫ ߛߙߍ</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">ߜߎ߲߬ߘߏ߬ߟߊ߬ߞߊ ߓߘߍ߬ߓߘߍ߬ߟߌ </a></li>
             </ul>
           </div>
 
@@ -174,7 +172,7 @@
           </div> --}}
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Rejoignez nous</h4>
+            <h4>ߣߊ߬ ߝߙߊ߬ ߊ߲ ߞߊ߲߬ </h4>
             {{-- <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p> --}}
             <div class="social-links mt-3">
               {{-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> --}}
@@ -191,7 +189,7 @@
 
     <div class="container py-4">
       <div class="copyright">
-        &copy; Copyright <strong><span>N'KO</span></strong>. Tous Droit Reserves
+        &copy; ߊ߬ ߖߏ ߟߊߕߊ߲߬ߞߊ߬ߣߍ߲  <strong><span></span></strong>
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->

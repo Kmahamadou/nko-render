@@ -5,13 +5,15 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Nos langues, notre force</title>
+  <title>ߊ߲ ߞߊ߫ ߞߊ߲ ߠߎ߬ ߸ ߊ߲ ߝߊ߲߬ߞߊ</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
+  <!-- Adjusted Content Security Policy -->
+  {{-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self';"> --}}
 
   <!-- Favicons -->
-  <link rel="icon" href="https://ikeneya.s3.us-east-2.amazonaws.com/nko-assets/assets/logo.png" type="image/x-icon">
-  <link rel="shortcut icon" href="https://ikeneya.s3.us-east-2.amazonaws.com/nko-assets/assets/logo.png" type="image/x-icon">
+  <link rel="icon" href="{{ secure_asset('assets/img/logo.png') }}" type="image/x-icon">
+  <link rel="shortcut icon" href="{{ secure_asset('assets/img/logo.png') }}" type="image/x-icon">
 
 
   <!-- fa icon CDN -->
@@ -28,6 +30,9 @@
   <link href="{{ secure_asset('assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
   <link href="{{ secure_asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
+    <!-- Add this to your HTML file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+
   <!-- Template Main CSS File -->
   <link href="{{ secure_asset('assets/css/style.css') }}" rel="stylesheet">
 
@@ -42,19 +47,20 @@
 
   <style>
 
-    .read-more-content {
-        max-height: 5em;
-        overflow: hidden;
-        transition: max-height 0.5s ease-in-out;
-    }
+        .read-more-content {
+            max-height: 5em;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
 
-    .read-more-trigger {
-        cursor: pointer;
-        color: blue;
-        text-decoration: underline;
-        display: inline-block;
-        margin-top: 10px;
-    }
+        .read-more-trigger {
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
 
     .member-img {
         width: 15em !important;
@@ -97,7 +103,7 @@
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
         <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">kmahamadou01@gmail.com</a></i>
-        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+223 60 69 03 43</span></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span>߀߀߂߂߃ ߆߀ ߆߉ ߀߃ ߄߃</span></i>
       </div>
       <div class="social-links d-none d-md-flex align-items-center">
         {{-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a> --}}
@@ -112,38 +118,22 @@
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="{{ route('homepage') }}">N'KO<span>.</span></a></h1>
+      <h1 class="logo"><a href="{{ route('nkoHomepage') }}">ߒߞߏ<span>.</span></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="{{ route('homepage') }}">Accueil</a></li>
-          <li><a class="nav-link scrollto" href="/homepage#about">A Propos</a></li>
+          <li><a class="nav-link scrollto active" href="{{ route('nkoHomepage') }}">ߟߊ߬ߛߣߍ߬ߟߌ߬ߘߊ</a></li>
+          <li><a class="nav-link scrollto" href="/nko/#about">ߊ߲ ߞߎ߲߭ߞߊ߲߬</a></li>
           {{-- <li><a class="nav-link scrollto" href="#services">Services</a></li> --}}
           {{-- <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li> --}}
-          <li><a class="nav-link scrollto" href="/homepage#team">Notre equipe</a></li>
-          {{-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="nav-link scrollto" href="/nko/#team">ߊ߲ ߞߊ߫ ߛߙߍ</a></li>
+
+          <li><a class="nav-link scrollto" href="/nko/#contact">ߞߵߊ߲ ߠߊߛߐ߬ߘߐ߲߬ </a></li>
+          <li class="dropdown"><a href="#"><span><img src="{{ secure_asset('assets/img/language/mali.png') }}" width="20px" height="20px"/></span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li> --}}
-          <li><a class="nav-link scrollto" href="/homepage#contact">Contact</a></li>
-          <li class="dropdown"><a href="#"><span><img src="{{ secure_asset('assets/img/language/france.png') }}" width="20px" height="20px"/></span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-                <li><a class="nav-link scrollto" href="{{ route('nkoHomepage') }}"><img src="{{ secure_asset('assets/img/language/mali.png') }}" width="25px" height="25px"/>Francais</a>  </li>
+                <li><a class="nav-link scrollto" href="{{ route('homepage') }}"><img src="{{ secure_asset('assets/img/language/france.png') }}" width="25px" height="25"/>Francais</a>  </li>
             </ul>
           </li>
         </ul>
@@ -161,10 +151,10 @@
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
       <div style="display: flex; flex-direction: row; justify-content: center; align-item: start">
         <div>
-          <h1>Nos langues <span>Notre force</span></h1>
-          <h2>Ensemble, valorisons nos langues</h2>
+          <h1>ߊ߲ ߞߊ߫ ߞߊ߲ ߠߎ߬ ߸  ߊ߲ ߝߊ߲߬ߞߊ </h1>
+          <h2>ߊ߲ ߧߋ߫ ߘߍ߬ ߞߵߊ߲ ߞߊ߫ ߞߊ߲ ߠߎ߬ ߘߏ߲߬ ߡߐ߬ߟߐ߲߬ߡߦߊ߬ </h2>
           <div class="d-flex">
-            <a href="{{ route('audioNko') }}" class="btn-get-started scrollto">Contribuer</a>
+            <a href="{{ route('showAudioNko') }}" class="btn-get-started scrollto">ߡߊ߬ߜߍ߲߫ ߞߍ߫ </a>
             {{-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span style="color: #fff">Presentation</span></a> --}}
           </div>
         </div>
@@ -178,174 +168,176 @@
 
     <!-- ======= Featured Services Section ======= -->
     <section id="featured-services" class="featured-services">
-        <div class="container" data-aos="fade-up">
+      <div class="container" data-aos="fade-up">
 
 
-          <div class="section-title">
-              <h2>Contribuer</h2>
-              <h3><span></span></h3>
-              <p></p>
-            </div>
+        <div class="section-title">
+            <h2>ߡߊ߬ߜߍ߲߫ ߞߍ߫ </h2>
+            <h3><span></span></h3>
+            <p></p>
+          </div>
 
 
-          <div class="row" data-aos="fade-up" data-aos-delay="100">
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
 
-            <div class="col-md-6 col-lg-3 d-flex align-items-stretch text-center mb-5 mb-lg-0">
-              <a href="{{ route('audioNko') }}">
-              <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
-                  <div class="icon"><i class="fas fa-microphone"></i></div>
-                  <h4 class="title"><a href="{{ route('audioNko') }}">Prononcer le texte NKO affiché</a></h4>
-                  <p class="description">
-                  Objectif : Encourager les visiteurs à vocaliser le texte NKO affiché. <br>
-                  </p>
-              </div>
-              </a>
-            </div>
-
-            <div class="col-md-6 col-lg-3 d-flex px-5 align-items-stretch text-center mb-5 mb-lg-0">
-              <a href="{{ route('showNkoText') }}">
-              <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-                <div class="icon"><i class="fas fa-pen"></i></div>
-                <h4 class="title"><a href="{{ route("showNkoText") }}">Écrire uniquement du texte en NKO</a></h4>
-                <p class="description">    Objectif : Inciter les visiteurs à composer du texte exclusivement en NKO. <br>
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch text-center mb-5 mb-lg-0">
+            <a href="{{ route('audioNko') }}">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon"><i class="fas fa-microphone"></i></div>
+                <h4 class="title"><a href="{{ route('audioNko') }}">ߒߞߏ ߞߟߏߜߍ ߝߍ߲߬ߛߍ߬ߣߍ߲ ߣߌ߲߬ ߞߊ߬ߙߊ߲߬</a></h4>
+                <p class="description">
+                    ߟߊ߬ߢߌߣߌ߲: ߞߊ߬ ߟߊ߬ߡߍ߲߬ߛߍ߲߬ߧߊ߬ߟߊ ߟߎ߬ ߘߐߛߎ߫ ߒߞߏ ߞߟߏߜߍ ߝߍ߲߬ߛߍ߬ߣߍ߲ ߘߐߞߊ߬ߙߊ߲߫ ߠߊ߫ <br>
                 </p>
-              </div>
-              </a>
             </div>
+            </a>
+          </div>
 
-            <div class="col-md-6 col-lg-3 d-flex align-items-stretch text-center mb-5 mb-lg-0">
-              <a href="{{ route("showFrenchToNkoPage") }}">
-              <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-                <div class="icon"><i class="fas fa-language"></i></div>
-                <h4 class="title"><a href="{{ route("showFrenchToNkoPage") }}">Traduire les textes fournis précédemment en français en texte NKO</a></h4>
-                <p class="description">    Objectif : Les visiteurs traduisent des textes français existants en NKO.<br>
-                </p>
-              </div>
-              </a>
+          <div class="col-md-6 col-lg-3 d-flex px-5 align-items-stretch text-center mb-5 mb-lg-0">
+            <a href="{{ route('showNkoText') }}">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon"><i class="fas fa-pen"></i></div>
+              <h4 class="title"><a href="{{ route("showNkoText") }}">ߞߊ߬ ߞߟߏߜߍ ߛߓߍ߫ ߒߞߏ ߘߐߙߐ߲߫ ߘߐ߫</a></h4>
+              <p class="description">    ߟߊ߬ߢߌߣߌ߲: ߞߊ߬ ߟߊ߬ߡߍ߲߬ߛߍ߲߬ߧߊ߬ߟߊ ߟߎ߬ ߘߐߛߎ߫ ߒߞߏ ߞߟߏߜߍ ߘߐߙߐ߲߫ ߛߓߍ߫ ߟߊ߫<br>
+              </p>
             </div>
+            </a>
+          </div>
 
-            <div class="col-md-6 col-lg-3 d-flex align-items-stretch text-center mb-5 mb-lg-0">
-              <a href="{{ route('onlyFrenchText') }}">
-              <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-                <div class="icon"><i class="fas fa-pen"></i></div>
-                <h4 class="title"><a href="{{ route('onlyFrenchText') }}">Écrire uniquement du texte en français</a></h4>
-                <p class="description">    Objectif : Encourager les visiteurs à rédiger exclusivement en français.<br>
-                </p>
-              </div>
-              </a>
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch text-center mb-5 mb-lg-0">
+            <a href="{{ route("showFrenchToNkoPage") }}">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon"><i class="fas fa-language"></i></div>
+              <h4 class="title"><a href="{{ route("showFrenchToNkoPage") }}">ߞߟߏߜߍ ߡߍ߲ ߠߎ߬ ߛߓߍߣߍ߲ ߝߊ߬ߙߊ߲߬ߛߌ ߘߐ߫ ߸ ߏ߬ ߟߎ߬ ߘߟߊߡߌ߬ߣߊ߬ ߒߞߏ ߘߐ߫</a></h4>
+              <p class="description">    ߟߊ߬ߢߌߣߌ߲: ߟߊ߬ߡߍ߲߬ߛߍ߲߬ߧߊ߬ߟߊ ߟߎ߬ ߦߋ߫ ߝߊ߬ߙߊ߲߬ߛߌ ߞߟߏߜߍ ߟߎ߬ ߘߟߊߡߌ߬ߣߊ߬ ߒߞߏ ߘߐ߫<br>
+              </p>
             </div>
+            </a>
+          </div>
 
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch text-center mb-5 mb-lg-0">
+            <a href="{{ route('onlyFrenchText') }}">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon"><i class="fas fa-pen"></i></div>
+              <h4 class="title"><a href="{{ route('onlyFrenchText') }}">ߛߓߍߟߌ ߞߍ߫ ߝߊ߬ߙߊ߲߬ߛߌ ߘߐߙߐ߲߫ ߘߐ߫</a></h4>
+              <p class="description">    ߟߊ߬ߢߌߣߌ߲: ߞߊ߬ ߟߊ߬ߡߍ߲߬ߛߍ߲߬ߧߊ߬ߟߊ ߟߎ߬ ߘߐߛߎ߫ ߸ ߊ߬ߟߎ߬ ߦߋ߫ ߛߓߍߟߌ ߞߍ߫ ߝߊ߬ߙߊ߲߬ߛߌ ߘߐߙߐ߲߫ ߘߐ߫ <br>
+              </p>
+            </div>
+            </a>
           </div>
 
         </div>
-      </section><!-- End Featured Services Section -->
 
-
+      </div>
+    </section><!-- End Featured Services Section -->
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about section-bg">
-        <div class="container" data-aos="fade-up">
+      <div class="container" data-aos="fade-up">
 
-          <div class="section-title">
-            <h2>A propos</h2>
-            <h3>Savoir plus <span>sur Nous</span></h3>
-            <p>Nous sommes un laboratoire de fabrication numerique.</p>
-          </div>
-
-          <div class="row">
-            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-              <img src="assets/img/about.jpg" class="img-fluid" alt="">
-            </div>
-            <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
-
-
-              <h4>À propos de nous</h4>
-
-              <div class="read-more-content">
-                  <p>Bienvenue sur <strong>la plateforme de collecte de données pour les modèles de Langue NKO </strong>.</p>
-
-                  <h4>Notre Mission</h4>
-
-                  <p>À <strong>DoniFab</strong>, nous croyons au pouvoir transformateur de la technologie pour créer un changement positif. En tant que FabLab, nous avons été à l'avant-garde du mouvement maker, fournissant un espace où des individus de divers horizons peuvent explorer, expérimenter et donner vie à leurs idées.</p>
-
-                  <h4>Pourquoi une plateforme de Collecte de Données pour les Modèles Linguistiques NKO</h4>
-
-                  <p>En plus de notre engagement envers l'innovation, nous avons mis en place une plateforme conçue pour rassembler des données textuelles et audio. Notre objectif est de contribuer à l'avancement des technologies à base d'intelligence artificielle, spécifiquement adaptées à la langue NKO, favorisant ainsi la communication et l'accessibilité.</p>
-
-                  <h4>Abattre les Barrières Linguistiques</h4>
-
-                  <p>Grâce à la collecte de jeux de données divers, nous visons à former nos modèles pour convertir de manière transparente la langue NKO en d'autre langues et vice versa. Cela améliore non seulement notre compréhension des subtilités linguistiques, mais aussi abat les barrières linguistiques, ouvrant de nouvelles possibilités de communication et de compréhension.</p>
-
-                  <h4>Rejoignez-nous dans l'Aventure de l'Innovation</h4>
-
-                  <p>Que vous soyez un innovateur chevronné, un créateur curieux, ou quelqu'un passionné par l'intersection de la technologie et du langage, <strong>DoniFab</strong> vous invite à nous rejoindre dans cette aventure de l'innovation. Ensemble, explorons les possibilités, repoussons les limites et façonnons un avenir où la technologie nous donne du pouvoir et nous connecte tous.</p>
-
-                  <p>Merci de faire partie de la communauté !</p>
-
-              </div>
-
-              <a class="read-more-trigger" onclick="toggleReadMore()">Lire la suite</a>
-            </div>
-            <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="250">
-
-
-              <ul>
-                  <li>
-                    <i class="fas fa-language"></i>
-                    <div>
-                      <h5>Précision Améliorée de la Traduction </h5>
-                      <p>
-                          Le jeu de données multilingue améliore la compréhension du modèle NKO des nuances et du contexte d'autres langues et du NKO, conduisant à des traductions plus précises.
-                      </p>
-                    </div>
-                  </li>
-                  <li>
-                    <i class="fa fa-text-width"></i>
-                    <div>
-                      <h5>Génération de Texte Améliorée</h5>
-                      <p>
-                          Les entrées linguistiques variées contribuent à une compréhension plus complète de la langue NKO, permettant au modèle de générer un texte cohérent et contextuellement pertinent en NKO.
-                      </p>
-                    </div>
-                  </li>
-                <li>
-                  <i class="fa fa-language"></i>
-                  <div>
-                    <h5>Compréhension Globale de la Langue NKO </h5>
-                    <p>
-                      Les activités couvrant l'écriture, la traduction et la parole contribuent à une compréhension holistique de la langue NKO, englobant les formes écrites et parlées, résultant en des modèles performants pour diverses tâches linguistiques.
-                    </p>
-                  </div>
-                </li>
-                <li>
-                  <i class="fa fa-plus-square"></i>
-                  <div>
-                    <h5>Soutien à la Création de Contenu NKO </h5>
-                    <p>
-                      Les créateurs de contenu sur la plateforme bénéficient de modèles linguistiques améliorés pour la création de contenu en NKO, améliorant la qualité et la pertinence dans divers domaines.
-                    </p>
-                  </div>
-                </li>
-                <li>
-                  <i class="fa fa-industry"></i>
-                  <div>
-                    <h5>Applications Linguistiques Polyvalentes </h5>
-                    <p>
-                      Un modèle NKO bien entraîné peut être appliqué dans de nombreuses applications, y compris la création de contenu, les services de traduction, les plateformes d'apprentissage linguistique, contribuant à la polyvalence de la technologie linguistique NKO.
-                    </p>
-                  </div>
-                </li>
-              </ul>
-              {{-- <p>
-                  Ensemble, mettons nos langues en valeur.<br/>
-
-              </p> --}}
-            </div>
-          </div>
-
+        <div class="section-title">
+          <h2>ߊ߲ ߞߎ߲߭ߞߊ߲߬ </h2>
+          <h3><span>ߞߵߊ߲ ߟߐ߫ ߞߊ߬ ߢߊ߬ ߞߏߛߓߍ߫ </span></h3>
+          <p>ߊ߲ ߧߋ߫ ߢߎߡߍߙߋ߲ߠߞߊ ߟߎ߬ ߘߐߓߍ߲߬ ߞߛߍߞߛߍߟߌߘߊ ߟߋ߬ ߘߌ߫</p>
         </div>
-      </section><!-- End About Section -->
 
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            {{-- <h3>A quoi sert la presente plateforme?</h3>
+            <p class="fst-italic">
+              Ici, nous collectons des donnees sur le N'KO en vue d'entrainer nos IA (Intelligence Artificielle) a comprendre et generer du texte en N'KO<br/>.
+              La mise en place d'un IA de ce type a les avantages suivants:
+            </p> --}}
+
+            <h4>ߊ߲ ߞߎ߲߭ߞߊ߲߬</h4>
+
+            <div class="read-more-content">
+                <p>ߌ ߣߌ߫ ߛߣߍ߫ ߒߞߏ ߟߐ߲ߕߊ ߟߊߘߍ߬ ߞߍߦߙߐ ߟߊ߫</p>
+
+                <h4>ߊ߲ ߞߋߟߦߊ </h4>
+
+                <p>ߘߏߣߌߟߊߓ ߟߊ߫ ߸ ߊ߲ ߟߊߣߍ߲ ߛߋ߲ߒߞߏߟߊߘߐߦߊ ߞߊ߫ߦߟߍ߬ߡߊ߬ߟߌ ߛߋߞߏߦߊ ߟߊ߫ ߸ ߞߊ߬ ߦߟߍ߬ߡߊ߬ߟߌ ߓߊ߲ߓߊ߲ߣߍ߲ ߛߌ߲ߘߌ. ߞߊ߬ߦߌ߯ ߊ߲ ߧߋ߫ ߝߊߓߑߟߊߓ ߘߌ߫ ߸ ߊ߲ ߞߊ߬ ߓߟߏߦߊߟߌ ߕߏ߰ߝߏ ߢߍߓߊ߫ߦߊ ߟߋ߬ ߕߊ߬ ߕߎ߬ߡߊ߬ ߓߍ߯ ߣߌ߫ ߞߣߍ ߟߎ߬ ߟߊߘߊ߲ߠߌ߲ ߘߌ߫ ߡߐ߰ ߓߐߣߍ߲ߢߐ߲߯ߡߊ ߟߎ߬ ߘߌ߫ ߛߋ߫ ߡߍ߲ ߕߣߐ߬ߓߐ߬ ߟߊ߫ ߸ ߞߊ߬ ߟߐ߲ߕߊ ߡߊߝߌߟߍ߫ ߞߵߊ߬ߟߎ߬ ߡߙߌߦߊ ߟߊߓߐ߫ </p>
+
+                <h4>ߡߎ߲߬ ߠߊ߫ ߞߍߦߙߐ ߒߞߏ ߞߊ߲ߞߊ߲ߞߋߦߊ ߟߐ߲ߕߊ ߟߎ߬ ߟߊߘߍ߬ߟߌ ߞߊߡߊ߬ </h4>
+
+                <p>ߊ߲ ߞߊ߫ ߟߊߞߎߘߦߊߟߌ ߖߘߍ߬ߘߌ ߞߐߝߍ߬ ߸ ߊ߲ ߞߊ߬ ߞߍߦߙߐ ߘߏ߫ ߟߊߘߊ߲߫ ߛߊ߫ ߞߊ߬ ߟߐ߲ߕߊ ߟߎ߬ : ߞߟߏߜߍ ߣߌ߫ ߡߍ߲ߞߊ߲ ߠߎ߬ ߟߊߞߊ߬ߝߏ߬. ߊ߲ ߞߊ߫ ߟߊߢߌߣߌ߲ ߧߋ߫ ߡߊ߬ߜߍ߲ ߠߋ߬ ߘߌ߫ ߛߋߒߞߏߟߊߘߐߦߊ ߞߊ߫ ߢߍߕߊ߮ ߟߊ߫ ߦߟߌߟߊ߲ߘߌ߫ ߘߍ߲߰ߢߊ߬ߣߍ߲ ߘߊߞߎ߲ ߠߊ߫. ߞߙߍߞߙߍߦߊ ߓߟߏߡߊ߬ ߸ ߊ߬ ߓߍ߲߬ߣߍ߲ ߒߞߏ ߡߊ߬ ߞߊ߬ ߓߌ߬ߟߊ߬ߢߐ߲߰ߡߊ ߣߌ߫ ߟߊߛߐ߬ߘߐ߲߬ߠߌ߲ ߣߐ߰ߦߊ߬</p>
+
+                <h4>ߞߊ߬ ߓߊ߬ߟߊ߲ ߓߐ߫ ߞߊ߲ ߠߎ߬ ߕߍ </h4>
+
+                <p>ߞߵߊ߬ ߕߎ߬ߙߎ ߞߍ߫ ߟߐ߲ߕߊ ߟߊߘߍ߬ߟߌ ߕߏߟߏ߲ ߓߐߣߍ߲ߢߐ߲߯ߡߊ ߟߎ߬ ߘߌ߫. ߊ߲ ߓߘߴߊ߲ ߕߊ߫ ߞߍߝߊߘߌ ߟߊߘߊ߲߫ ߛߊ߫ ߞߊ߬ ߒߞߏ ߦߟߍ߬ߡߊ߬ ߞߊ߲ ߕߐ߭ ߟߎ߬ ߘߐ߫ ߊ߬ ߣߴߏ߬ ߞߕߐߡߊ ߘߝߊ ߞߏߟߌߞߏߟߌ߫ ߘߐ߫߸ ߏ߬ ߓߍߣߊ߬ ߞߍ߫ ߕߙߎ߬ ߘߌ߫ ߞߵߊ߲ ߟߐ߲ߕߊ ߡߊߞߊ߬ߝߏ߬ ߞߊ߲ ߞߌ߬ߦߡߊ߬ ߦߙߐ ߟߎ߬ ߡߊ߬. ߒ߬ߓߊ߬ ߸ ߊ߬ ߓߍߣߊ߬ ߓߊ߬ߟߊ߲ ߓߐ߫ ߞߊ߲ ߠߎ߬ ߝߣߊ߫ ߕߍ߫ ߸ ߏ߬ ߓߍ߫ ߘߊߦߟߍ߬ ߓߌ߬ߟߊ߬ߢߐ߲߰ߡߊ ߝߙߍ߬ ߛߌߦߊߡߊ߲߫ ߢߍ߫ ߊ߬ ߣߌ߫ ߢߊߦߋߟߌ </p>
+
+                <h4>ߣߊ߬ ߝߙߊ߬ ߊ߲ ߞߊ߲߬ ߟߊߞߎߘߦߊߟߌ ߛߋ߲߬ߕߊ ߏ߬ ߘߐ߫ </h4>
+
+                <p>ߌ ߞߍ߫ ߘߊ߫ ߟߊߞߎߘߦߊߟߌߟߓߊ ߏ߱ ߌ ߞߍ߫ ߘߊ߫ ߛߌ߲ߘߟߌߟߊ ߞߎ߲ߝߊ߲ߕߐ ߛߐߒߞߏߟߊߘߐߦߊ߫ ߞߏ ߘߐ߫ ߏ߱ ߥߟߊ߫ ߞߊ߲ ߞߎ߲ߝߊ߲ߕߐ ߸ ߘߏߣߌߟߊߓ ߦߴߌ ߥߟߋ߫ ߟߊ߫ ߞߊ߬ ߣߊ߬ ߝߙߊ߬ ߊ߲ ߞߊ߲߬ ߟߊߞߎߘߦߊߟߌ ߛߋ߲߬ߕߊ ߣߌ߲߬ ߘߐ߫. ߊ߲ ߓߍ߯ ߦߴߊ߲ ߛߋߞߏ ߞߍ߫ ߸ ߞߊ߬ ߕߊ߬ߡߌ߬ ߊ߲ ߘߊ߲߭ ߠߊ߫ ߸ ߊ߲ ߧߋ߫ ߛߌߣߌ߲ ߞߍߝߊߘߌ ߘߏ߫ ߓߌ߬ߟߊ߬ ߊ߲ ߢߍ߫ ߛߋߒߞߏߟߊߘߐߦߊ ߓߍ߫ ߛߋߞߏ߬ߘߴߊ߲ ߡߊ߬ ߡߍ߲ ߘߐ߫ ߊ߬ ߣߌ߫ ߞߵߊ߲ ߜߊ߲ߞߎ߲ߢߐ߲߮ ߠߊ߫   </p>
+
+                <p>ߌ ߣߌ߫ ߗߋ߫ ߝߙߊ߬ߟߌ ߘߐ߫ ߊ߲ ߞߊ߲߬ ߹</p>
+
+                <p><strong>DoniFab</strong></p>
+            </div>
+
+            <a class="read-more-trigger" onclick="toggleReadMore()">ߊ߬ ߕߐ߭ ߞߊ߬ߙߊ߲߬</a>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="250">
+
+
+            <ul>
+                <li>
+                  <i class="fas fa-language"></i>
+                  <div>
+                    <h5>ߘߟߊߡߌߣߊߟߌ ߟߢߊߟߌ ߔߙߋߔߙߋߟߊߕߍ߰ </h5>
+                    <p>
+                        ߞߊ߲ ߓߐߣߍ߲ߢߐ߲߯ߡߊ ߟߎ߬ ߟߐ߲ߕߊ ߦߋ߫ ߒߞߏ ߕߊ߫ ߢߊߦߋߟߌ ߣߐ߰ߦߊ߬ ߟߊ߫ ߸ ߝߙߋߞߋ ߟߎ߬ ߸ ߊ߬ ߣߌ߫ ߞߊ߲ ߕߐ߭ ߟߎ߬ ߘߊߞߎ߲ ߣߌ߫ ߒߞߏ . ߏ߬ ߓߍߣߊ߬ ߘߟߊߡߌߣߊߟߌ ߖߐ߲ߖߐ߲ ߠߎ߬ ߞߍ߫
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <i class="fa fa-text-width"></i>
+                  <div>
+                    <h5>ߞߟߏߜߍ ߓߐߞߏߣߊ߲ ߟߊߢߊ߬ߣߍ߲  </h5>
+                    <p>
+                        ߟߐ߲ߕߊ ߟߊߘߏ߲߬ߣߍ߲ ߓߐߣߍ߲ߢߐ߲߫ߡߊ ߟߎ߬ ߓߍߣߊ߬ ߡߊߜߍ߲߫ ߞߍ߫ ߒߞߏ ߢߊߦߋߟߌ ߘߐ߫ ߞߏߛߓߍ߫. ߞߍߝߊߘߌ ߓߍߣߊ߬ ߛߋ߫ ߞߊ߬ ߞߟߏߜߍ ߘߊߕߐߡߦߊߣߍ߲ ߟߊߘߊ߲߫ ߒߞߏ ߘߐ߫ ߞߵߊ߬ ߓߍ߲߬ ߘߊߞߎ߲ ߠߎ߬ ߡߊ߬
+                    </p>
+                  </div>
+                </li>
+              <li>
+                <i class="fa fa-language"></i>
+                <div>
+                  <h5>ߒߞߏ ߝߘߏ߬ߓߊ߬ ߢߊߦߋߟߌ  </h5>
+                  <p>
+                    ߓߊ߯ߙߊ ߡߍ߲ ߦߋ߫ ߛߓߍߟߌ ߘߊߞߎ߲ ߠߊ߫ ߸ ߛߓߍߟߌ ߣߌ߫ ߞߎߡߊ ߦߋ߫ ߡߊ߬ߘߍ߲߬ߠߌ߲ ߞߍ߫ ߟߊ߫ ߞߊ߲ ߢߊߦߋߟߌ ߘߐ߫ ߕߌ߫ߦߊ ߓߟߏߡߊ߬ ߛߓߍߟߌ ߞߍߝߊߘߌ ߣߴߊ߬ ߝߐߟߌ ߸ ߞߊ߬ ߞߐߝߟߌ߫ ߢߌߡߊ߲߫ ߘߌ߫ ߞߊ߲ ߘߊߞߎ߲ ߓߐߣߍ߲ߢߐ߯ߡߊ ߟߎ߬ ߘߐ߫
+                  </p>
+                </div>
+              </li>
+              <li>
+                <i class="fa fa-plus-square"></i>
+                <div>
+                  <h5>ߡߊ߬ߘߍ߲߬ߠߌ ߒߞߏ ߟߐ߲ߕߊ ߟߎ߬ ߛߌ߲ߘߟߌ ߘߐ߫  </h5>
+                  <p>
+                    ߒߞߏ ߟߐ߲ߕߊ ߟߎ߬ ߛߌ߲ߘߟߌߟߊ ߟߎ߬ ߞߍߦߙߐ ߞߊ߲߬ ߏ߬ ߟߎ߬ ߓߍߣߊ߬ ߒߞߏ ߞߍߝߊߘߌ ߟߊߢߊߣߍ߲ ߛߐ߬ߘߐ߲߬ ߛߊ߫ ߞߊ߬ ߒߞߏ ߓߊ߯ߙߊ ߟߎ߬ ߞߍ߫ ߣߴߊ߬ ߦߋ߫ . ߞߵߊ߬ߟߎ߬ ߟߊ߫ ߓߊ߯ߙߊ ߛߋߞߏߦߊ ߡߊߞߊ߬ߝߏ߬ ߡߊ߬ߘߎ߰ ߛߌߦߊߡߊ߲ ߘߐ߫.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <i class="fa fa-industry"></i>
+                <div>
+                  <h5>ߞߊ߲ ߟߥߊߟߋߟߊ߲ ߛߋߞߏߦߊ߫ ߛߌߦߊߡߊ߲߫ </h5>
+                  <p>
+                    ߒߞߏ ߞߍߝߊߘߌ ߡߊߞߟߏߣߍ߲߫ ߞߏ߫ ߢߌ߲ߡߊ߲߫ ߓߴߛߋ߫ ߟߊߓߊ߯ߙߊ߫ ߟߊ߫ ߟߥߊߟߋ߲ߟߊ߲߫ ߛߌߦߊߡߊ߲߫ ߘߐ߫. ߞߣߐߘߐ ߟߊߘߊ߲ߠߌ߲ ߞߍߦߙߐ ߟߎ߬ ߏ߱ ߘߟߊߡߌߣߊߟߌ ߏ߱ ߸ ߊ߬ ߓߍߣߊ߬ ߡߊ߬ߜߍ߲߬ߓߊ ߞߍ߫ ߒߞߏ ߛߋߒߞߏߟߊߘߐߦߊ ߘߊߞߎ߲ ߠߎ߬ ߘߐ߫
+                  </p>
+                </div>
+              </li>
+            </ul>
+            {{-- <p>
+                Ensemble, mettons nos langues en valeur.<br/>
+
+            </p> --}}
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
     <!-- ======= Counts Section ======= -->
     <section id="counts" class="counts">
         <div class="container" data-aos="fade-up">
@@ -356,7 +348,7 @@
               <div class="count-box">
                 <i class="fas fa-microphone"></i>
                 <span data-purecounter-start="0" data-purecounter-end="{{ $countsValues["audios"] }}" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Enregistrements audios</p>
+                <p>ߡߍ߲ߞߊ߲ ߟߊߞߎ߲߬ߘߎ߬ߟߌ </p>
               </div>
             </div>
 
@@ -364,7 +356,7 @@
               <div class="count-box">
                 <i class="fas fa-pen"></i>
                 <span data-purecounter-start="0" data-purecounter-end="{{ $countsValues["nkosentences"] }}" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Textes en NKO</p>
+                <p>ߒߞߏ ߞߟߏߜߍ </p>
               </div>
             </div>
 
@@ -372,7 +364,7 @@
               <div class="count-box">
                 <i class="fas fa-language"></i>
                 <span data-purecounter-start="0" data-purecounter-end="{{ $countsValues["FrenchToNkos"] }}" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Traductions</p>
+                <p>ߘߟߊߡߌߣߊߟߌ </p>
               </div>
             </div>
 
@@ -380,7 +372,7 @@
               <div class="count-box">
                 <i class="fas fa-pen"></i>
                 <span data-purecounter-start="0" data-purecounter-end="{{ $countsValues["frenchsentences"] }}" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Textes en Francais</p>
+                <p>ߝߊ߬ߙߊ߲߬ߛߌ ߞߟߏߜߍ </p>
               </div>
             </div>
 
@@ -396,25 +388,25 @@
 
         <div class="row">
 
-          <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="{{ secure_asset('assets/img/donilab.png') }}" class="img-fluid" alt="">
-          </div>
+            <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+              <img src="{{ secure_asset('assets/img/donilab.png') }}" class="img-fluid" alt="">
+            </div>
 
-          <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="{{ secure_asset('assets/img/sallpro.jpeg') }}" class="img-fluid" alt="">
-          </div>
+            <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+              <img src="{{ secure_asset('assets/img/sallpro.jpeg') }}" class="img-fluid" alt="">
+            </div>
 
-          <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="{{ secure_asset('assets/img/bko-tech.png') }}" class="img-fluid" alt="">
-          </div>
+            <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+              <img src="{{ secure_asset('assets/img/bko-tech.png') }}" class="img-fluid" alt="">
+            </div>
 
-          <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="{{ secure_asset('assets/img/donifab.png') }}" class="img-fluid" alt="">
-          </div>
+            <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+              <img src="{{ secure_asset('assets/img/donifab.png') }}" class="img-fluid" alt="">
+            </div>
 
-          <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="{{ secure_asset('assets/img/logo-lonko-dounbou.png') }}" class="img-fluid" alt="">
-          </div>
+            <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+              <img src="{{ secure_asset('assets/img/logo-lonko-dounbou.png') }}" class="img-fluid" alt="">
+            </div>
 
         </div>
 
@@ -427,9 +419,9 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Equipe</h2>
-          <h3>DoniFab <span>Dream & Make</span></h3>
-          <p>Nous sommes une equipe de professionels et d'etudiants, tous passionnes des nouvelles technologies.</p>
+          <h2>ߘߏߣߌߟߊߓ ߛߙߍ</h2>
+          {{-- <h3>Notre formidable <span>Equipe</span></h3> --}}
+          <p>ߊ߲ߠߎ߬ ߦߋ߫ ߓߟߏߡߞߊ߫ ߛߘߍ ߣߌ߫ ߞߊ߬ߙߊ߲߬ߠߊ߬ߘߋ߲ ߠߎ߬ ߘߌ߫ ߸ ߡߌ߲ ߠߎ߬ ߖߙߊ߬ߓߌ߬ߣߍ߲ ߛߋߒߞߏߟߊߘߐߦߊ ߞߊ߬ߞߎ߬ߘߊ߬ߡߊ ߟߎ߬ ߟߊ߫ </p>
         </div>
 
         <div class="membre">
@@ -438,19 +430,19 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
               <div class="member-img">
-                {{-- <a href="https://ikeneya.s3.us-east-2.amazonaws.com/nko-assets/assets/hawa.JPG" data-lightbox="gallery" data-title="Hawa DIONE"> --}}
-                    <img src="{{ secure_asset('assets/img/hawa.JPG') }}" class="img-fluid" alt="">
-                {{-- </a> --}}
+                <a href="assets/img/hawa.JPG" data-lightbox="gallery" data-title="ߊߥߊ߬ ߖߏ߬ߣߌ߫ ߟߐ߲ߕߊ ߟߐ߲ߞߏ ߞߊ߬ߙߊ߲߬ߠߊ߬ߘߋ߲ ">
+                    <img src="assets/img/hawa.JPG" class="img-fluid" alt="" id="image1">
+                  </a>
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
-                  <a href="https://www.facebook.com/hawa.dioni.39" target="_blank"><i class="bi bi-facebook"></i></a>
+                  {{-- <a href=""><i class="bi bi-facebook"></i></a> --}}
                   {{-- <a href=""><i class="bi bi-instagram"></i></a> --}}
                   {{-- <a href=""><i class="bi bi-linkedin"></i></a> --}}
                 </div>
               </div>
               <div class="member-info">
-                <h4>Hawa DIONE</h4>
-                <span style="color: #3c3c3c">Etudiante en Data Sciences</span>
+                <h4>ߊߥߊ߬ ߖߏ߬ߣߌ߫</h4>
+                <span style="color: #3c3c3c">ߟߐ߲ߕߊ ߟߐ߲ߞߏ ߞߊ߬ߙߊ߲߬ߠߊ߬ߘߋ߲</span>
               </div>
             </div>
           </div>
@@ -458,9 +450,9 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
             <div class="member">
               <div class="member-img">
-                {{-- <a href="https://ikeneya.s3.us-east-2.amazonaws.com/nko-assets/assets/diouka.jpg" data-lightbox="gallery" data-title="Diouka SISSOKO"> --}}
-                    <img src="{{ secure_asset('assets/img/diouka.jpg') }}" class="img-fluid" alt="">
-                {{-- </a> --}}
+                <a href="assets/img/diouka.jpg" data-lightbox="gallery" data-title="ߘߌߥߎߞߊ߫ ߛߌ߬ߛߞߏ߬ ߕߟߋ߬ߓߊ߮ ߣߌ߫ ߥߎߟߊߟߊ߫ ߓߌߟߊߢߐ߲߯ߡߊ ߞߋ߬ߞߎ߲߬ߣߍ߲">
+                <img src="assets/img/diouka.jpg" class="img-fluid" alt="">
+                </a>
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
                   <a target="_blank" href="https://m.facebook.com/profile.php/?id=100022039608402"><i class="bi bi-facebook"></i></a>
@@ -469,8 +461,8 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Diouka SISSOKO</h4>
-                <span style="color: #3c3c3c">Etudiante en Genie <br/> Informatique et Telecoms</span>
+                <h4>ߘߌߥߎߞߊ߫ ߛߌ߬ߛߞߏ߬</h4>
+                <span style="color: #3c3c3c">ߕߟߋ߬ߓߊ߮ ߣߌ߫ ߥߎߟߊߟߊ߫ ߓߌߟߊߢߐ߲߯ߡߊ ߞߋ߬ߞߎ߲߬ߣߍ߲</span>
               </div>
             </div>
           </div>
@@ -478,9 +470,9 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
               <div class="member-img">
-                {{-- <a href="https://ikeneya.s3.us-east-2.amazonaws.com/nko-assets/assets/djigui.jpg" data-lightbox="gallery" data-title="Djigui KEITA"> --}}
-                    <img src="{{ secure_asset('assets/img/djigui.jpg') }}" class="img-fluid" alt="">
-                {{-- </a> --}}
+                <a href="assets/img/djigui.jpg" data-lightbox="gallery" data-title="ߦߎߓߊ߬ ߖߌ߯ ߞߋߕߊ߬ ߞߊ߲ ߞߟߊ߬ߡߊ߬ߓߊ߮ ">
+                <img src="assets/img/djigui.jpg" class="img-fluid" alt="">
+                </a>
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
                   <a target="_blank" href="#"><i class="bi bi-facebook"></i></a>
@@ -489,8 +481,8 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Djigui Youba KEITA</h4>
-                <span style="color: #3c3c3c">Expert en N'KO</span>
+                <h4>ߦߎߓߊ߬ ߖߌ߯</h4>
+                <span style="color: #3c3c3c">ߞߋߕߊ߬ ߞߊ߲ ߞߟߊ߬ߡߊ߬ߓߊ߮</span>
               </div>
             </div>
           </div>
@@ -498,9 +490,9 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="member">
               <div class="member-img">
-                {{-- <a href="https://ikeneya.s3.us-east-2.amazonaws.com/nko-assets/assets/Alpha.jpeg" data-lightbox="gallery" data-title="Bamoye TRAORE"> --}}
-                    <img src="{{ secure_asset('assets/img/Alpha.jpeg') }}" class="img-fluid" alt="">
-                {{-- </a> --}}
+                <a href="assets/img/Alpha.jpeg" data-lightbox="gallery" data-title="ߓߊ߬ߡߏߦߌ߬ ߕߙߊߥߟߊ߫ ߍߡ ߍߟ ߢߍߥߟߊߦߊߟߊ ">
+                <img src="assets/img/Alpha.jpeg" class="img-fluid" alt="">
+                </a>
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
                   <a target="_blank" href="https://www.facebook.com/profile.php?id=100006821057109"><i class="bi bi-facebook"></i></a>
@@ -509,8 +501,8 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Bamoye TRAORE</h4>
-                <span style="color: #3c3c3c">ML Developer</span>
+                <h4>ߓߊ߬ߡߏߦߌ߬ ߕߙߊߥߟߊ߫</h4>
+                <span style="color: #3c3c3c">ߍߡ ߍߟ ߢߍߥߟߊߦߊߟߊ</span>
               </div>
             </div>
           </div>
@@ -518,19 +510,19 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="50">
             <div class="member">
               <div class="member-img">
-                {{-- <a href="https://ikeneya.s3.us-east-2.amazonaws.com/nko-assets/assets/fatoma.jpeg" data-lightbox="gallery" data-title="Fatoma DAOU"> --}}
-                    <img src="{{ secure_asset('assets/img/fatoma.jpeg') }}" class="img-fluid" alt="">
-                {{-- </a> --}}
+                <a href="assets/img/fatoma.jpeg" data-lightbox="gallery" data-title="ߝߊ߬ߕߐ߯ߡߊ߲߬ ߘߊߥߎ߫ ߞߊ߲ ߞߟߊ߬ߡߊ߬ߓߊ߮ ">
+                <img src="assets/img/fatoma.jpeg" class="img-fluid" alt="">
+                </a>
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
-                  <a href="#"><i class="bi bi-facebook"></i></a>
+                  {{-- <a target="_blank" href="https://www.facebook.com/DoniFab/"><i class="bi bi-facebook"></i></a> --}}
                   {{-- <a href=""><i class="bi bi-instagram"></i></a> --}}
-                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                  {{-- <a target="_blank" href="https://www.linkedin.com/in/mahamadou-kone-42597b185/"><i class="bi bi-linkedin"></i></a> --}}
                 </div>
               </div>
               <div class="member-info">
-                <h4>Fatoma DAOU</h4>
-                <span style="color: #3c3c3c">Expert N'KO</span>
+                <h4>ߝߊ߬ߕߐ߯ߡߊ߲߬ ߘߊߥߎ߫ </h4>
+                <span style="color: #3c3c3c">ߞߊ߲ ߞߟߊ߬ߡߊ߬ߓߊ߮</span>
               </div>
             </div>
           </div>
@@ -538,29 +530,8 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="50">
             <div class="member">
               <div class="member-img">
-                {{-- <a href="https://ikeneya.s3.us-east-2.amazonaws.com/nko-assets/assets/sall.jpeg" data-lightbox="gallery" data-title="Yousssouf SALL"> --}}
-                    <img src="{{ secure_asset('assets/img/sall.jpeg') }}" class="img-fluid" alt="">
-                {{-- </a> --}}
-                <div class="social">
-                  {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
-                  <a target="_blank" href="https://www.facebook.com/DoniFab/"><i class="bi bi-facebook"></i></a>
-                  {{-- <a href=""><i class="bi bi-instagram"></i></a> --}}
-                  <a target="_blank" href="https://www.linkedin.com/in/youssouf-sall-567b5a72/"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Youssouf SALL</h4>
-                <span style="color: #3c3c3c">Consultant en Innovation Technologique</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="50">
-            <div class="member">
-              <div class="member-img">
-                {{-- <a href="https://ikeneya.s3.us-east-2.amazonaws.com/nko-assets/assets/mohamed.jpeg" data-lightbox="gallery" data-title="Mahamadou KONE"> --}}
-                    <img src="{{ secure_asset('assets/img/mohamed.jpeg') }}" class="img-fluid" alt="">
-{{--  --}}
+                <a href="assets/img/sall.jpeg" data-lightbox="gallery" data-title="ߦߛߎߝ ߛߊߟ ߛߋߒߞߏߟߊߘߐߦߊ ߟߊߞߎߘߦߊߟߊ ߞߏߟߊ߲ߞߘߐߢߐ߲߮ ">
+                <img src="assets/img/sall.jpeg" class="img-fluid" alt="">
                 </a>
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
@@ -570,8 +541,29 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Mahamadou KONE</h4>
-                <span style="color: #3c3c3c">FullStack Developer</span>
+                <h4>ߦߛߎߝ ߛߊߟ  </h4>
+                <span style="color: #3c3c3c">ߛߋߒߞߏߟߊߘߐߦߊ ߟߊߞߎߘߦߊߟߊ ߞߏߟߊ߲ߞߘߐߢߐ߲߮</span>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="50">
+            <div class="member">
+              <div class="member-img">
+                <a href="assets/img/mohamed.jpeg" data-lightbox="gallery" data-title="ߡߤߊ߬ߡߊ߬ߘߎ߬ ߞߏߣߋ߫ ߘߊߞߎ߲߫ ߥߙߍ ߢߍߥߟߊߦߟߊ ">
+                    <img src="assets/img/mohamed.jpeg" class="img-fluid" alt="">
+                </a>
+                <div class="social">
+                  {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
+                  <a target="_blank" href="https://www.facebook.com/DoniFab/"><i class="bi bi-facebook"></i></a>
+                  {{-- <a href=""><i class="bi bi-instagram"></i></a> --}}
+                  <a target="_blank" href="https://www.linkedin.com/in/mahamadou-kone-42597b185/"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>ߡߤߊ߬ߡߊ߬ߘߎ߬ ߞߏߣߋ߫  </h4>
+                <span style="color: #3c3c3c">ߘߊߞߎ߲߫ ߥߙߍ ߢߍߥߟߊߦߟߊ</span>
               </div>
             </div>
           </div>
@@ -586,24 +578,24 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Contact</h2>
-          <h3><span>Nous contacter</span></h3>
-          <p>Pour toutes suggestions, remarques ou tout autres besoins, laissez nous un message.</p>
+          <h2>ߞߵߊ߲ ߠߊߛߐ߬ߘߐ߲߬ </h2>
+          <h3><span>ߊ߲ ߥߟߋ߫</span></h3>
+          <p>ߘߐ߬ߛߎ߬ߟߌ ߞߊ߬ ߘߐ߬ߛߎ߬ߟߌ ߟߎ߬ ߣߌ߫ ߖߊ߬ߕߋ߬ߡߌߣߊ ߟߎ߬ ߞߍ߫ ߸ ߊ߬ ߣߌ߫ ߡߊ߬ߞߏ߬ ߜߘߍ߫ ߟߎ߬ ߸ ߗߋߛߓߍ ߓߌ߬ߟߴߊ߲ ߢߍ߫</p>
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-6">
             <div class="info-box mb-4">
               <i class="bx bx-map"></i>
-              <h3>Notre adresse</h3>
-              <p>0853 Rue des Armees, Sotuba ACI, Bamako-Mali</p>
+              <h3>ߊ߲ ߛߊ߲߬ߓߊ߬ߕߐ߮ </h3>
+              <p>߀߈߅߃ ߣߊ߲߬ߕߌ߮ ߟߎ߬ ߟߊ߫ ߓߐߟߐ߲߸ ߛߏ߬ߕߌ߬ߓߊ߬ ߊߛߋߦߌ ߡߊ߬ߟߌ ߓߡߊ߬ߞߐ߬ </p>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6">
             <div class="info-box  mb-4">
               <i class="bx bx-envelope"></i>
-              <h3>Envoyez-nous un email</h3>
+              <h3>ߗߋߛߓߍ ߗߴߊ߲ ߡߊ߬ </h3>
               <p>kmahamadou01@gmail.com</p>
             </div>
           </div>
@@ -611,8 +603,8 @@
           <div class="col-lg-3 col-md-6">
             <div class="info-box  mb-4">
               <i class="bx bx-phone-call"></i>
-              <h3>Appeller nous</h3>
-              <p>+223 60 69 03 43</p>
+              <h3>ߊ߲ ߥߟߋ߫</h3>
+              <p>߀߀߂߂߃ ߆߀ ߆߉ ߀߃ ߄߃</p>
             </div>
           </div>
 
@@ -623,10 +615,11 @@
 
           <div class="col-lg-6 ">
             <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15571.49108181196!2d-7.9270629!3d12.6563459!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe51d2eefc83e617%3A0x5d46e6bf47471e4f!2sDoniLab!5e0!3m2!1sen!2sml!4v1706201887233!5m2!1sen!2sml" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            {{-- <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe> --}}
           </div>
 
           <div class="col-lg-6">
-            <form action="https://nko-uyrz.onrender.com/api/send-visiter-email" method="POST" id="emailForm" class="php-email-form">
+            <form action="{{ route('sendVisiterEmail') }}" method="POST" id="emailForm" class="php-email-form">
               @csrf
               <div class="row">
                 <div class="col form-group">
@@ -649,7 +642,7 @@
             </div>
 
 
-              <div class="text-center"><button class="btn btn-primary" id="sendEmailBtn" type="button" onclick="sendEmail()">Envoyer</button></div>
+              <div class="text-center"><button class="btn btn-primary" id="sendEmailBtn" type="button" onclick="sendEmail()">ߞߊ߬ ߗߋ߫</button></div>
               </div>
             </form>
           </div>
@@ -687,24 +680,23 @@
       <div class="row">
 
         <div class="col-lg-3 col-md-6 footer-contact">
-          <h3>N'KO<span>.</span></h3>
+          <h3>ߒߞߏ <span>.</span></h3>
           <p>
-            0853 Rue des Armees <br>
-            Sotuba ACI, Bamako<br>
-            Mali <br><br>
-            <strong>Phone:</strong> +223 60 69 03 43<br>
+            ߀߈߅߃ ߣߊ߲߬ߕߌ߮ ߟߎ߬ ߟߊ߫ ߓߐߟߐ߲߸ <br>ߛߏ߬ߕߌ߬ߓߊ߬ ߊߛߋߦߌ ߡߊ߬ߟߌ ߓߡߊ߬ߞߐ߬ <br>
+             <br><br>
+            <strong>Phone:</strong> ߀߀߂߂߃ ߆߀ ߆߉ ߀߃ ߄߃<br>
             <strong>Email:</strong> kmahamadou01@gmail.com<br>
           </p>
         </div>
 
         <div class="col-lg-3 col-md-6 footer-links">
-          <h4>Raccourcis</h4>
+          <h4>ߕߍ߰ߒߞߣߐ</h4>
           <ul>
-            <li><i class="bx bx-chevron-right"></i> <a href="{{ route('homepage') }}">Accueil</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#about">A propos</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{{ route('nkoHomepage') }}">ߟߊ߬ߛߣߍ߬ߟߌ߬ߘߊ </a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#about">ߊ߲ ߞߎ߲߭ߞߊ߲߬ </a></li>
             {{-- <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li> --}}
-            <li><i class="bx bx-chevron-right"></i> <a href="#team">Equipe</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Politique de confidentialitee</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#team">ߛߙߍ</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">ߜߎ߲߬ߘߏ߬ߟߊ߬ߞߊ ߓߘߍ߬ߓߘߍ߬ߟߌ </a></li>
           </ul>
         </div>
 
@@ -720,14 +712,14 @@
         </div> --}}
 
         <div class="col-lg-3 col-md-6 footer-links">
-          <h4>Rejoignez nous</h4>
+          <h4>ߣߊ߬ ߝߙߊ߬ ߊ߲ ߞߊ߲߬ </h4>
           {{-- <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p> --}}
           <div class="social-links mt-3">
             {{-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> --}}
             <a target="_blank" href="https://www.facebook.com/DoniFab/" class="facebook"><i class="bx bxl-facebook"></i></a>
             {{-- <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> --}}
             {{-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> --}}
-            <a target="_blank" href="https://www.linkedin.com/in/mahamadou-kone-42597b185/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/mahamadou-kone-42597b185/"><i class="bx bxl-linkedin"></i></a>
           </div>
         </div>
 
@@ -737,7 +729,7 @@
 
   <div class="container py-4">
     <div class="copyright">
-      &copy; Copyright <strong><span>N'KO</span></strong>. Tous Droit Réservés
+      &copy; ߊ߬ ߖߏ ߟߊߕߊ߲߬ߞߊ߬ߣߍ߲  <strong><span></span></strong>
     </div>
     <div class="credits">
       <!-- All the links in the footer should remain intact. -->
@@ -746,7 +738,7 @@
       <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bizland-bootstrap-business-template/ -->
       Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
     </div>
-    <div class="credits mx-5">
+    <div class="credits mx-3">
       <!-- All the links in the footer should remain intact. -->
       <!-- You can delete the links only if you purchased the pro version. -->
       <!-- Licensing information: https://bootstrapmade.com/license/ -->
@@ -758,7 +750,6 @@
 
 <div id="preloader"></div>
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
 
 
 
@@ -785,7 +776,8 @@
 </script>
 
 
-<script>
+
+<script type="text/javascript">
 
     function isValidEmail(email) {
                 // Regular expression for a simple email validation
@@ -839,7 +831,7 @@
             formData.append("message",message_value)
 
 
-            ajax.open("POST", "https://nko-uyrz.onrender.com/api/send-visiter-email", true);
+            ajax.open("POST", "{{ route('sendVisiterEmail') }}", true);
 
 
             console.log("sending");
@@ -896,6 +888,15 @@
 
 
 
+    // Attach the event listener to the form after the function is defined
+    // document.getElementById('emailForm').addEventListener('submit', contactEmailForm);
+
+
+
+
+
+
+
 
 
         ////////////////////////////////// Notification /////////////////////////////
@@ -918,19 +919,20 @@
         }
 
 
-</script>
+    // Add the event listener for the button
+    // document.getElementById('sendEmailBtn').addEventListener('click', function() {
+    //     sendEmail();
+    // });
+    </script>
 
-
-
-<script>
-    document.querySelectorAll('.zoomable').forEach(function (image) {
-        image.addEventListener('click', function () {
-        this.classList.toggle('clicked');
+    <script>
+        document.querySelectorAll('.zoomable').forEach(function (image) {
+            image.addEventListener('click', function () {
+            this.classList.toggle('clicked');
+            });
         });
-    });
 
-</script>
-
+    </script>
 
 <!-- Vendor JS Files -->
 <script src="{{ secure_asset('assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
@@ -940,12 +942,12 @@
 <script src="{{ secure_asset('assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
 <script src="{{ secure_asset('assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
 <script src="{{ secure_asset('assets/vendor/waypoints/noframework.waypoints.js') }}"></script>
-{{-- <script src="{{ secure_asset('assets/vendor/php-email-form/validate.js') }}"></script> --}}
-
+<script src="{{ secure_asset('assets/vendor/php-email-form/validate.js') }}"></script>
 
 <!-- Jquery CDN -->
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
 
 
 <!-- Template Main JS File -->
