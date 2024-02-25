@@ -1,11 +1,11 @@
 FROM richarvey/nginx-php-fpm:latest
 
-
 # Install system dependencies
 RUN apk add --no-cache \
     autoconf \
     build-base \
-    openssl-dev
+    openssl-dev \
+    linux-headers
 
 # Install gRPC extension
 RUN pecl install grpc && \
