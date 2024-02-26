@@ -25,7 +25,7 @@ class audiocontroller extends Controller
             // Uncomment the following line if you want to see the details during testing
             // dd("randomSentence->sentence", $randomSentence->sentence, "spaceCount", $spaceCount);
 
-        } while ($spaceCount >= 33);
+        } while ($spaceCount >= 201);
 
         // dd("randomSentence->sentence", $randomSentence->sentence, "spaceCount", $spaceCount);
 
