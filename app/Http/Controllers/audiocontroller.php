@@ -12,7 +12,25 @@ class audiocontroller extends Controller
 {
     public function show()
     {
-        $randomSentence = DB::table('nkosentences')->inRandomOrder()->first();
+
+        do {
+            $randomSentence = DB::table('nkosentences')->inRandomOrder()->first();
+
+            // Reverse the string
+            $reversedString = strrev($randomSentence->sentence);
+
+            // Count the spaces in the reversed string
+            $spaceCount = substr_count($reversedString, ' ');
+
+            // Uncomment the following line if you want to see the details during testing
+            // dd("randomSentence->sentence", $randomSentence->sentence, "spaceCount", $spaceCount);
+
+        } while ($spaceCount >= 33);
+
+        // dd("randomSentence->sentence", $randomSentence->sentence, "spaceCount", $spaceCount);
+
+
+
         return view('audioNko')->with('randomSentence', $randomSentence);
         // return view('progressHelper')->with('randomSentence', $randomSentence);
     }
