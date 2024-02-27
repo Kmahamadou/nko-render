@@ -7,6 +7,7 @@ use App\Http\Controllers\contactController;
 use App\Http\Controllers\frenchcontroller;
 use App\Http\Controllers\FrenchToNkocontroller;
 use App\Http\Controllers\nkocontroller;
+use App\Http\Controllers\MultipleSentenceInputController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
