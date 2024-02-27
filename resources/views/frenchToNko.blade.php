@@ -40,7 +40,7 @@
                       </div>
 
                       <div class="my-3">
-                          <div class="spinner-border text-primary" role="status" id="loader" style="display: none;">
+                          <div style="position: absolute; top:41%; right:50%;" class="spinner-border text-primary" role="status" id="loader" style="display: none;">
                               <span class="visually-hidden">Chargement...</span>
                           </div>
                       </div>
@@ -208,36 +208,36 @@
 
     function getRandomSentence(direction) {
 
-// Display loader while fetching new sentence
-console.log("direction");
-console.log(direction);
-$('#loader').show();
+        // Display loader while fetching new sentence
+        console.log("direction");
+        console.log(direction);
+        $('#loader').show();
 
-// Example using jQuery
-$.ajax({
-    url: '/api/getRandomSentence',
-    method: 'get',
-    data: { direction: direction },
-    success: function (response) {
-        console.log(response);
+        // Example using jQuery
+        $.ajax({
+            url: '/api/getRandomFrenchSentence',
+            method: 'get',
+            data: { direction: direction },
+            success: function (response) {
+                console.log(response);
 
-        // Hide loader when the AJAX request is complete
-        $('#loader').hide();
-        // Update the displayed sentence
-        $('#french_sentence').text(response.sentence);
-        // Update the hidden input value for form submission
-        $('#randomFrenchSentence').val(response.sentence);
-        // Clear the textarea for the new translation
-        $('#sentence').val('');
-    },
-    error: function (error) {
+                // Hide loader when the AJAX request is complete
+                $('#loader').hide();
+                // Update the displayed sentence
+                $('#french_sentence').text(response.sentence);
+                // Update the hidden input value for form submission
+                $('#randomFrenchSentence').val(response.sentence);
+                // Clear the textarea for the new translation
+                $('#sentence').val('');
+            },
+            error: function (error) {
 
-        // Hide loader when the AJAX request is complete
-        $('#loader').hide();
-        console.log(error);
+                // Hide loader when the AJAX request is complete
+                $('#loader').hide();
+                console.log(error);
+            }
+        });
     }
-});
-}
 
 
 

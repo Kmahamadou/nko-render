@@ -16,6 +16,16 @@ class MultipleSentenceInputController extends Controller
 
     public function multipleFrenchSentenceInsertion(Request $request)
     {
+
+        // $frenchLatinRegex = '/^[A-Za-zÀ-ÖØ-öø-ÿ0-9\s,;()!?.:"\'~_-]+$/';
+        // // $nkoRegex = '/^[\x{07C0}-\x{07F9}\x{07FA}-\x{07FF}\s:()؟-]+$/u';
+        // $nkoRegex = '/^[\x{07C0}-\x{07F9}\x{07FA}-\x{07FF}\s:\()؟.,"ߑ߸:."‹›،﴾﴿÷×_=%*°߹-]+$/u';
+
+
+        // $validation = $request->validate([
+        //     'sentences' => ['required', 'string', 'regex:'.$frenchLatinRegex],
+        // ]);
+
         $sentences = $request->input('sentences');
         // Log::info($sentences);
 

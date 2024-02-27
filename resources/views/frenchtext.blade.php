@@ -21,19 +21,26 @@
 
         </div>
 
+        <div class="my-3">
+            <div style="position: absolute; top:41%; right:50%;" class="spinner-border text-primary" role="status" id="loader" style="display: none;">
+                <span class="visually-hidden">Chargement...</span>
+            </div>
+        </div>
+
           <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
 
             <div class="col-lg-6">
               <form id="thisForm" method="post" action="{{ route('saveFrenchText') }}" role="form" onsubmit="submitForm(event)">
                   @csrf
                 <div class="form-group">
-                  <textarea class="form-control" id="sentence" name="sentence" rows="5" placeholder="Votre phrase en francais..." autofocus required></textarea>
+                  <textarea oninput="updateCharacterCount(this)" maxlength="200" class="form-control" id="sentence" name="sentence" rows="5" placeholder="Votre phrase en francais..." autofocus required></textarea>
                 </div>
+                <div id="charCount" class="mt-3 ">200 charactères restant</div>
                 <div class="my-3">
                   {{-- <div class="error-message"></div>
                   <div class="sent-message">Your message has been sent. Thank you!</div> --}}
                 </div>
-                <div class="text-center"><button class="btn btn-primary" type="submit">Soumettre</button></div>
+                <div class="text-center"><button class="btn btn-primary" id="submitBtn" type="submit">Soumettre</button></div>
               </form>
             </div>
 
@@ -43,11 +50,32 @@
       </section><!-- End Contact Section -->
     </main>
 
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script>
+        function updateCharacterCount(textarea) {
+            console.log("oninput");
+            var maxLength = parseInt(textarea.getAttribute('maxlength'));
+            var currentLength = textarea.value.length;
+            var remaining = maxLength - currentLength;
+            var charCountElement = document.getElementById('charCount');
+            charCountElement.textContent = remaining + ' charactères restant';
+        }
+    </script>
+
+
     <script>
 
         function submitForm(event) {
                 // Prevent the default form submission
                 event.preventDefault();
+                var loader = document.getElementById('loader');
+
+
+
+                // Show loader while the file is being uploaded
+                loader.style.display = 'block';
 
                 // Get the form data
                 var formData = new FormData(document.getElementById('thisForm'));
@@ -64,6 +92,11 @@
                 })
                 .then(response => response.json())
                 .then(data => {
+                // Show loader while the file is being uploaded
+                loader.style.display = 'none';
+
+                // Disable submit button to prevent multiple submissions
+                $('#submitBtn').prop('disabled', false);
                     // Handle the server response
                     // console.log(data);
                     document.getElementById('sentence').value = '';
@@ -74,6 +107,11 @@
                         }, 10);
                 })
                 .catch(error => {
+                // Show loader while the file is being uploaded
+                loader.style.display = 'none';
+
+                // Disable submit button to prevent multiple submissions
+                $('#submitBtn').prop('disabled', false);
 
                         // Show a custom notification
                             setTimeout(() => {
@@ -90,6 +128,11 @@
 
             // Check if the input is null or contains only spaces
             if (!sentence.trim()) {
+                // Show loader while the file is being uploaded
+                loader.style.display = 'none';
+
+                // Disable submit button to prevent multiple submissions
+                $('#submitBtn').prop('disabled', false);
                     // Show a custom notification
                     setTimeout(() => {
                     showNotification("Aucun texte fourni", 'error');
@@ -103,6 +146,11 @@
 
             // Test if the sentence contains only French/Latin characters
             if (!frenchLatinRegex.test(sentence)) {
+                // Show loader while the file is being uploaded
+                loader.style.display = 'none';
+
+                // Disable submit button to prevent multiple submissions
+                $('#submitBtn').prop('disabled', false);
                 // Identify the non-French/Latin characters and log them to the console
                 var nonFrenchLatinCharacters = sentence.match(/^[A-Za-zÀ-ÖØ-öø-ÿ0-9\s,;()!?.:"'~_-]+$/g);
 

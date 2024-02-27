@@ -48,7 +48,24 @@
                     <!-- End Custom Card Component -->
                     <input type="hidden" id="sentence" name="sentence" value="{{ $randomSentence->sentence }}" />
                 @endif
-            </div>
+
+
+                <div style="display: flex; flex-direction:row; justify-content: space-around" class="mt-1">
+                    <div class="col-lg-2 text-end">
+                        <button type="button" class="btn btn-light rounded-circle shadow-lg p-3 mb-5 rounded" id="prevSentence" onclick="getRandomSentence('prev')"></i><i class="bi bi-shuffle ml-2"></i></button>
+                    </div>
+
+                    <div style="position: absolute; top:50%; right:50%;" class="my-3">
+                        <div class="spinner-border text-primary" role="status" id="loader" style="display: none;">
+                            <span class="visually-hidden">Chargement...</span>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 text-start">
+                        <button type="button" class="btn btn-light rounded-circle shadow-lg p-3 mb-5 rounded" id="nextSentence" onclick="getRandomSentence('next')"><i class="bi bi-shuffle mr-2"></i></i></button>
+                    </div>
+                </div>
+
 
 
                 <div class="audio-recording-container" data-aos="fade-down" data-aos-delay="250">
@@ -79,9 +96,10 @@
 
             <div class="col-12 mx-auto mt-5 text-center" id="sending">Envois encours ...</div>
             <div class="col-12 mx-auto mt-5 text-center" id="recording">Enregistrement encours...<br /> Clicquer pour
-                envoyer</div>
-
+                envoyer
             </div>
+        </div>
+
         </section><!-- End Audio Record Section -->
     </main>
 
@@ -92,6 +110,9 @@
     {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
     </script> --}}
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
 
     <script>
         let recorder = null
@@ -142,6 +163,10 @@
             // recorder_block.style.display = 'none';
             sending.style.display = 'block';
             recording.style.display = 'none';
+
+
+            // Disable submit button to prevent multiple submissions
+            $('#submitBtn').prop('disabled', true);
 
 
 
@@ -220,5 +245,45 @@
 
             ajax.send(formData)
         }
+
+
+
+
+
+    function getRandomSentence(direction) {
+
+        // Display loader while fetching new sentence
+        console.log("direction");
+        console.log(direction);
+        $('#loader').show();
+
+        // Example using jQuery
+        $.ajax({
+            url: '/api/getRandomNkoSentence',
+            method: 'get',
+            data: { direction: direction },
+            success: function (response) {
+                console.log(response);
+
+                // Hide loader when the AJAX request is complete
+                $('#loader').hide();
+                // Update the displayed sentence
+                $('#next_nko_sentence').text(response.sentence);
+                // Update the hidden input value for form submission
+                $('#sentence').val(response.sentence);
+            },
+            error: function (error) {
+
+                // Hide loader when the AJAX request is complete
+                $('#loader').hide();
+                console.log(error);
+            }
+        });
+    }
+
+
     </script>
+
+
+
 @endsection

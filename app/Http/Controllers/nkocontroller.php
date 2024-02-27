@@ -7,9 +7,46 @@ use Illuminate\Http\Request;
 
 class nkocontroller extends Controller
 {
+    public function getRandomNkoSentence()
+    {
+        // Log::info($direction);
+
+        do {
+            $randomSentence = DB::table('nkosentences')->inRandomOrder()->first();
+
+
+            // Reverse the string
+            $reversedString = strrev($randomSentence->sentence);
+
+            // Count the spaces in the reversed string
+            $spaceCount = substr_count($reversedString, ' ');
+
+            // Uncomment the following line if you want to see the details during testing
+            // dd("randomSentence->sentence", $randomSentence->sentence, "spaceCount", $spaceCount);
+
+        } while ($spaceCount >= 201);
+
+        return response()->json(['sentence' => $randomSentence->sentence], 200);
+
+    }
+
     public function showNkoText()
     {
-        $randomSentence = DB::table('nkosentences')->inRandomOrder()->first();
+        do {
+            $randomSentence = DB::table('nkosentences')->inRandomOrder()->first();
+
+
+            // Reverse the string
+            $reversedString = strrev($randomSentence->sentence);
+
+            // Count the spaces in the reversed string
+            $spaceCount = substr_count($reversedString, ' ');
+
+            // Uncomment the following line if you want to see the details during testing
+            // dd("randomSentence->sentence", $randomSentence->sentence, "spaceCount", $spaceCount);
+
+        } while ($spaceCount >= 201);
+
 
         return view('nkotext')->with('randomSentence', $randomSentence);
     }

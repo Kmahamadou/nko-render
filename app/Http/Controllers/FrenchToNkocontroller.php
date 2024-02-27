@@ -8,7 +8,7 @@ class FrenchToNkocontroller extends Controller
 {
 
 
-    public function getRandomSentence()
+    public function getRandomFrenchSentence()
     {
         // Log::info($direction);
 
