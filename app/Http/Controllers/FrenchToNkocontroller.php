@@ -38,10 +38,10 @@ class FrenchToNkocontroller extends Controller
             $randomSentence = DB::table('frenchsentences')->inRandomOrder()->first();
 
             // Reverse the string
-            $reversedString = strrev($randomSentence->sentence);
+            // $reversedString = strrev($randomSentence->sentence, ' ');
 
             // Count the spaces in the reversed string
-            $spaceCount = substr_count($reversedString, ' ');
+            $spaceCount = substr_count($randomSentence->sentence, ' ');
 
             // Uncomment the following line if you want to see the details during testing
             // dd("randomSentence->sentence", $randomSentence->sentence, "spaceCount", $spaceCount);

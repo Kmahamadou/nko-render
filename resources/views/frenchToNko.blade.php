@@ -34,6 +34,21 @@
 
             @if (!empty($randomSentence))
                 <div class="col-lg-6">
+                    <div style="display: flex; flex-direction:row; justify-content: space-around" class="mt-1">
+                      <div class="col-lg-2 text-end">
+                          <button type="button" class="btn btn-light rounded-circle shadow-lg p-3 mb-5 rounded" id="prevSentence" onclick="getRandomSentence('prev')"></i><i class="bi bi-shuffle ml-2"></i></button>
+                      </div>
+
+                      <div class="my-3">
+                          <div class="spinner-border text-primary" role="status" id="loader" style="display: none;">
+                              <span class="visually-hidden">Chargement...</span>
+                          </div>
+                      </div>
+
+                      <div class="col-lg-2 text-start">
+                          <button type="button" class="btn btn-light rounded-circle shadow-lg p-3 mb-5 rounded" id="nextSentence" onclick="getRandomSentence('next')"><i class="bi bi-shuffle mr-2"></i></i></button>
+                      </div>
+                  </div>
                 <form id="thisForm" method="post" action="{{ route('saveFrenchToNko') }}" role="form" onsubmit="submitForm(event)">
                     @csrf
 
@@ -51,21 +66,6 @@
                         <div><button class="btn btn-primary shadow-lg p-3 mb-5 rounded" id="submitBtn" type="submit">Soumettre</button></div>
                     </div>
                 </form>
-                <div style="display: flex; flex-direction:row; justify-content: space-around">
-                  <div class="col-lg-2 text-end">
-                      <button type="button" class="btn btn-light rounded-circle shadow-lg p-3 mb-5 rounded" id="prevSentence" onclick="getRandomSentence('prev')"></i><i class="bi bi-shuffle ml-2"></i></button>
-                  </div>
-
-                  <div class="my-3">
-                      <div class="spinner-border text-primary" role="status" id="loader" style="display: none;">
-                          <span class="visually-hidden">Loading...</span>
-                      </div>
-                  </div>
-
-                  <div class="col-lg-2 text-start">
-                      <button type="button" class="btn btn-light rounded-circle shadow-lg p-3 mb-5 rounded" id="nextSentence" onclick="getRandomSentence('next')"><i class="bi bi-shuffle mr-2"></i></i></button>
-                  </div>
-              </div>
                 </div>
             @endif
 
