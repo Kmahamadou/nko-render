@@ -19,14 +19,21 @@
               </p>
           </div>
 
+          <div class="my-3">
+            <div style="position: absolute; top:41%; right:50%;" class="spinner-border text-primary" role="status" id="loader" style="display: none;">
+                <span class="visually-hidden">Chargement...</span>
+            </div>
+        </div>
+
           <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
 
             <div class="col-lg-6">
               <form id="thisForm" method="post" action="{{ route('saveNkoText') }}" role="form" onsubmit="submitForm(event)">
                   @csrf
                 <div class="form-group">
-                  <textarea style="text-align: right;" class="form-control" id="sentence" name="sentence" rows="5" placeholder="Votre phrase en N'KO..." autofocus required></textarea>
+                  <textarea oninput="updateCharacterCount(this)" maxlength="200" style="text-align: right;" class="form-control" id="sentence" name="sentence" rows="5" placeholder="Votre phrase en N'KO..." autofocus required></textarea>
                 </div>
+                <div id="charCount" class="mt-3 ">200 charactères restant</div>
                 <div class="my-3">
                   {{-- <div class="error-message"></div>
                   <div class="sent-message">Your message has been sent. Thank you!</div> --}}
@@ -42,10 +49,33 @@
     </main>
 
 
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script>
+        function updateCharacterCount(textarea) {
+            console.log("oninput");
+            var maxLength = parseInt(textarea.getAttribute('maxlength'));
+            var currentLength = textarea.value.length;
+            var remaining = maxLength - currentLength;
+            var charCountElement = document.getElementById('charCount');
+            charCountElement.textContent = remaining + ' charactères restant';
+        }
+    </script>
+
+
     <script>
         function submitForm(event) {
                 // Prevent the default form submission
                 event.preventDefault();
+                var loader = document.getElementById('loader');
+
+
+
+                // Show loader while the file is being uploaded
+                loader.style.display = 'block';
+
+                // Disable submit button to prevent multiple submissions
+                $('#submitBtn').prop('disabled', true);
 
                 // Get the form data
                 var formData = new FormData(document.getElementById('thisForm'));
@@ -62,6 +92,11 @@
                 })
                 .then(response => response.json())
                 .then(data => {
+                // Show loader while the file is being uploaded
+                loader.style.display = 'none';
+
+                // Disable submit button to prevent multiple submissions
+                $('#submitBtn').prop('disabled', false);
                     // Handle the server response
                     // console.log(data);
                     document.getElementById('sentence').value = '';
@@ -72,6 +107,11 @@
                         }, 10);
                 })
                 .catch(error => {
+                // Show loader while the file is being uploaded
+                loader.style.display = 'none';
+
+                // Disable submit button to prevent multiple submissions
+                $('#submitBtn').prop('disabled', false);
 
                         // Show a custom notification
                             setTimeout(() => {
@@ -90,6 +130,11 @@
 
                 // Check if the input is null or contains only spaces
                 if (!sentence.trim()) {
+                // Show loader while the file is being uploaded
+                loader.style.display = 'none';
+
+                // Disable submit button to prevent multiple submissions
+                $('#submitBtn').prop('disabled', false);
                     // Show a custom notification
                     setTimeout(() => {
                     showNotification("Aucun texte fourni", 'error');
@@ -107,6 +152,11 @@
 
                 // Test if the sentence contains only N'Ko characters
                 if (!nkoRegex.test(sentence)) {
+                // Show loader while the file is being uploaded
+                loader.style.display = 'none';
+
+                // Disable submit button to prevent multiple submissions
+                $('#submitBtn').prop('disabled', false);
                     // Identify the non-N'Ko characters and log them to the console
                     // var nonNkoCharacters = sentence.match(/[^\u07C0-\u07FF\s:()؟-]/gu);
                     // console.error('Caracteres invalides trouves: ' + nonNkoCharacters.join(''));

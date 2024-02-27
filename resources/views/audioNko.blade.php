@@ -55,7 +55,7 @@
                         <button type="button" class="btn btn-light rounded-circle shadow-lg p-3 mb-5 rounded" id="prevSentence" onclick="getRandomSentence('prev')"></i><i class="bi bi-shuffle ml-2"></i></button>
                     </div>
 
-                    <div style="position: absolute; top:50%; right:50%;" class="my-3">
+                    <div style="position: absolute; top:41%; right:50%;" class="my-3">
                         <div class="spinner-border text-primary" role="status" id="loader" style="display: none;">
                             <span class="visually-hidden">Chargement...</span>
                         </div>

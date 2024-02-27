@@ -12,7 +12,7 @@
 
           <div class="section-title">
             <h2>Saisie</h2>
-            <h3><span>Fancais <i class="bi bi-pencil" style="margin-right:5px; color: #3399FF;"></i></span></h3>
+            <h3><span>Francais <i class="bi bi-pencil" style="margin-right:5px; color: #3399FF;"></i></span></h3>
             <p>Phrase ou paragraphe en Francais:</p>
 
             <p class="fst-italic">   <strong> Objectif :</strong> Rédiger une phrase ou un paragraphe en utilisant l'alphabet Français.<br>

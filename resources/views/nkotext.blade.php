@@ -28,11 +28,6 @@
             </div>
         </div>
 
-        <div class="my-3">
-            <div class="spinner-border text-primary" role="status" id="loader" style="display: none;">
-                <span class="visually-hidden">Chargement...</span>
-            </div>
-        </div>
 
           <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
 
