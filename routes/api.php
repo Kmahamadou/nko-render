@@ -28,5 +28,6 @@ Route::post('/enregistrement-audio-nko', [audiocontroller::class, 'saveAudio'])-
 
 Route::post('/nkotext', [nkocontroller::class, 'saveNkoText'])->name('saveNkoText');
 Route::post('/frenchtext', [frenchcontroller::class, 'saveFrenchText'])->name('saveFrenchText');
+Route::post('/multipleFrenchSentenceInsertion', [MultipleSentenceInputController::class, 'multipleFrenchSentenceInsertion'])->name('multipleFrenchSentenceInsertion');
 Route::post('/frenchtonko', [FrenchToNkocontroller::class, 'saveFrenchToNko'])->name('saveFrenchToNko');
 Route::post('/send-visiter-email', [contactController::class, 'sendVisiterEmail'])->name("sendVisiterEmail");
