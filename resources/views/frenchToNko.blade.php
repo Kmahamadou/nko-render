@@ -39,14 +39,33 @@
 
                     <input type="hidden" id="randomFrenchSentence" name="randomFrenchSentence" value="{{ $randomSentence->sentence }}">
                     <div class="form-group">
-                    <textarea style="text-align: right;" class="form-control" id="sentence" name="sentence" rows="5" placeholder="Votre traduction..." autofocus required></textarea>
+                    <textarea oninput="updateCharacterCount(this)" maxlength="200" style="text-align: right;" class="form-control" id="sentence" name="sentence" rows="5" placeholder="Votre traduction..." autofocus required></textarea>
                     </div>
+                    <div id="charCount" class="mt-3 ">200 charactères restant</div>
+
                     <div class="my-3">
                     {{-- <div class="error-message"></div>
                     <div class="sent-message">Your message has been sent. Thank you!</div> --}}
                     </div>
-                    <div class="text-center"><button class="btn btn-primary" type="submit">Soumettre</button></div>
+                    <div style="display: flex; flex-direction:row; justify-content: space-around">
+                        <div><button class="btn btn-primary shadow-lg p-3 mb-5 rounded" id="submitBtn" type="submit">Soumettre</button></div>
+                    </div>
                 </form>
+                <div style="display: flex; flex-direction:row; justify-content: space-around">
+                  <div class="col-lg-2 text-end">
+                      <button type="button" class="btn btn-light rounded-circle shadow-lg p-3 mb-5 rounded" id="prevSentence" onclick="getRandomSentence('prev')"></i><i class="bi bi-shuffle ml-2"></i></button>
+                  </div>
+
+                  <div class="my-3">
+                      <div class="spinner-border text-primary" role="status" id="loader" style="display: none;">
+                          <span class="visually-hidden">Loading...</span>
+                      </div>
+                  </div>
+
+                  <div class="col-lg-2 text-start">
+                      <button type="button" class="btn btn-light rounded-circle shadow-lg p-3 mb-5 rounded" id="nextSentence" onclick="getRandomSentence('next')"><i class="bi bi-shuffle mr-2"></i></i></button>
+                  </div>
+              </div>
                 </div>
             @endif
 
@@ -56,13 +75,29 @@
       </section><!-- End Contact Section -->
     </main>
 
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
+    <script>
+        function updateCharacterCount(textarea) {
+            console.log("oninput");
+            var maxLength = parseInt(textarea.getAttribute('maxlength'));
+            var currentLength = textarea.value.length;
+            var remaining = maxLength - currentLength;
+            var charCountElement = document.getElementById('charCount');
+            charCountElement.textContent = remaining + ' charactères restant';
+        }
+    </script>
 
     <script>
 
             function submitForm(event) {
                 // Prevent the default form submission
                 event.preventDefault();
+                // Display loader while submitting the form
+                $('#loader').show();
+
+                // Disable submit button to prevent multiple submissions
+                $('#submitBtn').prop('disabled', true);
 
                 // Get the form data
                 var formData = new FormData(document.getElementById('thisForm'));
@@ -79,6 +114,10 @@
                 })
                 .then(response => response.json())
                 .then(data => {
+                    $('#loader').hide();
+
+                    // Disable submit button to prevent multiple submissions
+                    $('#submitBtn').prop('disabled', false);
                     // Handle the server response
                     // console.log(data['next_french_sentence']);
                     document.getElementById('sentence').value = '';
@@ -97,6 +136,10 @@
                         }, 3000);
                 })
                 .catch(error => {
+                    $('#loader').hide();
+
+                    // Disable submit button to prevent multiple submissions
+                    $('#submitBtn').prop('disabled', false);
 
                         // Show a custom notification
                             setTimeout(() => {
@@ -114,6 +157,10 @@
 
             // Check if the input is null or contains only spaces
             if (!sentence.trim()) {
+
+                $('#loader').hide();
+
+                $('#submitBtn').prop('disabled', false);
                     // Show a custom notification
                     setTimeout(() => {
                         showNotification("Aucun texte fourni", 'error');
@@ -129,6 +176,10 @@
 
             // Test if the sentence contains only N'Ko characters
             if (!nkoRegex.test(sentence)) {
+
+                $('#loader').hide();
+
+                $('#submitBtn').prop('disabled', false);
                 // Identify the non-N'Ko characters and log them to the console
                 var nonNkoCharacters = sentence.match(/[^\u07C0-\u07FF\s:()؟.,"ߑ߸:."‹›،﴾﴿÷×_=%*°߹-]/gu);
                 // console.error('Caracteres invalides trouves: ' + nonNkoCharacters.join(''));
@@ -151,6 +202,43 @@
 
             return true; // Allow form submission
         }
+
+
+
+
+    function getRandomSentence(direction) {
+
+// Display loader while fetching new sentence
+console.log("direction");
+console.log(direction);
+$('#loader').show();
+
+// Example using jQuery
+$.ajax({
+    url: '/api/getRandomSentence',
+    method: 'get',
+    data: { direction: direction },
+    success: function (response) {
+        console.log(response);
+
+        // Hide loader when the AJAX request is complete
+        $('#loader').hide();
+        // Update the displayed sentence
+        $('#french_sentence').text(response.sentence);
+        // Update the hidden input value for form submission
+        $('#randomFrenchSentence').val(response.sentence);
+        // Clear the textarea for the new translation
+        $('#sentence').val('');
+    },
+    error: function (error) {
+
+        // Hide loader when the AJAX request is complete
+        $('#loader').hide();
+        console.log(error);
+    }
+});
+}
+
 
 
         ////////////////////////////////// Notification /////////////////////////////

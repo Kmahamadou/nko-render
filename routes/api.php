@@ -31,4 +31,5 @@ Route::post('/nkotext', [nkocontroller::class, 'saveNkoText'])->name('saveNkoTex
 Route::post('/frenchtext', [frenchcontroller::class, 'saveFrenchText'])->name('saveFrenchText');
 Route::post('/multipleFrenchSentenceInsertion', [MultipleSentenceInputController::class, 'multipleFrenchSentenceInsertion'])->name('multipleFrenchSentenceInsertion');
 Route::post('/frenchtonko', [FrenchToNkocontroller::class, 'saveFrenchToNko'])->name('saveFrenchToNko');
+Route::get('/getRandomSentence', [FrenchToNkocontroller::class, 'getRandomSentence'])->name('getRandomSentence');
 Route::post('/send-visiter-email', [contactController::class, 'sendVisiterEmail'])->name("sendVisiterEmail");

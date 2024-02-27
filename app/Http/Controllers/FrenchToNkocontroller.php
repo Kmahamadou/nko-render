@@ -6,8 +6,49 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 class FrenchToNkocontroller extends Controller
 {
+
+
+    public function getRandomSentence()
+    {
+        // Log::info($direction);
+
+        do {
+            $randomSentence = DB::table('frenchsentences')->inRandomOrder()->first();
+
+            // Reverse the string
+            $reversedString = strrev($randomSentence->sentence);
+
+            // Count the spaces in the reversed string
+            $spaceCount = substr_count($reversedString, ' ');
+
+            // Uncomment the following line if you want to see the details during testing
+            // dd("randomSentence->sentence", $randomSentence->sentence, "spaceCount", $spaceCount);
+
+        } while ($spaceCount >= 201);
+
+        return response()->json(['sentence' => $randomSentence->sentence], 200);
+
+    }
+
+
     public function showFrenchToNkoPage()
     {
+
+        do {
+            $randomSentence = DB::table('frenchsentences')->inRandomOrder()->first();
+
+            // Reverse the string
+            $reversedString = strrev($randomSentence->sentence);
+
+            // Count the spaces in the reversed string
+            $spaceCount = substr_count($reversedString, ' ');
+
+            // Uncomment the following line if you want to see the details during testing
+            // dd("randomSentence->sentence", $randomSentence->sentence, "spaceCount", $spaceCount);
+
+        } while ($spaceCount >= 201);
+
+
         $randomSentence = DB::table('frenchsentences')->inRandomOrder()->first();
 
         // dd($randomSentence);
