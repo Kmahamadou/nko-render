@@ -439,7 +439,7 @@
             <div class="member">
               <div class="member-img">
                 <a href="assets/img/hawa.JPG" data-lightbox="gallery" data-title="Hawa DIONE">
-                    <img src="{{ secure_asset('assets/img/hawa.JPG') }}" class="img-fluid" alt="">
+                    <img src="assets/img/hawa.JPG" class="img-fluid" alt="">
                 </a>
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
@@ -459,7 +459,7 @@
             <div class="member">
               <div class="member-img">
                 <a href="assets/img/diouka.jpg" data-lightbox="gallery" data-title="Diouka SISSOKO">
-                    <img src="{{ secure_asset('assets/img/diouka.jpg') }}" class="img-fluid" alt="">
+                    <img src="assets/img/diouka.jpg" class="img-fluid" alt="">
                 </a>
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
@@ -479,7 +479,7 @@
             <div class="member">
               <div class="member-img">
                 <a href="assets/img//djigui.jpg" data-lightbox="gallery" data-title="Djigui KEITA">
-                    <img src="{{ secure_asset('assets/img/djigui.jpg') }}" class="img-fluid" alt="">
+                    <img src="assets/img/djigui.jpg" class="img-fluid" alt="">
                 </a>
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
@@ -499,7 +499,7 @@
             <div class="member">
               <div class="member-img">
                 <a href="assets/img/Alpha.jpeg" data-lightbox="gallery" data-title="Bamoye TRAORE">
-                    <img src="{{ secure_asset('assets/img/Alpha.jpeg') }}" class="img-fluid" alt="">
+                    <img src="assets/img/Alpha.jpeg" class="img-fluid" alt="">
                 </a>
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
@@ -519,7 +519,7 @@
             <div class="member">
               <div class="member-img">
                 <a href="assets/img/fatoma.jpeg" data-lightbox="gallery" data-title="Fatoma DAOU">
-                    <img src="{{ secure_asset('assets/img/fatoma.jpeg') }}" class="img-fluid" alt="">
+                    <img src="assets/img/fatoma.jpeg" class="img-fluid" alt="">
                 </a>
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
@@ -539,7 +539,7 @@
             <div class="member">
               <div class="member-img">
                 <a href="assets/img/sall.jpeg" data-lightbox="gallery" data-title="Yousssouf SALL">
-                    <img src="{{ secure_asset('assets/img/sall.jpeg') }}" class="img-fluid" alt="">
+                    <img src="assets/img/sall.jpeg" class="img-fluid" alt="">
                 </a>
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
@@ -559,7 +559,7 @@
             <div class="member">
               <div class="member-img">
                 <a href="assets/img/mohamed.jpeg" data-lightbox="gallery" data-title="Mahamadou KONE">
-                    <img src="{{ secure_asset('assets/img/mohamed.jpeg') }}" class="img-fluid" alt="">
+                    <img src="assets/img/mohamed.jpeg" class="img-fluid" alt="">
                 </a>
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
