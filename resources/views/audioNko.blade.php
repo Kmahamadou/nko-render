@@ -191,12 +191,17 @@
                 if (this.readyState == 4) {
                     if (this.status == 200) {
 
-                        // Access the response data
-                        const responseData = this.responseText;
+                        try {
+                            const jsonData = JSON.parse(this.responseText.replace(/^\uFEFF/, ''));
+                            // Handle the JSON data
+                            console.log(jsonData['next_nko_sentence']);
+                            document.getElementById("sentence").value = jsonData["next_nko_sentence"];
+                            document.getElementById('next_nko_sentence').textContent = jsonData['next_nko_sentence'];
+                        } catch (error) {
+                            console.error("Error parsing JSON:", error);
+                            console.log("Non-JSON response:", this.responseText);  // Log the response for debugging
+                        }
 
-                        // If the response data is in JSON format, parse it
-                        const jsonData = JSON.parse(responseData);
-                        // console.log(jsonData);
 
                         // Simulating a successful file upload
                         setTimeout(() => {
@@ -215,8 +220,7 @@
 
                         isAudioUploading = false;
                         // console.log(this.responseText)
-                        // this.
-                        document.getElementById('next_nko_sentence').textContent = jsonData['next_nko_sentence'];
+
                     }
 
                     if (this.status == 500) {

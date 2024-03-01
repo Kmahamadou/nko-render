@@ -120,9 +120,17 @@
                     $('#submitBtn').prop('disabled', false);
                     // Handle the server response
                     // console.log(data['next_french_sentence']);
-                    document.getElementById('sentence').value = '';
-                    document.getElementById('french_sentence').textContent = data['next_french_sentence'];
-
+                    try {
+                            // const jsonData = JSON.parse(this.responseText.replace(/^\uFEFF/, ''));
+                            // Handle the JSON data
+                            console.log(data['next_french_sentence']);
+                            document.getElementById('sentence').value = "";
+                            document.getElementById('randomFrenchSentence').value = data["next_french_sentence"];
+                            document.getElementById('french_sentence').textContent = data['next_french_sentence'];
+                        } catch (error) {
+                            console.error("Error parsing JSON:", error);
+                            console.log("Non-JSON response:", this.responseText);  // Log the response for debugging
+                        }
                     // Show a custom notification
                         setTimeout(() => {
                             showNotification("Phrase ajoutee avec succes !!!", 'success');

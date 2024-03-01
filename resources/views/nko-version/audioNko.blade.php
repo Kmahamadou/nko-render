@@ -116,6 +116,7 @@
         var loader = document.getElementById('loader');
         var sending = document.getElementById('sending');
         var recording = document.getElementById('recording');
+        var next_nko_sentence_value = document.getElementById("next_nko_sentence")
         // var recorder_block = document.getElementById('recorder-block');
         var progressBar = document.getElementById('progress-bar');
         sending.style.display = 'none';
@@ -181,13 +182,16 @@
                 if (this.readyState == 4) {
                     if (this.status == 200) {
 
-                        // Access the response data
-                        const responseData = this.responseText;
-                        console.log(responseData);
-
-                        // If the response data is in JSON format, parse it
-                        // const jsonData = JSON.parse(responseData);
-                        // // console.log(jsonData);
+                        try {
+                            const jsonData = JSON.parse(this.responseText.replace(/^\uFEFF/, ''));
+                            // Handle the JSON data
+                            console.log(jsonData['next_nko_sentence']);
+                            document.getElementById("sentence").value = jsonData["next_nko_sentence"];
+                            document.getElementById('next_nko_sentence').textContent = jsonData['next_nko_sentence'];
+                        } catch (error) {
+                            console.error("Error parsing JSON:", error);
+                            console.log("Non-JSON response:", this.responseText);  // Log the response for debugging
+                        }
 
 
                         // Simulating a successful file upload
@@ -205,8 +209,6 @@
 
                         isAudioUploading = false;
                         // console.log(this.responseText)
-                        // // this.
-                        document.getElementById('next_nko_sentence').textContent = jsonData['next_nko_sentence'];
                     }
 
                     if (this.status == 500) {
