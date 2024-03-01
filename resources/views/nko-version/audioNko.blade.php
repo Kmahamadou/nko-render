@@ -38,7 +38,7 @@
                     <!-- Custom Card Component with shadow and padding -->
                     <div style="font-size: 21px; box-shadow: 0px 7px 13px rgba(0, 0, 0, 0.2); padding: 15px; background-color: white; border-radius: 8px; width: 50%;"
                         class="mx-auto my-5">
-                        <p style="text-align: right;" id="next_nko_sentence">{{ $randomSentence->sentence }}</p>
+                        <p style="text-align: right; font-size: 1em;" id="next_nko_sentence">{{ $randomSentence->sentence }}</p>
                         <div class="my-3">
                         {{-- <div id="loader"></div> --}}
                         </div>
@@ -189,14 +189,14 @@
                         // const jsonData = JSON.parse(responseData);
                         // // console.log(jsonData);
 
-                        // // this.
-                        // document.getElementById('next_nko_sentence').textContent = jsonData['next_nko_sentence'];
 
                         // Simulating a successful file upload
                         setTimeout(() => {
                             // Show a custom notification
                             showNotification('Vocal envoyer avec succes !', 'success');
                         }, 100); // Simulated upload time (adjust as needed)
+
+
 
                         // Hide loader after upload is complete
                         loader.style.display = 'none';
@@ -205,6 +205,8 @@
 
                         isAudioUploading = false;
                         // console.log(this.responseText)
+                        // // this.
+                        document.getElementById('next_nko_sentence').textContent = jsonData['next_nko_sentence'];
                     }
 
                     if (this.status == 500) {
@@ -261,6 +263,9 @@
                 // Hide loader when the AJAX request is complete
                 $('#loader').hide();
                 // Update the displayed sentence
+                setTimeout(() => {
+                            // Show a custom notification
+                        }, 700);
                 $('#next_nko_sentence').text(response.sentence);
                 // Update the hidden input value for form submission
                 $('#sentence').val(response.sentence);
