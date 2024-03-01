@@ -25,7 +25,7 @@ class frenchcontroller extends Controller
     public function saveFrenchText(Request $request)
     {
 
-        $frenchLatinRegex = '/^[A-Za-zÀ-ÖØ-öø-ÿ0-9\s,;<>()!?.:"\'~_-]+$/';
+        $frenchLatinRegex = '/^[A-Za-zÀ-ÖØ-öø-ÿ0-9\s,;<>()!?.:\/"\'~_-]+$/';
         $validation = $request->validate([
             'sentence' => ['required','string', 'regex:'.$frenchLatinRegex],
         ]);

@@ -171,7 +171,7 @@
             // Define a regex pattern for N'Ko characters
             // var nkoRegex = /^[\u07C0-\u07FF\s]+$/u;
             // var nkoRegex = /^[\u07C0-\u07F9\u07FA-\u07FF\s:()؟-]+$/u;
-            var nkoRegex = /^[\u07C0-\u07F9\u07FA-\u07FF\s:()؟.,"ߑ߸:."<>‹›،﴾﴿÷×_=%*°߹-]+$/u;
+            var nkoRegex = /^[\u07C0-\u07F9\u07FA-\u07FF\s:()؟⁏~.,"ߑ߸:."</>‹›،﴾﴿÷×_=%*°߹-]+$/u;
 
 
             // Test if the sentence contains only N'Ko characters
@@ -181,7 +181,7 @@
 
                 $('#submitBtn').prop('disabled', false);
                 // Identify the non-N'Ko characters and log them to the console
-                var nonNkoCharacters = sentence.match(/[^\u07C0-\u07FF\s:()؟.,"ߑ߸:."<>‹›،﴾﴿÷×_=%*°߹-]/gu);
+                var nonNkoCharacters = sentence.match(/[^\u07C0-\u07FF\s:()؟.⁏~,"ߑ߸:."</>‹›،﴾﴿÷×_=%*°߹-]/gu);
                 // console.error('Caracteres invalides trouves: ' + nonNkoCharacters.join(''));
 
 
