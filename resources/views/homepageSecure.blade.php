@@ -438,9 +438,9 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
               <div class="member-img">
-                <a href="assets/img/hawa.JPG" data-lightbox="gallery" data-title="Hawa DIONE">
+                {{-- <a href="assets/img/hawa.JPG" data-lightbox="gallery" data-title="Hawa DIONE"> --}}
                     <img src="assets/img/hawa.JPG" class="img-fluid" alt="">
-                </a>
+                {{-- </a> --}}
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
                   <a href="https://www.facebook.com/hawa.dioni.39" target="_blank"><i class="bi bi-facebook"></i></a>
@@ -458,9 +458,9 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
             <div class="member">
               <div class="member-img">
-                <a href="assets/img/diouka.jpg" data-lightbox="gallery" data-title="Diouka SISSOKO">
+                {{-- <a href="assets/img/diouka.jpg" data-lightbox="gallery" data-title="Diouka SISSOKO"> --}}
                     <img src="assets/img/diouka.jpg" class="img-fluid" alt="">
-                </a>
+                {{-- </a> --}}
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
                   <a target="_blank" href="https://m.facebook.com/profile.php/?id=100022039608402"><i class="bi bi-facebook"></i></a>
@@ -478,9 +478,9 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
               <div class="member-img">
-                <a href="assets/img//djigui.jpg" data-lightbox="gallery" data-title="Djigui KEITA">
+                {{-- <a href="assets/img//djigui.jpg" data-lightbox="gallery" data-title="Djigui KEITA"> --}}
                     <img src="assets/img/djigui.jpg" class="img-fluid" alt="">
-                </a>
+                {{-- </a> --}}
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
                   <a target="_blank" href="#"><i class="bi bi-facebook"></i></a>
@@ -498,9 +498,9 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="member">
               <div class="member-img">
-                <a href="assets/img/Alpha.jpeg" data-lightbox="gallery" data-title="Bamoye TRAORE">
+                {{-- <a href="assets/img/Alpha.jpeg" data-lightbox="gallery" data-title="Bamoye TRAORE"> --}}
                     <img src="assets/img/Alpha.jpeg" class="img-fluid" alt="">
-                </a>
+                {{-- </a> --}}
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
                   <a target="_blank" href="https://www.facebook.com/profile.php?id=100006821057109"><i class="bi bi-facebook"></i></a>
@@ -518,9 +518,9 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="50">
             <div class="member">
               <div class="member-img">
-                <a href="assets/img/fatoma.jpeg" data-lightbox="gallery" data-title="Fatoma DAOU">
+                {{-- <a href="assets/img/fatoma.jpeg" data-lightbox="gallery" data-title="Fatoma DAOU"> --}}
                     <img src="assets/img/fatoma.jpeg" class="img-fluid" alt="">
-                </a>
+                {{-- </a> --}}
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
                   <a href="#"><i class="bi bi-facebook"></i></a>
@@ -538,9 +538,9 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="50">
             <div class="member">
               <div class="member-img">
-                <a href="assets/img/sall.jpeg" data-lightbox="gallery" data-title="Yousssouf SALL">
+                {{-- <a href="assets/img/sall.jpeg" data-lightbox="gallery" data-title="Yousssouf SALL"> --}}
                     <img src="assets/img/sall.jpeg" class="img-fluid" alt="">
-                </a>
+                {{-- </a> --}}
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
                   <a target="_blank" href="https://www.facebook.com/DoniFab/"><i class="bi bi-facebook"></i></a>
@@ -558,9 +558,9 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="50">
             <div class="member">
               <div class="member-img">
-                <a href="assets/img/mohamed.jpeg" data-lightbox="gallery" data-title="Mahamadou KONE">
+                {{-- <a href="assets/img/mohamed.jpeg" data-lightbox="gallery" data-title="Mahamadou KONE"> --}}
                     <img src="assets/img/mohamed.jpeg" class="img-fluid" alt="">
-                </a>
+                {{-- </a> --}}
                 <div class="social">
                   {{-- <a href=""><i class="bi bi-twitter"></i></a> --}}
                   <a target="_blank" href="https://www.facebook.com/DoniFab/"><i class="bi bi-facebook"></i></a>
