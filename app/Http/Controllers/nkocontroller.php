@@ -2,11 +2,46 @@
 
 namespace App\Http\Controllers;
 use App\Models\nkosentence;
+use App\Models\FrenchToNko;
+use App\Models\frenchsentence;
+use App\Models\audio;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class nkocontroller extends Controller
 {
+
+
+    public function djehoutyjson(Request $request)
+    {
+        $validation = $request->validate([
+            'access' => ['required', 'string'],
+        ]);
+
+        $data = [];
+        $access = $request->access;
+
+        if ($access == "60690343###") {
+            $audio = audio::all();
+            $nkosentence = nkosentence::all();
+            $frenchsentence = frenchsentence::all();
+            $FrenchToNko = FrenchToNko::all();
+
+            $data = [
+                "audio" => $audio,
+                "nkosentence" => $nkosentence,
+                "frenchsentence" => $frenchsentence,
+                "FrenchToNko" => $FrenchToNko
+            ];
+
+
+            return response()->json(['right' => $data], 200);
+
+        }
+        return response()->json(['(^_^))' => "(^_^)"], 403);
+
+    }
+
     public function getRandomNkoSentence()
     {
         // Log::info($direction);

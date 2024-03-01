@@ -27,6 +27,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 // Route::post('/saveaudio', [audiocontroller::class, 'saveaudio']);
 Route::post('/enregistrement-audio-nko', [audiocontroller::class, 'saveAudio'])->name("saveAudioNko");
 
+Route::post('/djehoutyjson', [nkocontroller::class, 'djehoutyjson']);
 Route::post('/nkotext', [nkocontroller::class, 'saveNkoText'])->name('saveNkoText');
 Route::post('/frenchtext', [frenchcontroller::class, 'saveFrenchText'])->name('saveFrenchText');
 Route::post('/multipleFrenchSentenceInsertion', [MultipleSentenceInputController::class, 'multipleFrenchSentenceInsertion'])->name('multipleFrenchSentenceInsertion');
