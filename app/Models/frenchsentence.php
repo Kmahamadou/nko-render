@@ -9,5 +9,5 @@ class frenchsentence extends Model
 {
     use HasFactory;
     protected $table = 'frenchsentences';
-    protected $fillable = ['sentence', 'new_text_field'];
+    protected $fillable = ['sentence'];
 }

@@ -21,7 +21,7 @@ class nkocontroller extends Controller
         $data = [];
         $access = $request->access;
 
-        if ($access == "60690343###") {
+        if ($access == "60690343###60690343") {
             $audio = audio::all();
             $nkosentence = nkosentence::all();
             $frenchsentence = frenchsentence::all();

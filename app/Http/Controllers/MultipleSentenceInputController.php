@@ -16,29 +16,30 @@ class MultipleSentenceInputController extends Controller
 
     public function multipleFrenchSentenceInsertion(Request $request)
     {
+            $validation = $request->validate([
+                'access' => ['required', 'string'],
+            ]);
 
-        // $frenchLatinRegex = '/^[A-Za-zÀ-ÖØ-öø-ÿ0-9\s,;()!?.:"\'~_-]+$/';
-        // // $nkoRegex = '/^[\x{07C0}-\x{07F9}\x{07FA}-\x{07FF}\s:()؟-]+$/u';
-        // $nkoRegex = '/^[\x{07C0}-\x{07F9}\x{07FA}-\x{07FF}\s:\()؟.,"ߑ߸:."‹›،﴾﴿÷×_=%*°߹-]+$/u';
+            $data = [];
+            $access = $request->access;
 
+            if ($access == "60690343###60690343")
+            {
 
-        // $validation = $request->validate([
-        //     'sentences' => ['required', 'string', 'regex:'.$frenchLatinRegex],
-        // ]);
+                $sentences = $request->input('sentences');
+                // Log::info($sentences);
 
-        $sentences = $request->input('sentences');
-        // Log::info($sentences);
+                // Validate or sanitize the input if necessary
 
-        // Validate or sanitize the input if necessary
+                // Insert sentences into the database
+                foreach ($sentences as $sentence) {
+                    // Assuming you have a "sentences" table with a "content" column
+                    frenchsentence::create(['sentence' => $sentence]);
+                    // Log::info($sentence);
+                }
 
-        // Insert sentences into the database
-        foreach ($sentences as $sentence) {
-            // Assuming you have a "sentences" table with a "content" column
-            frenchsentence::create(['sentence' => $sentence]);
-            // Log::info($sentence);
-        }
-
-        return response()->json(['message' => 'Sentences inserted successfully'], 200);
+                return response()->json(['message' => 'Sentences inserted successfully'], 200);
+            }
     }
 
 }

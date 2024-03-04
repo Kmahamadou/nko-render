@@ -10,12 +10,13 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up(): void
-    {Schema::create('audio', function (Blueprint $table) {
-        $table->id();
-        $table->text('audio_data')->nullable();
-        $table->text('texte_saisi');
-        $table->timestamps();
-    });
+    {
+        Schema::create('audio', function (Blueprint $table) {
+            $table->id();
+            $table->text('audio_data')->nullable();
+            $table->text('texte_saisi');
+            $table->timestamps();
+        });
     }
 
     /**
