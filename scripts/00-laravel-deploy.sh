@@ -16,4 +16,4 @@ php artisan view:clear
 php artisan view:cache
 
 echo "Running migrations..."
-php artisan migrate --force
+php artisan migrate --seed --force
