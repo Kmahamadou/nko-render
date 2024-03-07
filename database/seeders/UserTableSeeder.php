@@ -29,17 +29,24 @@ class UserTableSeeder extends Seeder
                 //     'password' => Hash::make('password###@###@#@'),
                 // ]);
 
-                $admin3 = DB::table('users')->insert([
-                    'name' => 'Djehouty KONE',
-                    'email' => 'self@djehouty.com',
-                    'password' => Hash::make('password###@###@#@'),
-                ]);
+                // $admin3 = DB::table('users')->insert([
+                //     'name' => 'Djehouty KONE',
+                //     'email' => 'self@djehouty.com',
+                //     'password' => Hash::make('password###@###@#@'),
+                // ]);
+
+
+                // $admin4 = DB::table('users')->insert([
+                //     'name' => 'YOUSSOUF SALL',
+                //     'email' => 'sall@pro.com',
+                //     'password' => Hash::make('password###@###@#@'),
+                // ]);
 
 
                 $admin4 = DB::table('users')->insert([
-                    'name' => 'YOUSSOUF SALL',
-                    'email' => 'sall@pro.com',
-                    'password' => Hash::make('password###@###@#@'),
+                    'name' => 'Aboubacar KOUENTA',
+                    'email' => 'ask@pro.com',
+                    'password' => Hash::make('password###123456789'),
                 ]);
     }
 }
