@@ -39,10 +39,10 @@ class frenchcontroller extends Controller
 
 
         // Firebase - Firestore
-        $sentenceRef = app('firebase.firestore')->database()->collection('FrenchSentence')->newDocument();
-        $sentenceRef->set([
-            'sentence' => $request->sentence,
-        ]);
+        // $sentenceRef = app('firebase.firestore')->database()->collection('FrenchSentence')->newDocument();
+        // $sentenceRef->set([
+        //     'sentence' => $request->sentence,
+        // ]);
 
 
         if (!empty($sentence)) {

@@ -92,11 +92,11 @@ class FrenchToNkocontroller extends Controller
 
 
         // Firebase - Firestore
-        $sentenceRef = app('firebase.firestore')->database()->collection('FrenchToNko')->newDocument();
-        $sentenceRef->set([
-            'frenchSentence' => $equivalentFrenchText,
-            'nkoSentence' => $nkoSentence,
-        ]);
+        // $sentenceRef = app('firebase.firestore')->database()->collection('FrenchToNko')->newDocument();
+        // $sentenceRef->set([
+        //     'frenchSentence' => $equivalentFrenchText,
+        //     'nkoSentence' => $nkoSentence,
+        // ]);
 
 
 

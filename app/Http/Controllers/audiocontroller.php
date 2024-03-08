@@ -98,12 +98,12 @@ class audiocontroller extends Controller
 
 
         // Firebase - Firestore
-        $sentenceRef = app('firebase.firestore')->database()->collection('audio')->newDocument();
-        $sentenceRef->set([
-            'audio_data' => $base64String,
-            'texte_saisi' => $texteSaisi,
-            'audio_name' => "audio-".$audio_name.".wav",
-        ]);
+        // $sentenceRef = app('firebase.firestore')->database()->collection('audio')->newDocument();
+        // $sentenceRef->set([
+        //     'audio_data' => $base64String,
+        //     'texte_saisi' => $texteSaisi,
+        //     'audio_name' => "audio-".$audio_name.".wav",
+        // ]);
 
 
 

@@ -43,10 +43,10 @@ class UserTableSeeder extends Seeder
                 // ]);
 
 
-                $admin4 = DB::table('users')->insert([
-                    'name' => 'Aboubacar KOUENTA',
-                    'email' => 'ask@pro.com',
-                    'password' => Hash::make('password###123456789'),
-                ]);
+                // $admin4 = DB::table('users')->insert([
+                //     'name' => 'Aboubacar KOUENTA',
+                //     'email' => 'ask@pro.com',
+                //     'password' => Hash::make('password###123456789'),
+                // ]);
     }
 }
